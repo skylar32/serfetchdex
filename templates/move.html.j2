@@ -1,0 +1,48 @@
+{% extends "base.html.j2" %}
+{% block title %}{{move.name}} - serfetchdex{% endblock %}
+{% block content %}
+        <span class="move-tagline">
+            <h1>{{move.name}}</h1>
+            <span class="move-icons">
+                <img src="/static/icons/{{move.damage_class}}.png" alt="{{move.damage_class|title}} move" title="{{move.damage_class|title}} move" />
+                <a href="/types/{{move.type}}"><img src="/static/icons/type/{{move.type}}.png" alt="{{move.type|title}}-type move" title="{{move.type|title}}-type move" class="type-icon" /></a>
+            </span>
+        </span>
+        <span class="move-details">
+            <table class="move-stats">
+                <tbody>
+                    <tr>
+                        <th>Power</th>
+                        <th>Accuracy</th>
+                        <th>PP</th>
+                    </tr>
+                    <tr>
+                        <td>{%if move.power%}{{move.power}}{%else%}—{%endif%}</td>
+                        <td>{%if move.accuracy%}{{move.accuracy}}%{%else%}—{%endif%}</td>
+                        <td>{{move.pp}} (max {{(move.pp * (8/5))|int}})</td>
+                    </tr>
+                        <th>Target</th>
+                        <th>Priority</th>
+                    <tr>
+                    </tr>
+                    <tr>
+                        <td>{{move.target.name}}</td>
+                        <td>{{move.priority}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <span class="move-description">
+                <h2>Description</h2>
+                <hr />
+                <p>{{move.flavor_text|parse_links}}</p>
+            </span>
+        </span>
+    <h2>Flags</h2>
+    <hr />
+    <ul class="flags">
+        {%for flag in all_flags %}<li{%if flag.name not in move_flags%} class="crossed-out"{%endif%}>
+            {{flag.name}}
+            {%if flag.name in move_flags and flag.description%}<ul><li>{{flag.description|parse_links}}</li></ul>{%endif%}
+        </li>{%endfor%}
+    </ul>
+{% endblock %}

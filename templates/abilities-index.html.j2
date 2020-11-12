@@ -1,0 +1,21 @@
+{% extends "base.html.j2" %}
+{% block title %}Abilities - serfetchdex{% endblock %}
+{% block content %}
+    <h1>Abilities</h1>
+    <table class="tablelist">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ability in abilities %}
+            <tr>
+                <td><a href="/abilities/{{ability.identifier}}">{{ability.name}}</a></td>
+                <td>{{ability.flavor_text|parse_links}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

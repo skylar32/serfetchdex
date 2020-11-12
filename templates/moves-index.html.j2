@@ -1,0 +1,32 @@
+{% extends "base.html.j2" %}
+{% block title %}Moves - serfetchdex{% endblock %}
+{% block head %} <script type="text/javascript" src="/static/js/sort-movetable.js"></script>{% endblock %}
+{% block content %}
+    <h1>Moves</h1>
+    <table class="movelist tablelist">
+        <thead>
+            <tr>
+                <th onclick="onColumnHeaderClicked(event)">Move</th>
+                <th onclick="onColumnHeaderClicked(event)">Type</th>
+                <th onclick="onColumnHeaderClicked(event)">Class</th>
+                <th onclick="onColumnHeaderClicked(event)">Power</th>
+                <th onclick="onColumnHeaderClicked(event)">Acc</th>
+                <th onclick="onColumnHeaderClicked(event)">PP</th>
+                <th onclick="onColumnHeaderClicked(event)">Pri</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for move in moves %}
+            <tr>
+                <td><a href="/moves/{{move.identifier}}">{{move.name}}</a></td>
+                <td><a href="/types/{{move.type}}"><img src="/static/icons/type/{{move.type}}.png" alt="{{move.type|title}}-type move" title="{{move.type|title}}-type move" class="type-icon" /></a></td>
+                <td><img src="/static/icons/{{move.damage_class}}.png" alt="{{move.damage_class|title}} move" title="{{move.damage_class|title}} move" /></td>
+                <td>{%if move.power%}{{move.power}}{%else%}—{%endif%}</td>
+                <td>{%if move.accuracy%}{{move.accuracy}}%{%else%}—{%endif%}</td>
+                <td>{{move.pp}}</td>
+                <td>{{move.priority}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

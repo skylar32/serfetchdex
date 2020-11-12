@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}serfetchdex{% endblock %}</title>
+        <link rel="stylesheet" href="/static/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <script type="text/javascript" src="/static/js/hover-fetchd.js"></script>
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <nav>
+            <header>
+                <a href="/"><img src="/static/icons/farfetchd-static.png" onmouseover="hover(this)" onmouseout="unhover(this)" /></a>
+                <a href="/"><h1>serfetchdex</h1></a>
+            </header>
+            <ul>
+                <li><a href="/moves">moves</a></li>
+                <li><a href="/abilities">abilities</a></li>
+                <li><a href="#">pokémon</a></li>
+            </ul>
+        </nav>
+        <main>
+            <content>
+                {% block content %}{% endblock %}
+            </content>
+            <footer>
+                <p>serfetch/serfetchdex &copy; kyeugh 2020</p>
+                <p>
+                    data courtesy of <a href="https://github.com/CatTrinket" target="_blank">Trinket</a>,
+                    <a href="https://veekun.com">veekun</a>, &amp; <a href="https://bulbapedia.bulbagarden.net" target="_blank">Bulbapedia</a>.
+                </p>
+                <p>pokémon is &copy; pokémon, nintendo, game freak, creatures inc., etc.</p>
+            </footer>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+{% extends "base.html.j2" %}
+{% block title %}{{ability.name}} - serfetchdex{% endblock %}
+{% block content %}
+    <h1>{{ability.name}}</h1>
+    <p>{{ability.flavor_text|parse_links}}</p>
+{% endblock %}
