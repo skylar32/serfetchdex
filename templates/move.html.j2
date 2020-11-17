@@ -1,11 +1,15 @@
 {% extends "base.html.j2" %}
 {% block title %}{{move.name}} - serfetchdex{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="/static/pokemon-assets/css/symbols.css">
+    <link rel="stylesheet" href="/static/icons/icons.css">    
+{% endblock %}
 {% block content %}
         <span class="move-tagline">
             <h1>{{move.name}}</h1>
             <span class="move-icons">
-                <img src="/static/icons/{{move.damage_class}}.png" alt="{{move.damage_class|title}} move" title="{{move.damage_class|title}} move" />
-                <a href="/types/{{move.type}}"><img src="/static/icons/type/{{move.type}}.png" alt="{{move.type|title}}-type move" title="{{move.type|title}}-type move" class="type-icon" /></a>
+                <span class="damage-class {{move.damage_class}}" alt="{{move.damage_class|title}} move" title="{{move.damage_class|title}} move"></span>
+                <a href="/types/{{move.type}}"><span class="type-bar {{move.type}}" alt="{{move.type|title}}-type move" title="{{move.type|title}}-type move"></span></a>
             </span>
         </span>
         <span class="move-details">

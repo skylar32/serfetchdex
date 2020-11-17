@@ -108,22 +108,27 @@ img.type-icon {
     justify-content: space-around;
 }
 
-.stance {
-    flex: 1 1 0px
+.side {
+    flex: 1 1 0px;
+    padding: 0 1rem;
 }
 
-.stance table td > ul {
+.side table {
+    width: 100%;
+}
+
+.side table td > ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     margin: .25rem 0;
 }
 
-.stance table th, .stance table td {
+.side table th, .side table td {
     padding: 0;
 }
 
-.stance table img {
+.side table img {
     height: 1.5em;
 }
 
@@ -186,6 +191,10 @@ table.tablelist > thead > tr {
         margin-right: 0;
         content: " ▼";
         color: #61adf3;
+    }
+
+    table.movelist th:nth-of-type(4) > span:last-of-type {
+        display: none;
     }
 }
 
@@ -263,6 +272,14 @@ footer {
         display: none;
     }
 
+    table.movelist th:nth-of-type(4) > span:first-of-type {
+        display: none;
+    }
+
+    table.movelist th:nth-of-type(4) > span:last-of-type {
+        display: initial;
+    }
+
     .move-tagline {
         flex-direction: column;
         margin-bottom: 1rem;
@@ -290,24 +307,23 @@ footer {
         justify-content: center;
     }
 
-    .stance h3 {
+    .side h3 {
         text-align: center;
     }
 
-    .stance table {
-        width: min-content;
+    .side table {
         margin: 0 auto;
     }
 
-    .stance table th {
+    .side table th {
         vertical-align: top;
     }
 
-    .stance table td > ul {
+    .side table td > ul {
         padding: .25rem;
     }
 
-    .stance table img {
+    .side table img {
         height: 1.25em;
     }
 }
@@ -368,6 +384,6 @@ footer {
     }
 
     table.movelist td:first-of-type, table.movelist th:first-of-type {
-        width: 6em;
+        max-width: 6em;
     }
 }

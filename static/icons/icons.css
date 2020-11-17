@@ -1,0 +1,275 @@
+.type-bar, .type-bar-small, .type-badge, .damage-class, .damage-icon {
+    background-image: url("/static/icons/icons.png");
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+.type-bar {
+    width: 200px;
+    height: 44px;
+    border-radius: 15px;
+}
+
+.damage-class {
+    width: 69px;
+    height: 54px;
+}
+
+.type-badge {
+    width: 32px;
+    height: 32px;
+}
+
+.damage-icon {
+    width: 42px;
+    height: 32px;
+}
+
+.type-bar-small {
+    width: 109px;
+    height: 24px;
+    border-radius: 7px;
+}
+
+.type-bar.bug {
+    background-position: 0 0;
+}
+
+.type-bar.dark {
+    background-position: 0 -44px;
+}
+
+.type-bar.dragon {
+    background-position: 0 -88px;
+}
+
+.type-bar.electric {
+    background-position: 0 -132px;
+}
+
+.type-bar.fairy {
+    background-position: 0 -176px;
+}
+
+.type-bar.fighting {
+    background-position: 0 -220px;
+}
+
+.type-bar.fire {
+    background-position: 0 -264px;
+}
+
+.type-bar.flying {
+    background-position: 0 -308px;
+}
+
+.type-bar.ghost {
+    background-position: 0 -352px;
+}
+
+.type-bar.grass {
+    background-position: 0 -396px;
+}
+
+.type-bar.ground {
+    background-position: 0 -440px;
+}
+
+.type-bar.ice {
+    background-position: 0 -484px;
+}
+
+.type-bar.normal {
+    background-position: 0 -528px;
+}
+
+.type-bar.poison {
+    background-position: 0 -572px;
+}
+
+.type-bar.psychic {
+    background-position: 0 -616px;
+}
+
+.type-bar.rock {
+    background-position: 0 -660px;
+}
+
+.type-bar.steel {
+    background-position: 0 -704px;
+}
+
+.type-bar.water {
+    background-position: 0 -748px;
+}
+
+.type-bar-small.bug {
+    background-position: 0 -977px;
+}
+
+.type-bar-small.dark {
+    background-position: -109px -977px;
+}
+
+.type-bar-small.dragon {
+    background-position: 0 -1001px;
+}
+
+.type-bar-small.electric {
+    background-position: -109px -1001px;
+}
+
+.type-bar-small.fairy {
+    background-position: 0 -1025px;
+}
+
+.type-bar-small.fighting {
+    background-position: -109px -1025px;
+}
+
+.type-bar-small.fire {
+    background-position: 0 -1049px;
+}
+
+.type-bar-small.flying {
+    background-position: -109px -1049px;
+}
+
+.type-bar-small.ghost {
+    background-position: 0 -1073px;
+}
+
+.type-bar-small.grass {
+    background-position: -109px -1073px;
+}
+
+.type-bar-small.ground {
+    background-position: 0 -1097px;
+}
+
+.type-bar-small.ice {
+    background-position: -109px -1097px;
+}
+
+.type-bar-small.normal {
+    background-position: 0 -1121px;
+}
+
+.type-bar-small.poison {
+    background-position: -109px -1121px;
+}
+
+.type-bar-small.psychic {
+    background-position: 0 -1145px;
+}
+
+.type-bar-small.rock {
+    background-position: -109px -1145px;
+}
+
+.type-bar-small.steel {
+    background-position: 0 -1169px;
+}
+
+.type-bar-small.water {
+    background-position: -109px -1169px;
+}
+
+.type-badge.bug {
+    background-position: 0 -792px;
+}
+
+.type-badge.dark {
+    background-position: -32px -792px;
+}
+
+.type-badge.dragon {
+    background-position:-64px -792px;
+}
+
+.type-badge.electric {
+    background-position: -96px -792px;
+}
+
+.type-badge.fairy {
+    background-position: -128px -792px;
+}
+
+.type-badge.fighting {
+    background-position: -160px -792px;
+}
+
+.type-badge.fire {
+    background-position: 0 -824px;
+}
+
+.type-badge.flying {
+    background-position: -32px -824px;
+}
+
+.type-badge.ghost {
+    background-position: -64px -824px;
+}
+
+.type-badge.grass {
+    background-position: -96px -824px;
+}
+
+.type-badge.ground {
+    background-position: -128px -824px;
+}
+
+.type-badge.ice {
+    background-position: -160px -824px;
+}
+
+.type-badge.normal {
+    background-position: 0 -856px;
+}
+
+.type-badge.poison {
+    background-position: -32px -856px;
+}
+
+.type-badge.psychic {
+    background-position: -64px -856px;
+}
+
+.type-badge.rock {
+    background-position: -96px -856px;
+}
+
+.type-badge.steel {
+    background-position: -128px -856px;
+}
+
+.type-badge.water {
+    background-position: -160px -856px;
+}
+
+.damage-class.status {
+    background-position: -69px -917px;
+}
+
+.damage-class.special {
+    background-position: 0px -917px;
+}
+
+.damage-class.physical {
+    background-position: -140px -917px;
+}
+
+.damage-icon.status {
+    background-position: 0px -888px;
+}
+
+.damage-icon.special {
+    background-position: -42px -888px;
+}
+
+.damage-icon.physical {
+    background-position: -84px -888px;
+}
