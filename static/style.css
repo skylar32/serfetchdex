@@ -150,6 +150,10 @@ a:visited {
     margin-bottom: 2.5rem;
 }
 
+.move-details > .type-efficiencies {
+    width: 50%;
+}
+
 .move-stats {
     width: 50%;
 }
@@ -294,6 +298,10 @@ footer {
     .move-stats {
         width: 100%;
         margin-bottom: 2rem;
+    }
+
+    .move-details > .type-efficiencies {
+        width: 100%;
     }
 
     .side h3 {

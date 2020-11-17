@@ -42,7 +42,7 @@
                             {% for type in efficiencies[side][efficiency] %}
                             <li><a href="/types/{{type}}"><span class="type-bar-small {{type}}" alt="{{type|title}}" title="{{type|title}}" /></span></a></li>
                             {% endfor %}
-                            {% else %}<li>N/A</li>
+                            {% else %}<li style="color: #cccbc3">N/A</li>
                         {% endif %}
                     </td>
                 </tr>
