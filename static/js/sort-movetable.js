@@ -1,7 +1,7 @@
 /* https://stackoverflow.com/questions/59282842/how-to-make-sorting-html-tables-faster */
 
 function parseCell(cell) {
-    if (cell.querySelectorAll("img").length > 0)
+    if (cell.querySelectorAll("span").length > 0)
         return cell.innerHTML;
     const cellValue = cell.innerText;
     if (cellValue == "—")

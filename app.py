@@ -11,51 +11,53 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mohacdex.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app, model_class=Base)
 
-def get_type_efficiencies(type_name):
-    efficiencies = {"Attacking": {}, "Defending": {}}
+def get_type_efficiencies(type_name, both_sides=False):
+    efficiencies = {"Damage dealt": {}}
 
-    efficiencies["Attacking"]["2x"] = [
+    efficiencies["Damage dealt"]["2x"] = [
         type.defending_type.identifier for type in
         db.session.query(mohacdex.db.TypeMatchup).filter(
             mohacdex.db.TypeMatchup.attacking_type_identifier==type_name,
             mohacdex.db.TypeMatchup.matchup == 2
         ).all()
     ]
-    efficiencies["Attacking"]["½x"] = [
+    efficiencies["Damage dealt"]["½x"] = [
         type.defending_type.identifier for type in
         db.session.query(mohacdex.db.TypeMatchup).filter(
             mohacdex.db.TypeMatchup.attacking_type_identifier==type_name,
             mohacdex.db.TypeMatchup.matchup == .5
         ).all()
     ]
-    efficiencies["Attacking"]["0x"] = [
+    efficiencies["Damage dealt"]["0x"] = [
         type.defending_type.identifier for type in
         db.session.query(mohacdex.db.TypeMatchup).filter(
             mohacdex.db.TypeMatchup.attacking_type_identifier==type_name,
             mohacdex.db.TypeMatchup.matchup == 0
         ).all()
     ]
-    efficiencies["Defending"]["2x"] = [
-        type.attacking_type.identifier for type in
-        db.session.query(mohacdex.db.TypeMatchup).filter(
-            mohacdex.db.TypeMatchup.defending_type_identifier==type_name,
-            mohacdex.db.TypeMatchup.matchup == 2
-        ).all()
-    ]
-    efficiencies["Defending"]["½x"] = [
-        type.attacking_type.identifier for type in
-        db.session.query(mohacdex.db.TypeMatchup).filter(
-            mohacdex.db.TypeMatchup.defending_type_identifier==type_name,
-            mohacdex.db.TypeMatchup.matchup == .5
-        ).all()
-    ]
-    efficiencies["Defending"]["0x"] = [
-        type.attacking_type.identifier for type in
-        db.session.query(mohacdex.db.TypeMatchup).filter(
-            mohacdex.db.TypeMatchup.defending_type_identifier==type_name,
-            mohacdex.db.TypeMatchup.matchup == 0
-        ).all()
-    ]
+    if both_sides:
+        efficiencies["Damage taken"] = {}
+        efficiencies["Damage taken"]["2x"] = [
+            type.attacking_type.identifier for type in
+            db.session.query(mohacdex.db.TypeMatchup).filter(
+                mohacdex.db.TypeMatchup.defending_type_identifier==type_name,
+                mohacdex.db.TypeMatchup.matchup == 2
+            ).all()
+        ]
+        efficiencies["Damage taken"]["½x"] = [
+            type.attacking_type.identifier for type in
+            db.session.query(mohacdex.db.TypeMatchup).filter(
+                mohacdex.db.TypeMatchup.defending_type_identifier==type_name,
+                mohacdex.db.TypeMatchup.matchup == .5
+            ).all()
+        ]
+        efficiencies["Damage taken"]["0x"] = [
+            type.attacking_type.identifier for type in
+            db.session.query(mohacdex.db.TypeMatchup).filter(
+                mohacdex.db.TypeMatchup.defending_type_identifier==type_name,
+                mohacdex.db.TypeMatchup.matchup == 0
+            ).all()
+        ]
 
     return efficiencies
 
@@ -103,7 +105,8 @@ def get_move(identifier):
     move = db.session.query(mohacdex.db.Move).filter(mohacdex.db.Move.identifier==identifier).one()
     flags = db.session.query(mohacdex.db.Flag).all()
     move_flags = [flag.flag.name for flag in db.session.query(mohacdex.db.MoveFlag).filter(mohacdex.db.MoveFlag.move==move.identifier).all()]
-    return render_template("move.html.j2", move=move, all_flags=flags, move_flags=move_flags)
+    efficiencies = get_type_efficiencies(move.type)
+    return render_template("move.html.j2", move=move, all_flags=flags, move_flags=move_flags, efficiencies=efficiencies)
 
 @app.route('/abilities/<identifier>')
 def get_ability(identifier):
@@ -113,7 +116,7 @@ def get_ability(identifier):
 @app.route('/types/<type_name>')
 def get_type(type_name):
     moves  = db.session.query(mohacdex.db.Move).filter(mohacdex.db.Move.type==type_name).all()
-    efficiencies = get_type_efficiencies(type_name)
+    efficiencies = get_type_efficiencies(type_name, both_sides=True)
     return render_template("type.html.j2", type_name=type_name.title(), moves=moves, efficiencies=efficiencies)
 
 if __name__ == "__main__":

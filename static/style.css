@@ -86,7 +86,6 @@ main {
 .move-tagline {
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
 }
 
 .move-tagline h1 {
@@ -108,28 +107,28 @@ img.type-icon {
     justify-content: space-around;
 }
 
-.side {
+.type-efficiencies h3 {
+    margin-top: 0;
+}
+
+.type-efficiencies > .side {
     flex: 1 1 0px;
     padding: 0 1rem;
 }
 
-.side table {
+.type-efficiencies table {
     width: 100%;
 }
 
-.side table td > ul {
+.type-efficiencies table td > ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     margin: .25rem 0;
 }
 
-.side table th, .side table td {
+.type-efficiencies table th, .type-efficiencies table td {
     padding: 0;
-}
-
-.side table img {
-    height: 1.5em;
 }
 
 hr {
@@ -156,7 +155,6 @@ a:visited {
 }
 
 .move-description {
-    width: 50%;
     padding: 0 2rem;
 }
 
@@ -286,16 +284,20 @@ footer {
     }
 
     .move-details {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .move-description {
-        width: 100%;
         padding: 0 0 1rem;
     }
 
     .move-stats {
         width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .side h3 {
+        margin-bottom: 0;
     }
 
     table.move-stats {

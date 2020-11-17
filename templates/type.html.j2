@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="/static/icons/icons.css">
 {% endblock %}
 {% block content %}
-    <span class="type-bar {{type_name|lower}}"></span>
+    <h1><span class="type-bar {{type_name|lower}}"></span> type</h1>
     {{ table_utils.type_chart(efficiencies) }}
     <h2>Moves</h2>
     {{ table_utils.move_table(moves) }}
