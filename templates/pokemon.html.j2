@@ -1,0 +1,116 @@
+{% extends "base.html.j2" %}
+{% import "macros/tables.py" as table_utils %}
+{% block title %}{{pokemon.name}}{%if pokemon.form and pokemon.form.name %} ({{ pokemon.form.name }} Form){% endif %} - serfetchdex{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="/static/icons/icons.css">
+<link rel="stylesheet" href="/static/icons/pokemon.css">
+{% endblock %}
+{% block content %}
+    <span class="pokemon-tagline">
+            <h1>#{{pokemon.number}}: {{pokemon.name}}</h1>
+            {% if pokemon.form and pokemon.form.name %}
+            <h2>{{ pokemon.form.name }} Form</h2>
+            {% endif %}
+    </span>
+    <section class="pokemon-essentials">
+        <span class="pokemon-portrait">
+            <img src="/static/pokemon/{{ pokemon.identifier }}.png" />
+            <span class="pokemon-types">
+                <a href="/types/{{pokemon.type1}}"><span class="type-bar {{pokemon.type1}}" alt="{{pokemon.type1|title}} type" title="{{pokemon.type1|title}} type"></span></a>
+                {% if pokemon.type2 %}
+                <a href="/types/{{pokemon.type2}}"><span class="type-bar {{pokemon.type2}}" alt="{{pokemon.type2|title}} type" title="{{pokemon.type2|title}} type"></span></a>
+                {% endif %}
+            </span>
+        </span>
+        <dl>
+            <dt>Species</dt>
+                <dd>{{ pokemon.species }} Pokémon</dd>
+            <dt>Abilities</dt>
+                <dd>
+                {% for slot in pokemon.abilities %}
+                {% for ability in pokemon.abilities[slot] %}
+                    <dl>
+                        <dt><a href="/abilities/{{ ability.identifier }}" {%if slot == "hidden_ability" %} title="Hidden ability" class="hidden-ability"{%endif%}>{{ ability.name }}</a></dt>
+                            <dd>{{ ability.flavor_text|parse_links }}</dd>
+                    </dl>
+                {% endfor %}
+                {% endfor %}
+                </dd>
+            <dt>Egg Groups</dt>
+                 <dd>
+                    <ul>
+                        {% for group in pokemon.egg_groups %}<li>{{ group }}</li>{% endfor %}
+                    </ul>
+                 </dd>
+        </dl>
+        <table class="pokemon-stats">
+            <thead>
+                <th><h3>Stats</h3></th>
+            </thead>
+            <tbody>
+            {% for stat in pokemon.stats %}
+                <tr>    
+                    <td><strong>{{ stat }}:</strong> {{ pokemon.stats[stat] }}</td>
+                    <td><span style="width: calc(100% * {{ pokemon.stats[stat] }} / 255)"></span></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    <section class="pokemon-details">
+        {{ table_utils.type_chart(efficiencies) }}
+        <table class="pokemon-misc">
+            <th colspan="3"><h3>Miscellaneous data</h3></th>
+            <tbody>
+                <tr>
+                    <th>Gender</th>
+                    <th>Height</th>
+                    <th>Weight</th>
+                </tr>
+                <tr>
+                    <td>gender</td>
+                    <td>{{ pokemon.height_m }} m{% if pokemon.identifier.endswith("-gigantamax") %}+{% endif %}
+                        <br />
+                        {{ pokemon.height_m|m_to_feet }}{% if pokemon.identifier.endswith("-gigantamax") %}+{% endif %}
+                    </td>
+                    <td>
+                        {% if pokemon.weight_kg %}
+                        {{ pokemon.weight_kg }} kg<br />{{ pokemon.weight_kg|kg_to_lbs }} lbs
+                        {% else %} ??? kg <br /> ??? lbs
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Growth rate</th>
+                    <th>EV yield</th>
+                    <th>Capture rate</th>
+                </tr>
+                <tr>
+                    <td>growth rate</td>
+                    <td>ev yield</td>
+                    <td>capture rate</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="pokemon-flavor">
+        <h2>Dex Entries</h2>
+        <p>Only Farfetch'd that have survived many battles can attain this evolution. When this Pokémon's leek withers, it will retire from combat.</p>
+        <hr />
+        <p>After deflecting attacks with its hard leaf shield, it strikes back with its sharp leek stalk. The leek stalk is both weapon and food.</p>
+    </section>
+    
+    {% if other_forms %}
+    <h2>Other Forms</h2>
+    <section class="other-forms">
+    {% for form in other_forms %}
+        <span class="pokemon-portrait">
+            <a href="/pokemon/{{ form.identifier }}">
+                <img src="/static/pokemon/{{ form.identifier }}.png" />
+                <h4>{% if form.form %}{{ form.form.name }}{% else %}Base{% endif %} Form</h4>
+            </a>
+        </span>
+    {% endfor %}
+    </section>
+    {% endif %}
+{% endblock %}

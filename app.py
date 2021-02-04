@@ -3,63 +3,53 @@ from mohacdex.db.base import Base
 
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
+from flask_caching import Cache
 
 import re
+
+cache_config = {
+    "DEBUG": True,
+    "CACHE_TYPE": "simple",
+    "CACHE_DEFAULT_TIMEOUT": 0
+}
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mohacdex.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+cache = Cache()
 db = SQLAlchemy(app, model_class=Base)
 
-def get_type_efficiencies(type_name, both_sides=False):
-    efficiencies = {"Damage dealt": {}}
+def get_type_efficiencies(types, sides=["Damage dealt", "Damage taken"]):
+    matchups = {side: {} for side in sides}
+    sides_map = {
+        "Damage dealt": mohacdex.db.TypeMatchup.attacking_type_identifier,
+        "Damage taken": mohacdex.db.TypeMatchup.defending_type_identifier
+    }
 
-    efficiencies["Damage dealt"]["2x"] = [
-        type.defending_type.identifier for type in
-        db.session.query(mohacdex.db.TypeMatchup).filter(
-            mohacdex.db.TypeMatchup.attacking_type_identifier==type_name,
-            mohacdex.db.TypeMatchup.matchup == 2
-        ).all()
-    ]
-    efficiencies["Damage dealt"]["½x"] = [
-        type.defending_type.identifier for type in
-        db.session.query(mohacdex.db.TypeMatchup).filter(
-            mohacdex.db.TypeMatchup.attacking_type_identifier==type_name,
-            mohacdex.db.TypeMatchup.matchup == .5
-        ).all()
-    ]
-    efficiencies["Damage dealt"]["0x"] = [
-        type.defending_type.identifier for type in
-        db.session.query(mohacdex.db.TypeMatchup).filter(
-            mohacdex.db.TypeMatchup.attacking_type_identifier==type_name,
-            mohacdex.db.TypeMatchup.matchup == 0
-        ).all()
-    ]
-    if both_sides:
-        efficiencies["Damage taken"] = {}
-        efficiencies["Damage taken"]["2x"] = [
-            type.attacking_type.identifier for type in
-            db.session.query(mohacdex.db.TypeMatchup).filter(
-                mohacdex.db.TypeMatchup.defending_type_identifier==type_name,
-                mohacdex.db.TypeMatchup.matchup == 2
-            ).all()
-        ]
-        efficiencies["Damage taken"]["½x"] = [
-            type.attacking_type.identifier for type in
-            db.session.query(mohacdex.db.TypeMatchup).filter(
-                mohacdex.db.TypeMatchup.defending_type_identifier==type_name,
-                mohacdex.db.TypeMatchup.matchup == .5
-            ).all()
-        ]
-        efficiencies["Damage taken"]["0x"] = [
-            type.attacking_type.identifier for type in
-            db.session.query(mohacdex.db.TypeMatchup).filter(
-                mohacdex.db.TypeMatchup.defending_type_identifier==type_name,
-                mohacdex.db.TypeMatchup.matchup == 0
-            ).all()
-        ]
+    for side in sides:
+        for type in types:
+            type_matchups = db.session.query(mohacdex.db.TypeMatchup).filter(sides_map[side]==type).all()
+            for matchup in type_matchups:
+                if side == "Damage dealt":
+                    matchup_type = matchup.defending_type_identifier
+                elif side == "Damage taken":
+                    matchup_type = matchup.attacking_type_identifier
+                if matchup_type not in matchups[side]:
+                    matchups[side][matchup_type] = matchup.matchup
+                else:
+                    matchups[side][matchup_type] *= matchup.matchup
 
-    return efficiencies
+    matchup_name_map = {4.0: "4x", 2.0: "2x", 0.5: "½x", 0.25: "¼x", 0.0: "0x"}
+    reversed_matchups = {side: {matchup_name_map[key]: [] for key in matchup_name_map.keys()} for side in sides}
+    for side in sides:
+        for key, value in matchups[side].items():
+            if value != 1.0:
+                reversed_matchups[side][matchup_name_map[value]].append(key)
+        if len(types) == 1 or None in types:
+            del reversed_matchups[side]["4x"]
+            del reversed_matchups[side]["¼x"]
+  
+    return reversed_matchups
 
 @app.before_request
 def clear_trailing():
@@ -86,9 +76,26 @@ def parse_links(string):
     
     return string
 
+@app.template_filter()
+def m_to_feet(m):
+    import decimal
+    feet = m // decimal.Decimal(".3048")
+    inches = m / decimal.Decimal(".3048") % 1 * 12
+    return "{}'{}\"".format(feet, round(inches))
+
+@app.template_filter()
+def kg_to_lbs(kg):
+    import decimal
+    return (kg * decimal.Decimal("2.20462")).quantize(kg)
+
 @app.route('/')
 def index():
     return render_template("index.html.j2")
+
+@app.route('/pokemon')
+def get_pokemon_index():
+    pokemon = db.session.query(mohacdex.db.Pokemon).all()
+    return render_template("pokemon-index.html.j2", pokemon=pokemon)
 
 @app.route('/moves')
 def get_move_index():
@@ -100,13 +107,21 @@ def get_ability_index():
     abilities = db.session.query(mohacdex.db.Ability).all()
     return render_template("abilities-index.html.j2", abilities=abilities)
 
+@app.route('/pokemon/<identifier>')
+def get_pokemon(identifier):
+    pokemon = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon.identifier==identifier).one()
+    matchups = get_type_efficiencies(pokemon.types, sides=["Damage taken"])
+    other_forms = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon.number==pokemon.number).all()
+    other_forms = [form for form in other_forms if form != pokemon]
+    return render_template("pokemon.html.j2", pokemon=pokemon, efficiencies=matchups, other_forms=other_forms)
+
 @app.route('/moves/<identifier>')
 def get_move(identifier):
     move = db.session.query(mohacdex.db.Move).filter(mohacdex.db.Move.identifier==identifier).one()
     flags = db.session.query(mohacdex.db.Flag).all()
     move_flags = [flag.flag.name for flag in db.session.query(mohacdex.db.MoveFlag).filter(mohacdex.db.MoveFlag.move==move.identifier).all()]
-    efficiencies = get_type_efficiencies(move.type)
-    return render_template("move.html.j2", move=move, all_flags=flags, move_flags=move_flags, efficiencies=efficiencies)
+    matchups = get_type_efficiencies([move.type], sides=["Damage dealt"])
+    return render_template("move.html.j2", move=move, all_flags=flags, move_flags=move_flags, efficiencies=matchups)
 
 @app.route('/abilities/<identifier>')
 def get_ability(identifier):
@@ -116,8 +131,11 @@ def get_ability(identifier):
 @app.route('/types/<type_name>')
 def get_type(type_name):
     moves  = db.session.query(mohacdex.db.Move).filter(mohacdex.db.Move.type==type_name).all()
-    efficiencies = get_type_efficiencies(type_name, both_sides=True)
-    return render_template("type.html.j2", type_name=type_name.title(), moves=moves, efficiencies=efficiencies)
+    matchups = get_type_efficiencies([type_name], sides=["Damage dealt", "Damage taken"])
+    return render_template("type.html.j2", type_name=type_name.title(), moves=moves, efficiencies=matchups)
 
 if __name__ == "__main__":
+    cache.init_app(app, config=cache_config)
+    with app.app_context():
+        cache.clear()
     app.run(debug=True)

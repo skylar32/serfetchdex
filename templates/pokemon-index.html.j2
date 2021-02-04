@@ -1,0 +1,12 @@
+{% extends "base.html.j2" %}
+{% import "macros/tables.py" as table_utils %}
+{% block title %}Pokémon - serfetchdex{% endblock %}
+{% block head %}
+<script type="text/javascript" src="/static/js/sort-movetable.js"></script>
+<link rel="stylesheet" href="/static/icons/icons.css">
+<link rel="stylesheet" href="/static/icons/pokemon.css">
+{% endblock %}
+{% block content %}
+    <h1>Pokémon</h1>
+    {{ table_utils.pokemon_table(pokemon) }}
+{% endblock %}

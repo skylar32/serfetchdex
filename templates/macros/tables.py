@@ -27,12 +27,58 @@
     </table>
 {% endmacro %}
 
+{% macro pokemon_table(pokemon) %}
+    <table class="pokemonlist tablelist">
+        <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th onclick="onColumnHeaderClicked(event)">Pokémon</th>
+                <th onclick="onColumnHeaderClicked(event)">Type</th>
+                <th onclick="onColumnHeaderClicked(event)">Abilities</th>
+                <th onclick="onColumnHeaderClicked(event)">Hidden Ability</th>
+                <th onclick="onColumnHeaderClicked(event)">HP</th>
+                <th onclick="onColumnHeaderClicked(event)">Atk</th>
+                <th onclick="onColumnHeaderClicked(event)">Def</th>
+                <th onclick="onColumnHeaderClicked(event)">Sp.Atk</th>
+                <th onclick="onColumnHeaderClicked(event)">Sp.Def</th>
+                <th onclick="onColumnHeaderClicked(event)">Spe</th>
+            </tr>
+        </thead>
+        {% for mon in pokemon %}{% if not mon.form or mon.form.display_separately==True %}
+            <tr>
+                <td><span class="party-sprite {{ mon.identifier }}"></span></td>
+                <td><a href="/pokemon/{{mon.identifier}}">{{ mon.name }}
+                    {% if mon.form and mon.form.name %}<br /><small>{{ mon.form.name }} Form</small>{% endif %}
+                </a></td>
+                <td>{% for type in mon.types %}{% if type %}
+                    <a href="/types/{{ type }}">
+                        <span class="type-bar-small {{ type }}" alt="{{ type|title }} type" title="{{ type|title }} type"></span>
+                    </a>{% endif %}{% endfor %}
+                </td>
+                <td>
+                    <ul>
+                        {% for slot in mon.abilities %}{% if slot != "hidden_ability" %}{% for ability in mon.abilities[slot] %}
+                        <li><a href="/abilitles/{{ability.identifier}}">{{ ability.name }}</a></li>
+                        {% endfor %}{% endif %}{% endfor %}
+                    </ul>
+                </td>
+                <td>{% if mon.abilities["hidden_ability"] %}
+                    <a href="/abilities/{{mon.abilities['hidden_ability'][0].identifier}}"><em>{{ mon.abilities["hidden_ability"][0].name }}</em></a>
+                {% endif %}</td>
+                {% for stat in mon.stats %}<td>{{ mon.stats[stat] }}</td>{% endfor %}
+            </tr>
+        {% endif %}{% endfor %}
+    </table>
+{% endmacro %}
+
 {% macro type_chart(efficiencies) %}
-<span class="type-efficiencies">
+<section class="type-efficiencies">
     {% for side in efficiencies %}
     <span class="side">
-        <h3>{{ side }}</h3>
             <table>
+                <thead>
+                    <th colspan="2"><h3>{{ side }}</h3></th>
+                </thead>
                 {% for efficiency in efficiencies[side] %}
                 <tr>
                     <th>{{ efficiency }}:</th>
@@ -50,5 +96,5 @@
             </table>
     </span>
     {% endfor %}
-</span>
+</section>
 {% endmacro %}
