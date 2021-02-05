@@ -108,12 +108,10 @@
     <section class="pokemon-moves">
         <h2>Learnset</h2>
         <hr />
-        <h3>Level-up</h3>
-        {{ table_utils.levelup_table(pokemon.levelup_moves) }}
-        {% for method in [pokemon.machine_moves, pokemon.tutor_moves, pokemon.egg_moves] %}{% if method %}
-        <h3>{% if method==pokemon.machine_moves%}Machine{% elif method==pokemon.tutor_moves %}Tutor{% else %}Egg moves{% endif %}</h3>
-        {{ table_utils.move_table(method) }}
-        {% endif %}{% endfor %}
+        <h3>Level-up</h3> {{ table_utils.levelup_table(pokemon.levelup_moves) }}
+        {% if pokemon.machine_moves %}<h3>Machine</h3> {{ table_utils.move_table(pokemon.machine_moves) }}{% endif %}
+        {% if pokemon.tutor_moves %}<h3>Tutor</h3> {{ table_utils.move_table(pokemon.tutor_moves) }}{% endif %}
+        {% if pokemon.egg_moves %}<h3>Egg Moves</h3> {{ table_utils.move_table(pokemon.egg_moves) }}{% endif %}
     </section>
     {% if other_forms %}
     <h2>Other Forms</h2>
