@@ -30,7 +30,10 @@
                 {% for slot in pokemon.abilities %}
                 {% for ability in pokemon.abilities[slot] %}
                     <dl>
-                        <dt><a href="/abilities/{{ ability.identifier }}" {%if slot == "hidden_ability" %} title="Hidden ability" class="hidden-ability"{%endif%}>{{ ability.name }}</a></dt>
+                        <dt><a href="/abilities/{{ ability.identifier }}"
+                        {%if slot == "hidden_ability" %} title="Hidden ability" class="hidden-ability"
+                        {%elif slot == "unique_ability" %} title="Unique ability" class="hidden-ability"{%endif%}>
+                        {{ ability.name }}{% if slot == "unique_ability" %}<sup>*</sup>{% endif %}</a></dt>
                             <dd>{{ ability.flavor_text|parse_links }}</dd>
                     </dl>
                 {% endfor %}
@@ -50,10 +53,13 @@
             <tbody>
             {% for stat in pokemon.stats %}
                 <tr>    
-                    <td><strong>{{ stat }}:</strong> {{ pokemon.stats[stat] }}</td>
-                    <td><span style="width: calc(100% * {{ pokemon.stats[stat] }} / 255)"></span></td>
+                    <td><strong>{{ stat }}:</strong> {{ pokemon.stats[stat].base_stat }}</td>
+                    <td><span style="width: calc(100% * {{ pokemon.stats[stat].base_stat }} / 255)"></span></td>
                 </tr>
             {% endfor %}
+                <tr>
+                    <td><strong>Total:</strong></td>
+                    <td>{{ pokemon.stats.values()|sum(attribute="base_stat") }}</td>
             </tbody>
         </table>
     </section>
@@ -99,7 +105,16 @@
         <hr />
         <p>After deflecting attacks with its hard leaf shield, it strikes back with its sharp leek stalk. The leek stalk is both weapon and food.</p>
     </section>
-    
+    <section class="pokemon-moves">
+        <h2>Learnset</h2>
+        <hr />
+        <h3>Level-up</h3>
+        {{ table_utils.levelup_table(pokemon.levelup_moves) }}
+        {% for method in [pokemon.machine_moves, pokemon.tutor_moves, pokemon.egg_moves] %}{% if method %}
+        <h3>{% if method==pokemon.machine_moves%}Machine{% elif method==pokemon.tutor_moves %}Tutor{% else %}Egg moves{% endif %}</h3>
+        {{ table_utils.move_table(method) }}
+        {% endif %}{% endfor %}
+    </section>
     {% if other_forms %}
     <h2>Other Forms</h2>
     <section class="other-forms">

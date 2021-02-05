@@ -2,8 +2,9 @@
 {% block title %}{{move.name}} - serfetchdex{% endblock %}
 {% import "macros/tables.py" as table_utils %}
 {% block head %}
-    <link rel="stylesheet" href="/static/pokemon-assets/css/symbols.css">
-    <link rel="stylesheet" href="/static/icons/icons.css">    
+<script type="text/javascript" src="/static/js/sort-movetable.js"></script>
+<link rel="stylesheet" href="/static/icons/icons.css">
+<link rel="stylesheet" href="/static/icons/pokemon.css">
 {% endblock %}
 {% block content %}
         <span class="move-tagline">
@@ -51,4 +52,11 @@
             {%if flag.name in move_flags and flag.description%}<ul><li>{{flag.description|parse_links}}</li></ul>{%endif%}
         </li>{%endfor%}
     </ul>
+
+    <h2>Pokémon</h2>
+    <hr />
+    {% if levelup %}<h3>By level-up</h3> {{ table_utils.pokemon_level_table(levelup) }}{% endif %}
+    {% if machine %}<h3>By machine</h3> {{ table_utils.pokemon_table(machine) }}{% endif %}
+    {% if tutor %}<h3>By tutor</h3> {{ table_utils.pokemon_table(tutor) }}{% endif %}
+    {% if egg %}<h3>As an Egg Move</h3> {{ table_utils.pokemon_table(egg) }}{% endif %}
 {% endblock %}

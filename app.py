@@ -6,6 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_caching import Cache
 
 import re
+import itertools
 
 cache_config = {
     "DEBUG": True,
@@ -94,7 +95,7 @@ def index():
 
 @app.route('/pokemon')
 def get_pokemon_index():
-    pokemon = db.session.query(mohacdex.db.Pokemon).all()
+    pokemon = db.session.query(mohacdex.db.Pokemon).order_by(mohacdex.db.Pokemon.order).all()
     return render_template("pokemon-index.html.j2", pokemon=pokemon)
 
 @app.route('/moves')
@@ -121,12 +122,25 @@ def get_move(identifier):
     flags = db.session.query(mohacdex.db.Flag).all()
     move_flags = [flag.flag.name for flag in db.session.query(mohacdex.db.MoveFlag).filter(mohacdex.db.MoveFlag.move==move.identifier).all()]
     matchups = get_type_efficiencies([move.type], sides=["Damage dealt"])
-    return render_template("move.html.j2", move=move, all_flags=flags, move_flags=move_flags, efficiencies=matchups)
+    levelup = [(move.pokemon, move.level) for move in db.session.query(
+        mohacdex.db.LevelUpMove).filter(mohacdex.db.LevelUpMove.move==move).order_by(mohacdex.db.LevelUpMove.level).all()
+        ]
+    levelup = [next(level) for move, level in itertools.groupby(levelup, lambda y: y[0])]
+    machine = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon.machine_moves.any(mohacdex.db.Move.identifier==identifier)).all()
+    tutor = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon.tutor_moves.any(mohacdex.db.Move.identifier==identifier)).all()
+    egg = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon.egg_moves.any(mohacdex.db.Move.identifier==identifier)).all()
+    return render_template("move.html.j2", move=move, all_flags=flags, move_flags=move_flags, efficiencies=matchups, levelup=levelup, machine=machine, tutor=tutor, egg=egg)
 
 @app.route('/abilities/<identifier>')
 def get_ability(identifier):
     ability = db.session.query(mohacdex.db.Ability).filter(mohacdex.db.Ability.identifier==identifier).one()
-    return render_template("ability.html.j2", ability=ability)
+    ordinary = [a.pokemon for a in db.session.query(mohacdex.db.PokemonAbility).filter(mohacdex.db.PokemonAbility.ability==ability, mohacdex.db.PokemonAbility.slot.in_(("ability_1", "ability_2"))).all()]
+    hidden = [a.pokemon for a in db.session.query(mohacdex.db.PokemonAbility).filter(mohacdex.db.PokemonAbility.ability==ability, mohacdex.db.PokemonAbility.slot=="hidden_ability").all()]
+    unique = [a.pokemon for a in db.session.query(mohacdex.db.PokemonAbility).filter(mohacdex.db.PokemonAbility.ability==ability, mohacdex.db.PokemonAbility.slot=="unique_ability").all()]
+    pokemon = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon._ability_table.any(mohacdex.db.PokemonAbility.ability_identifier==identifier)).all()
+    for item in [ordinary, hidden, unique]:
+        print([mon.identifier for mon in item])
+    return render_template("ability.html.j2", ability=ability, ordinary=ordinary, hidden=hidden, unique=unique)
 
 @app.route('/types/<type_name>')
 def get_type(type_name):

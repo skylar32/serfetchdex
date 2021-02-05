@@ -42,7 +42,8 @@ header h1 {
 }
 
 header > a:hover, nav > ul a:hover {
-    color: white;
+    color: white !important;
+    transition: ease-in .02s;
 }
 
 header a:link, header a:visited {
@@ -357,14 +358,23 @@ table.tablelist > thead > tr {
         color: #61adf3;
     }
 
-    table.movelist th:nth-of-type(4) > span:last-of-type {
+    table.movelist:not(.leveluplist) th:nth-of-type(4) > span:last-of-type,
+    table.movelist.leveluplist th:nth-of-type(5) > span:last-of-type {
         display: none;
     }
+}
+
+table.pokemonlist {
+    width: 100%;
 }
 
 table.pokemonlist ul {
     list-style: none;
     padding-left: 0;
+}
+
+table.pokemonlist tbody td:nth-of-type(2) {
+    max-width: 9rem;
 }
 
 tr {
@@ -403,7 +413,8 @@ table.movelist img {
     height: 1.25em;
 }
 
-table.movelist td:first-of-type, table.movelist th:first-of-type {
+table.movelist:not(.leveluplist) td:first-of-type, table.movelist:not(.leveluplist) th:first-of-type,
+table.movelist.leveluplist td:nth-of-type(2), table.movelist.leveluplist th:nth-of-type(2) {
     width: 8em;
 }
 
@@ -456,16 +467,21 @@ footer {
     }
 
     /* Tables */
+    table.movelist {
+        font-size: .85rem;
+    }
 
     table.movelist td:last-of-type, table.movelist th:last-of-type {
         display: none;
     }
 
-    table.movelist th:nth-of-type(4) > span:first-of-type {
+    table.movelist:not(.leveluplist) th:nth-of-type(4) > span:first-of-type,
+    table.movelist.leveluplist th:nth-of-type(5) > span:first-of-type {
         display: none;
     }
 
-    table.movelist th:nth-of-type(4) > span:last-of-type {
+    table.movelist:not(.leveluplist) th:nth-of-type(4) > span:last-of-type,
+    table.movelist.leveluplist th:nth-of-type(5) > span:last-of-type {
         display: initial;
     }
 
