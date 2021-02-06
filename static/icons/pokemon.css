@@ -3,6 +3,7 @@
             background-image: url('pokemon.png');
             background-repeat: no-repeat;
             display: inline-block;
+            image-rendering: crisp-edges;
         }
 
         @media screen and (-webkit-min-device-pixel-ratio: 1.0), screen and (min--moz-device-pixel-ratio: 1.0), screen and (-o-min-device-pixel-ratio: 100/100), screen and (min-device-pixel-ratio: 1.0), screen and (min-resolution: 1.0dppx) {

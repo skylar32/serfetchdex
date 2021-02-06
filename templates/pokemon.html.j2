@@ -2,6 +2,7 @@
 {% import "macros/tables.py" as table_utils %}
 {% block title %}{{pokemon.name}}{%if pokemon.form and pokemon.form.name %} ({{ pokemon.form.name }} Form){% endif %} - serfetchdex{% endblock %}
 {% block head %}
+<script type="text/javascript" src="/static/js/sort-movetable.js"></script>
 <link rel="stylesheet" href="/static/icons/icons.css">
 <link rel="stylesheet" href="/static/icons/pokemon.css">
 {% endblock %}
@@ -22,46 +23,48 @@
                 {% endif %}
             </span>
         </span>
-        <dl>
-            <dt>Species</dt>
-                <dd>{{ pokemon.species }} Pokémon</dd>
-            <dt>Abilities</dt>
-                <dd>
-                {% for slot in pokemon.abilities %}
-                {% for ability in pokemon.abilities[slot] %}
-                    <dl>
-                        <dt><a href="/abilities/{{ ability.identifier }}"
-                        {%if slot == "hidden_ability" %} title="Hidden ability" class="hidden-ability"
-                        {%elif slot == "unique_ability" %} title="Unique ability" class="hidden-ability"{%endif%}>
-                        {{ ability.name }}{% if slot == "unique_ability" %}<sup>*</sup>{% endif %}</a></dt>
-                            <dd>{{ ability.flavor_text|parse_links }}</dd>
-                    </dl>
+        <span class="pokemon-essential-details">
+            <dl>
+                <dt>Species</dt>
+                    <dd>{{ pokemon.species }} Pokémon</dd>
+                <dt>Abilities</dt>
+                    <dd>
+                    {% for slot in pokemon.abilities %}
+                    {% for ability in pokemon.abilities[slot] %}
+                        <dl>
+                            <dt><a href="/abilities/{{ ability.identifier }}"
+                            {%if slot == "hidden_ability" %} title="Hidden ability" class="hidden-ability"
+                            {%elif slot == "unique_ability" %} title="Unique ability" class="hidden-ability"{%endif%}>
+                            {{ ability.name }}{% if slot == "unique_ability" %}<sup>*</sup>{% endif %}</a></dt>
+                                <dd>{{ ability.flavor_text|parse_links }}</dd>
+                        </dl>
+                    {% endfor %}
+                    {% endfor %}
+                    </dd>
+                <dt>Egg Groups</dt>
+                    <dd>
+                        <ul>
+                            {% for group in pokemon.egg_groups %}<li>{{ group }}</li>{% endfor %}
+                        </ul>
+                    </dd>
+            </dl>
+            <table class="pokemon-stats">
+                <thead>
+                    <th><h3>Stats</h3></th>
+                </thead>
+                <tbody>
+                {% for stat in pokemon.stats %}
+                    <tr>    
+                        <td><strong>{{ stat }}:</strong> {{ pokemon.stats[stat].base_stat }}</td>
+                        <td><span style="width: calc(100% * {{ pokemon.stats[stat].base_stat }} / 255)"></span></td>
+                    </tr>
                 {% endfor %}
-                {% endfor %}
-                </dd>
-            <dt>Egg Groups</dt>
-                 <dd>
-                    <ul>
-                        {% for group in pokemon.egg_groups %}<li>{{ group }}</li>{% endfor %}
-                    </ul>
-                 </dd>
-        </dl>
-        <table class="pokemon-stats">
-            <thead>
-                <th><h3>Stats</h3></th>
-            </thead>
-            <tbody>
-            {% for stat in pokemon.stats %}
-                <tr>    
-                    <td><strong>{{ stat }}:</strong> {{ pokemon.stats[stat].base_stat }}</td>
-                    <td><span style="width: calc(100% * {{ pokemon.stats[stat].base_stat }} / 255)"></span></td>
-                </tr>
-            {% endfor %}
-                <tr>
-                    <td><strong>Total:</strong></td>
-                    <td>{{ pokemon.stats.values()|sum(attribute="base_stat") }}</td>
-            </tbody>
-        </table>
+                    <tr>
+                        <td><strong>Total:</strong></td>
+                        <td>{{ pokemon.stats.values()|sum(attribute="base_stat") }}</td>
+                </tbody>
+            </table>
+        </span>
     </section>
     <section class="pokemon-details">
         {{ table_utils.type_chart(efficiencies) }}

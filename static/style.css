@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-* {
-    box-sizing: border-box
-  }
   
+* {
+    box-sizing: border-box;
+}
+
 /* PAGE LAYOUT */
 
 body {
@@ -211,22 +211,22 @@ ul.flags > li > ul {
     margin: 2px;
 }
 
-.pokemon-essentials > dl {
+.pokemon-essential-details > dl {
     margin: 0 2rem;
     width: 100%;
 }
 
-.pokemon-essentials dl > dt {
+.pokemon-essential-details dl > dt {
     font-weight: bold;
 }
 
-.pokemon-essentials dl > dt:not(:first-of-type) {
+.pokemon-essential-details dl > dt:not(:first-of-type) {
     border-top: 1px solid #cccbc3;
     margin-top: 1rem;
     padding-top: 1rem;
 }
 
-.pokemon-essentials dl > dd:nth-of-type(2) {
+.pokemon-essential-details dl > dd:nth-of-type(2) {
     padding-bottom: .4rem;
 }
 
@@ -265,8 +265,36 @@ table.pokemon-stats tr > td > span {
     justify-content: space-evenly;
 }
 
+.pokemon-essential-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.pokemon-essential-details > table {
+    width: 40%;
+}
+
+.pokemon-essential-details > dl, .pokemon-essential-details > table {
+    padding: 0 1.5rem;
+}
+
 .pokemon-details > * {
     width: 48%;
+}
+
+@media only screen and (max-width: 1279px) {
+    .pokemon-portrait {
+        align-self: center;
+        margin-bottom: 1rem;
+    }
+
+    .pokemon-essentials {
+        flex-direction: column;
+    }
+
+    .pokemon-essential-details > dl {
+        margin-left: 0
+    }
 }
 
 table.pokemon-misc {
@@ -364,18 +392,90 @@ table.tablelist > thead > tr {
     }
 }
 
-table.pokemonlist {
+/* Pokémon table */
+.poketable-wrapper {
+    display: block;
     width: 100%;
+    overflow-x: auto;
 }
 
 table.pokemonlist ul {
     list-style: none;
     padding-left: 0;
+    margin: 0;
 }
 
-table.pokemonlist tbody td:nth-of-type(2) {
-    max-width: 9rem;
+.party-sprite-cell {
+    width: 70px;
 }
+
+.pokemon-name-cell {
+    width: 10.75rem;
+}
+
+.pokemon-type-cell {
+    width: 224px;
+}
+
+@media only screen and (max-width: 800px) {
+    .pokemon-type-cell {
+        width: min-content;
+    }
+}
+
+.abilities-cell, .hidden-ability-cell {
+    width: 9rem;
+}
+
+
+.pokemon-stat-cell {
+    width: 2rem;
+}
+
+td.pokemon-stat-cell {
+    text-align: right;
+}
+
+.level-cell {
+    width: 2rem;
+}
+
+@media only screen and (max-width: 1919) {
+
+    .pokemon-name-cell {
+        width: 8em;
+        margin-right: 1rem;
+    }
+
+    .pokemon-type-cell {
+        width: 140px;
+    }
+
+    .abilities-cell,
+    .hidden-ability-cell {
+        width: min-content;
+    }
+
+    .abilities-cell li:after {
+        content: ","
+    }
+
+    .abilities-cell li:last-child:after {
+        content: ""
+    }
+
+    table.pokemonlist th {
+        font-size: .85rem;
+    }
+
+    table.pokemonlist td {
+        font-size: .7rem;
+    }
+
+    
+}
+
+/* Table */
 
 tr {
     border-top: 1px solid #cccbc3;
@@ -404,13 +504,17 @@ td, th {
 
 /* Move table */
 
-table.movelist {
-    min-width: 60%;
+table.movelist, table.pokemonlist {
+    width: 99%;
     table-layout: fixed;
 }
 
 table.movelist img {
     height: 1.25em;
+}
+
+table.movelist td {
+    width: max-content;
 }
 
 table.movelist:not(.leveluplist) td:first-of-type, table.movelist:not(.leveluplist) th:first-of-type,
@@ -466,6 +570,10 @@ footer {
         flex-direction: column;
     }
 
+    .pokemon-details > * {
+        width: 100% !important;
+    }
+
     /* Tables */
     table.movelist {
         font-size: .85rem;
@@ -488,6 +596,10 @@ footer {
     table.move-stats {
         text-align: center;
         width: 100%;
+    }
+
+    .pokemon-type-cell {
+        width: 64px;
     }
 
     /* Type matchup table */
@@ -568,6 +680,18 @@ footer {
         width: 100%;
     }
 
+    .pokemon-essential-details {
+        flex-direction: column;
+    }
+
+    .pokemon-essential-details > table {
+        width: 100%;
+    }
+
+    .pokemon-essential-details > table, .pokemon-essential-details > dl {
+        padding: 0;
+    }
+
     .pokemon-portrait {
         width: 100%;
         align-items: center;
@@ -578,7 +702,7 @@ footer {
         width: 100%;
     }
 
-    .pokemon-essentials dl {
+    .pokemon-essential-details dl {
         margin: initial;
     }
 

@@ -15,7 +15,7 @@
         {% for move in moves %}
             <tr>
                 <td><a href="/moves/{{move.identifier}}">{{move.name}}</a></td>
-                <td><a href="/types/{{move.type}}"><span class="type-badge {{move.type}}" alt="{{move.type|title}}-type move" title="{{move.type|title}}-type move"></span></a></td>
+                <td><a href="/types/{{move.type}}"><span class="type-dynamic {{move.type}}" alt="{{move.type|title}}-type move" title="{{move.type|title}}-type move"></span></a></td>
                 <td><span class="damage-icon {{move.damage_class}}" alt="{{move.damage_class|title}} move" title="{{move.damage_class|title}} move"></span></td>
                 <td>{%if move.power%}{{move.power}}{%else%}—{%endif%}</td>
                 <td>{%if move.accuracy%}{{move.accuracy}}%{%else%}—{%endif%}</td>
@@ -46,7 +46,7 @@
             <tr>
                 <td>{{ level }}</td>
                 <td><a href="/moves/{{move.identifier}}">{{move.name}}</a></td>
-                <td><a href="/types/{{move.type}}"><span class="type-badge {{move.type}}" alt="{{move.type|title}}-type move" title="{{move.type|title}}-type move"></span></a></td>
+                <td><a href="/types/{{move.type}}"><span class="type-dynamic {{move.type}}" alt="{{move.type|title}}-type move" title="{{move.type|title}}-type move"></span></a></td>
                 <td><span class="damage-icon {{move.damage_class}}" alt="{{move.damage_class|title}} move" title="{{move.damage_class|title}} move"></span></td>
                 <td>{%if move.power%}{{move.power}}{%else%}—{%endif%}</td>
                 <td>{%if move.accuracy%}{{move.accuracy}}%{%else%}—{%endif%}</td>
@@ -59,93 +59,97 @@
 {% endmacro %}
 
 {% macro pokemon_level_table(pokemon) %}
+<span class="poketable-wrapper">
     <table class="pokemonlist tablelist">
         <thead>
             <tr>
-                <th onclick="onColumnHeaderClicked(event)">Lvl.</th>
-                <th>&nbsp;</th>
-                <th onclick="onColumnHeaderClicked(event)">Pokémon</th>
-                <th onclick="onColumnHeaderClicked(event)">Type</th>
-                <th onclick="onColumnHeaderClicked(event)">Abilities</th>
-                <th onclick="onColumnHeaderClicked(event)">Hidden Ability</th>
-                <th onclick="onColumnHeaderClicked(event)">HP</th>
-                <th onclick="onColumnHeaderClicked(event)">Atk</th>
-                <th onclick="onColumnHeaderClicked(event)">Def</th>
-                <th onclick="onColumnHeaderClicked(event)">Sp.Atk</th>
-                <th onclick="onColumnHeaderClicked(event)">Sp.Def</th>
-                <th onclick="onColumnHeaderClicked(event)">Spe</th>
+                <th class="level-cell" onclick="onColumnHeaderClicked(event)">Lvl.</th>
+                <th class="party-sprite-cell">&nbsp;</th>
+                <th class="pokemon-name-cell" onclick="onColumnHeaderClicked(event)">Pokémon</th>
+                <th class="pokemon-type-cell" onclick="onColumnHeaderClicked(event)">Type</th>
+                <th class="abilities-cell" onclick="onColumnHeaderClicked(event)">Abilities</th>
+                <th class="hidden-ability-cell" onclick="onColumnHeaderClicked(event)">Hidden Ability</th>
+                <th class="pokemon-stat-cell" onclick="onColumnHeaderClicked(event)">HP</th>
+                <th class="pokemon-stat-cell" onclick="onColumnHeaderClicked(event)">Atk</th>
+                <th class="pokemon-stat-cell" onclick="onColumnHeaderClicked(event)">Def</th>
+                <th class="pokemon-stat-cell" onclick="onColumnHeaderClicked(event)">SpA</th>
+                <th class="pokemon-stat-cell" onclick="onColumnHeaderClicked(event)">SpD</th>
+                <th class="pokemon-stat-cell" onclick="onColumnHeaderClicked(event)">Spe</th>
             </tr>
         </thead>
         {% for mon in pokemon %}{% if not mon[0].form or mon[0].form.display_separately==True %}
             <tr>
-                <td>{{ mon[1] }}
-                <td><span class="party-sprite {{ mon[0].identifier }}"></span></td>
-                <td><a href="/pokemon/{{mon[0].identifier}}">{{ mon[0].name }}
+                <td class="level-cell">{{ mon[1] }}
+                <td class="party-sprite-cell"><span class="party-sprite {{ mon[0].identifier }}"></span></td>
+                <td class="pokemon-name-cell"><a href="/pokemon/{{mon[0].identifier}}">{{ mon[0].name }}
                     {% if mon[0].form and mon[0].form.name %}<br /><small>{{ mon[0].form.name }} Form</small>{% endif %}
                 </a></td>
-                <td>{% for type in mon[0].types %}{% if type %}
+                <td class="pokemon-type-cell">{% for type in mon[0].types %}{% if type %}
                     <a href="/types/{{ type }}">
-                        <span class="type-bar-small {{ type }}" alt="{{ type|title }} type" title="{{ type|title }} type"></span>
-                    </a><br />{% endif %}{% endfor %}
+                        <span class="type-dynamic {{ type }}" alt="{{ type|title }} type" title="{{ type|title }} type"></span>
+                    </a>{% endif %}{% endfor %}
                 </td>
-                <td>
+                <td class="abilities-cell">
                     <ul>
                         {% for slot in mon[0].abilities %}{% if slot != "hidden_ability" %}{% for ability in mon[0].abilities[slot] %}
                         <li><a href="/abilitles/{{ability.identifier}}">{{ ability.name }}</a></li>
                         {% endfor %}{% endif %}{% endfor %}
                     </ul>
                 </td>
-                <td>{% if mon[0].abilities["hidden_ability"] %}
+                <td class="hidden-ability-cell">{% if mon[0].abilities["hidden_ability"] %}
                     <a href="/abilities/{{mon[0].abilities['hidden_ability'][0].identifier}}"><em>{{ mon[0].abilities["hidden_ability"][0].name }}</em></a>
                 {% endif %}</td>
-                {% for stat in mon[0].stats %}<td>{{ mon[0].stats[stat].base_stat }}</td>{% endfor %}
+                {% for stat in mon[0].stats %}<td class="pokemon-stat-cell">{{ mon[0].stats[stat].base_stat }}</td>{% endfor %}
             </tr>
         {% endif %}{% endfor %}
     </table>
+</span>
 {% endmacro %}
 
 {% macro pokemon_table(pokemon) %}
+<span class="poketable-wrapper">
     <table class="pokemonlist tablelist">
         <thead>
             <tr>
-                <th>&nbsp;</th>
-                <th onclick="onColumnHeaderClicked(event)">Pokémon</th>
-                <th onclick="onColumnHeaderClicked(event)">Type</th>
-                <th onclick="onColumnHeaderClicked(event)">Abilities</th>
-                <th onclick="onColumnHeaderClicked(event)">Hidden Ability</th>
-                <th onclick="onColumnHeaderClicked(event)">HP</th>
-                <th onclick="onColumnHeaderClicked(event)">Atk</th>
-                <th onclick="onColumnHeaderClicked(event)">Def</th>
-                <th onclick="onColumnHeaderClicked(event)">Sp.Atk</th>
-                <th onclick="onColumnHeaderClicked(event)">Sp.Def</th>
-                <th onclick="onColumnHeaderClicked(event)">Spe</th>
+                <th class="party-sprite-cell">&nbsp;</th>
+                <th class="pokemon-name-cell" onclick="onColumnHeaderClicked(event)">Pokémon</th>
+                <th class="pokemon-type-cell" onclick="onColumnHeaderClicked(event)">Type</th>
+                <th class="abilities-cell" onclick="onColumnHeaderClicked(event)">Abilities</th>
+                <th class="hidden-ability-cell" onclick="onColumnHeaderClicked(event)">Hidden Ability</th>
+                <th class="pokemon-stat-cell" onclick="onColumnHeaderClicked(event)">HP</th>
+                <th class="pokemon-stat-cell" onclick="onColumnHeaderClicked(event)">Atk</th>
+                <th class="pokemon-stat-cell" onclick="onColumnHeaderClicked(event)">Def</th>
+                <th class="pokemon-stat-cell" onclick="onColumnHeaderClicked(event)">SpA</th>
+                <th class="pokemon-stat-cell" onclick="onColumnHeaderClicked(event)">SpD</th>
+                <th class="pokemon-stat-cell" onclick="onColumnHeaderClicked(event)">Spe</th>
             </tr>
         </thead>
         {% for mon in pokemon %}{% if not mon.form or mon.form.display_separately==True %}
             <tr>
-                <td><span class="party-sprite {{ mon.identifier }}"></span></td>
-                <td><a href="/pokemon/{{mon.identifier}}">{{ mon.name }}
+                <td class="party-sprite-cell"><span class="party-sprite {{ mon.identifier }}"></span></td>
+                <td class="pokemon-name-cell"><a href="/pokemon/{{mon.identifier}}">{{ mon.name }}
                     {% if mon.form and mon.form.name %}<br /><small>{{ mon.form.name }} Form</small>{% endif %}
                 </a></td>
-                <td>{% for type in mon.types %}{% if type %}
+                <td class="pokemon-type-cell">{% for type in mon.types %}{% if type %}
                     <a href="/types/{{ type }}">
-                        <span class="type-bar-small {{ type }}" alt="{{ type|title }} type" title="{{ type|title }} type"></span>
-                    </a><br />{% endif %}{% endfor %}
+                        <span class="type-dynamic {{ type }}" alt="{{ type|title }} type" title="{{ type|title }} type"></span>
+                    </a>{% endif %}{% endfor %}
                 </td>
-                <td>
+                <td class="abilities-cell">
                     <ul>
                         {% for slot in mon.abilities %}{% if slot != "hidden_ability" %}{% for ability in mon.abilities[slot] %}
                         <li><a href="/abilitles/{{ability.identifier}}">{{ ability.name }}</a></li>
                         {% endfor %}{% endif %}{% endfor %}
                     </ul>
                 </td>
-                <td>{% if mon.abilities["hidden_ability"] %}
+                <td class="hidden-ability-cell">{% if mon.abilities["hidden_ability"] %}
                     <a href="/abilities/{{mon.abilities['hidden_ability'][0].identifier}}"><em>{{ mon.abilities["hidden_ability"][0].name }}</em></a>
                 {% endif %}</td>
-                {% for stat in mon.stats %}<td>{{ mon.stats[stat].base_stat }}</td>{% endfor %}
+                {% for stat in mon.stats %}<td class="pokemon-stat-cell">{{ mon.stats[stat].base_stat }}</td>{% endfor %}
             </tr>
         {% endif %}{% endfor %}
     </table>
+</span>
 {% endmacro %}
 
 {% macro type_chart(efficiencies) %}

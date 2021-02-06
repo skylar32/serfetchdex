@@ -1,4 +1,4 @@
-.type-bar, .type-bar-small, .type-badge, .damage-class, .damage-icon {
+.type-bar, .type-bar-small, .type-badge, .damage-class, .damage-icon, .type-dynamic {
     background-image: url("/static/icons/icons.png");
     background-repeat: no-repeat;
     display: inline-block;
@@ -28,7 +28,7 @@
     height: 32px;
 }
 
-.type-bar-small {
+.type-bar-small, .type-dynamic {
     width: 109px;
     height: 24px;
     border-radius: 7px;
@@ -106,75 +106,75 @@
     background-position: 0 -748px;
 }
 
-.type-bar-small.bug {
+.type-bar-small.bug, .type-dynamic.bug {
     background-position: 0 -977px;
 }
 
-.type-bar-small.dark {
+.type-bar-small.dark, .type-dynamic.dark {
     background-position: -109px -977px;
 }
 
-.type-bar-small.dragon {
+.type-bar-small.dragon, .type-dynamic.dragon {
     background-position: 0 -1001px;
 }
 
-.type-bar-small.electric {
+.type-bar-small.electric, .type-dynamic.electric {
     background-position: -109px -1001px;
 }
 
-.type-bar-small.fairy {
+.type-bar-small.fairy, .type-dynamic.fairy {
     background-position: 0 -1025px;
 }
 
-.type-bar-small.fighting {
+.type-bar-small.fighting, .type-dynamic.fighting {
     background-position: -109px -1025px;
 }
 
-.type-bar-small.fire {
+.type-bar-small.fire, .type-dynamic.fire {
     background-position: 0 -1049px;
 }
 
-.type-bar-small.flying {
+.type-bar-small.flying, .type-dynamic.flying {
     background-position: -109px -1049px;
 }
 
-.type-bar-small.ghost {
+.type-bar-small.ghost, .type-dynamic.ghost {
     background-position: 0 -1073px;
 }
 
-.type-bar-small.grass {
+.type-bar-small.grass, .type-dynamic.grass {
     background-position: -109px -1073px;
 }
 
-.type-bar-small.ground {
+.type-bar-small.ground, .type-dynamic.ground {
     background-position: 0 -1097px;
 }
 
-.type-bar-small.ice {
+.type-bar-small.ice, .type-dynamic.ice {
     background-position: -109px -1097px;
 }
 
-.type-bar-small.normal {
+.type-bar-small.normal, .type-dynamic.normal {
     background-position: 0 -1121px;
 }
 
-.type-bar-small.poison {
+.type-bar-small.poison, .type-dynamic.poison {
     background-position: -109px -1121px;
 }
 
-.type-bar-small.psychic {
+.type-bar-small.psychic, .type-dynamic.psychic {
     background-position: 0 -1145px;
 }
 
-.type-bar-small.rock {
+.type-bar-small.rock, .type-dynamic.rock{
     background-position: -109px -1145px;
 }
 
-.type-bar-small.steel {
+.type-bar-small.steel, .type-dynamic.steel {
     background-position: 0 -1169px;
 }
 
-.type-bar-small.water {
+.type-bar-small.water, .type-dynamic.water {
     background-position: -109px -1169px;
 }
 
@@ -272,4 +272,83 @@
 
 .damage-icon.physical {
     background-position: -84px -888px;
+}
+
+@media only screen and (max-width: 800px) {
+    .type-dynamic {
+        width: 32px;
+        height: 32px;
+    }
+
+    .type-dynamic.bug {
+        background-position: 0 -792px;
+    }
+    
+    .type-dynamic.dark {
+        background-position: -32px -792px;
+    }
+    
+    .type-dynamic.dragon {
+        background-position:-64px -792px;
+    }
+    
+    .type-dynamic.electric {
+        background-position: -96px -792px;
+    }
+    
+    .type-dynamic.fairy {
+        background-position: -128px -792px;
+    }
+    
+    .type-dynamic.fighting {
+        background-position: -160px -792px;
+    }
+    
+    .type-dynamic.fire {
+        background-position: 0 -824px;
+    }
+    
+    .type-dynamic.flying {
+        background-position: -32px -824px;
+    }
+    
+    .type-dynamic.ghost {
+        background-position: -64px -824px;
+    }
+    
+    .type-dynamic.grass {
+        background-position: -96px -824px;
+    }
+    
+    .type-dynamic.ground {
+        background-position: -128px -824px;
+    }
+    
+    .type-dynamic.ice {
+        background-position: -160px -824px;
+    }
+    
+    .type-dynamic.normal {
+        background-position: 0 -856px;
+    }
+    
+    .type-dynamic.poison {
+        background-position: -32px -856px;
+    }
+    
+    .type-dynamic.psychic {
+        background-position: -64px -856px;
+    }
+    
+    .type-dynamic.rock {
+        background-position: -96px -856px;
+    }
+    
+    .type-dynamic.steel {
+        background-position: -128px -856px;
+    }
+    
+    .type-dynamic.water {
+        background-position: -160px -856px;
+    }
 }
