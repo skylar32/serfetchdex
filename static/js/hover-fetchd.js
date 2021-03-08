@@ -5,8 +5,13 @@ static.src = "/static/icons/farfetchd-static.png";
 var animated = new Image();
 animated.src = "/static/icons/farfetchd-animated.png";
 
+const screenWidth = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
 function hover() {
-  document.querySelector("header img").setAttribute('src', animated.src);
+  if (screenWidth > 760)
+    document.querySelector("header img").setAttribute('src', animated.src);
 }
 
 function unhover() {

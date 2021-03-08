@@ -268,6 +268,7 @@ table.pokemon-stats tr > td > span {
 .pokemon-essential-details {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .pokemon-essential-details > table {
@@ -280,6 +281,23 @@ table.pokemon-stats tr > td > span {
 
 .pokemon-details > * {
     width: 48%;
+}
+
+.gender-bar {
+    display: flex;
+    height: 1.5em;
+    min-width: 200px;
+    background: lightgrey;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.male {
+    background: lightblue;
+}
+
+.female {
+    background: pink;
 }
 
 @media only screen and (max-width: 1279px) {

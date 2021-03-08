@@ -77,7 +77,17 @@
                     <th>Weight</th>
                 </tr>
                 <tr>
-                    <td>gender</td>
+                    <td style="width: 0">
+                        <span class="gender-bar">
+                            {% if pokemon.gender > 0 %}
+                                <span class="male" style="width: {{ (8 - pokemon.gender) * 12.5 }}%"></span>
+                                <span class="female" style="width: {{ pokemon.gender * 12.5 }}%"></span>
+                            {% endif %}
+                        </span>
+                        <p style="margin: 0">{% if pokemon.gender < 0 %}Genderless
+                           {% else %}{{ (8 - pokemon.gender) * 12.5 }}% male, {{ pokemon.gender * 12.5 }}% female{% endif %}
+                        </p>
+                    </td>
                     <td>{{ pokemon.height_m }} m{% if pokemon.identifier.endswith("-gigantamax") %}+{% endif %}
                         <br />
                         {{ pokemon.height_m|m_to_feet }}{% if pokemon.identifier.endswith("-gigantamax") %}+{% endif %}
@@ -95,27 +105,34 @@
                     <th>Capture rate</th>
                 </tr>
                 <tr>
-                    <td>growth rate</td>
-                    <td>ev yield</td>
-                    <td>capture rate</td>
+                    <td>{{ pokemon.growth_rate|capitalize }}</td>
+                    <td>
+                            {% for item in pokemon.effort_yield %}
+                            {{ pokemon.effort_yield[item].value }} {{ item }}{{ "<br />" if not loop.last else "" }}
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>{{ pokemon.capture_rate }}</td>
                 </tr>
             </tbody>
         </table>
     </section>
     <section class="pokemon-flavor">
         <h2>Dex Entries</h2>
-        <p>Only Farfetch'd that have survived many battles can attain this evolution. When this Pokémon's leek withers, it will retire from combat.</p>
+        <p>{{ pokemon.flavor[0] }}</p>
         <hr />
-        <p>After deflecting attacks with its hard leaf shield, it strikes back with its sharp leek stalk. The leek stalk is both weapon and food.</p>
+        <p>{{ pokemon.flavor[1] }}</p>
     </section>
+    {% if pokemon.levelup_moves %}
     <section class="pokemon-moves">
         <h2>Learnset</h2>
         <hr />
-        <h3>Level-up</h3> {{ table_utils.levelup_table(pokemon.levelup_moves) }}
+        {% if pokemon.levelup_moves %}<h3>Level-up</h3> {{ table_utils.levelup_table(pokemon.levelup_moves) }}{% endif %}
         {% if pokemon.machine_moves %}<h3>Machine</h3> {{ table_utils.move_table(pokemon.machine_moves) }}{% endif %}
         {% if pokemon.tutor_moves %}<h3>Tutor</h3> {{ table_utils.move_table(pokemon.tutor_moves) }}{% endif %}
         {% if pokemon.egg_moves %}<h3>Egg Moves</h3> {{ table_utils.move_table(pokemon.egg_moves) }}{% endif %}
     </section>
+    {% endif %}
     {% if other_forms %}
     <h2>Other Forms</h2>
     <section class="other-forms">
