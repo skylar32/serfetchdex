@@ -16,6 +16,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     padding: env(safe-area-inset);
 }
+
 a:link {
     font-weight: bold;
     text-decoration: none;
@@ -39,6 +40,10 @@ header {
 header h1 {
     font-size: 2.5rem;
     margin: .75rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
 }
 
 header > a:hover, nav > ul a:hover {
@@ -203,8 +208,8 @@ ul.flags > li > ul {
 
 .pokemon-portrait > .pokemon-types {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .pokemon-portrait > .pokemon-types > a > .type-bar {
@@ -272,7 +277,7 @@ table.pokemon-stats tr > td > span {
 }
 
 .pokemon-essential-details > table {
-    width: 40%;
+    width: 75%;
 }
 
 .pokemon-essential-details > dl, .pokemon-essential-details > table {
@@ -286,7 +291,6 @@ table.pokemon-stats tr > td > span {
 .gender-bar {
     display: flex;
     height: 1.5em;
-    min-width: 200px;
     background: lightgrey;
     border-radius: 10px;
     overflow: hidden;
@@ -429,15 +433,20 @@ table.pokemonlist ul {
 
 .pokemon-name-cell {
     width: 10.75rem;
+    font-size: 1.25rem;
+}
+
+.pokemon-name-cell small {
+    font-size: 0.9rem;
 }
 
 .pokemon-type-cell {
     width: 224px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1750px) {
     .pokemon-type-cell {
-        width: min-content;
+        width: 115px;
     }
 }
 
@@ -458,39 +467,127 @@ td.pokemon-stat-cell {
     width: 2rem;
 }
 
-@media only screen and (max-width: 1919) {
+@media only screen and (max-width: 1500px) {
+    /* Pokémon table */
+    .poketable-wrapper {
+        margin-top: 0.8rem;
+    }
+
+    .pokemonlist tr {
+        display: inline-flex;
+        width: 100%;
+        padding: 0 0.5rem 0.5rem;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .pokemonlist tbody tr:not(:first-of-type) {
+        border-top: none;
+    }
+
+    .pokemonlist tbody tr:first-of-type {
+        border-top: 1px solid #cccbc3;
+    }
+
+    .pokemonlist thead {
+        display: none;
+    }
+
+    .pokemonlist td {
+        padding: 0;
+    }
+
+    .level-cell {
+        text-align: center;
+        margin-right: 0.75rem;
+        width: 2em;
+    }
+
+    .level-cell::before {
+        content: "Lvl.\A0";
+        font-weight: bold;
+    }
 
     .pokemon-name-cell {
-        width: 8em;
-        margin-right: 1rem;
+        flex: 1;
+        font-size: 1.35em;
+    }
+
+    .pokemon-name-cell br {
+        display: none;
+    }
+
+    .pokemon-name-cell small {
+        font-size: 0.9rem;
     }
 
     .pokemon-type-cell {
-        width: 140px;
+        display: flex;
+        justify-content: flex-end;
     }
 
-    .abilities-cell,
-    .hidden-ability-cell {
-        width: min-content;
+    .abilities-cell, .hidden-ability-cell {
+        width: 100%;
     }
 
-    .abilities-cell li:after {
-        content: ","
+    .abilities-cell ul::before {
+        content: "Ability:\A0";
+        font-weight: bold;
+        margin-right: 0;
+        float: left;
     }
 
-    .abilities-cell li:last-child:after {
-        content: ""
+    .abilities-cell li {
+        display: inline;
     }
 
-    table.pokemonlist th {
-        font-size: .85rem;
+    .abilities-cell li:not(:last-child)::after {
+        content: ",\A0";
     }
 
-    table.pokemonlist td {
-        font-size: .7rem;
+    .hidden-ability-cell ul::before {
+        content: "Hidden Ability:\A0";
+        font-weight: bold;
+        margin-right: 0;
+        float: left;
     }
 
-    
+    .pokemon-stat-cell {
+        text-align: center;
+        width: 5rem;
+    }
+
+    .hp::before {
+        content: "HP:\A0";
+        font-weight: bold;
+    }
+
+    .atk::before {
+        content: "Atk:\A0";
+        font-weight: bold;
+    }
+
+    .def::before {
+        content: "Def:\A0";
+        font-weight: bold;
+    }
+
+    .spa::before {
+        content: "Sp.A:\A0";
+        font-weight: bold;
+    }
+
+    .spd::before {
+        content: "Sp.D:\A0";
+        font-weight: bold;
+    }
+
+    .spe::before {
+        content: "Spe:\A0";
+        font-weight: bold;
+    }    
 }
 
 /* Table */
@@ -502,10 +599,6 @@ tr {
 
 table.tablelist tbody > tr:hover {
     background: #dce8d7;
-}
-
-tr:last-of-type {
-    border-bottom: none;
 }
 
 tbody > tr:first-of-type {
@@ -549,7 +642,15 @@ footer {
     text-align: center;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1023px) {
+    h1, h2, h3, h4, h5, h6 {
+        text-align: center;
+    }
+
+    hr {
+        width: 70%;
+    }
+
     /* Move page */
 
     .move-tagline {
@@ -643,7 +744,7 @@ footer {
     }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 800px) {
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
     main {
         padding: 2rem;
     }
@@ -653,7 +754,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     /* Page layout */
     body {
         max-width: 100vw;

@@ -114,7 +114,6 @@ def get_pokemon(identifier):
     matchups = get_type_efficiencies(pokemon.types, sides=["Damage taken"])
     other_forms = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon.number==pokemon.number).all()
     other_forms = [form for form in other_forms if form != pokemon]
-    print(pokemon.effort_yield)
     return render_template("pokemon.html.j2", pokemon=pokemon, efficiencies=matchups, other_forms=other_forms)
 
 @app.route('/moves/<identifier>')

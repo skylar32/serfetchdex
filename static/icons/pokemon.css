@@ -7855,28 +7855,31 @@
             background-position: -1224px -2184px;
             width: 54px;
             height: 30px;
-            padding: calc((56px - 30px) / 2) calc((68px - 54px) / 2) 0;
+            margin: calc((56px - 30px) / 2) calc((68px - 54px) / 2) 0;
         }
 
         .party-sprite.calyrex-shadow {
             background-position: -2244px 0;
             width: 37px;
             height: 50px;
-            padding: calc((56px - 50px) / 2) calc((68px - 37px) / 2) 0;
+            margin: calc((56px - 50px) / 2) calc((68px - 37px) / 2) 0;
+            box-sizing: initial;
         }
 
         .party-sprite.calyrex-ice {
             background-position: -2244px -50px;
             width: 37px;
             height: 50px;
-            padding: calc((56px - 37px) / 2) calc((68px - 45p50px) / 2) 0;
+            margin: calc((56px - 37px) / 2) calc((68px - 45p50px) / 2) 0;
+            box-sizing: initial;
         }
 
         .party-sprite.articuno-galar {
             background-position: -2244px -100px;
             width: 35px;
             height: 45px;
-            padding: calc((56px - 45px) / 2) calc((68px - 45px) / 2) 0;
+            margin: calc((56px - 45px) / 2) calc((68px - 45px) / 2) 0;
+            box-sizing: initial;
 
         }
 
@@ -7884,14 +7887,16 @@
             background-position: 0 -2240px;
             width: 43px;
             height: 41px;
-            padding: calc((56px - 41px) / 2) calc((68px - 48px) / 2) 0;
+            margin: calc((56px - 41px) / 2) calc((68px - 48px) / 2) 0;
+            box-sizing: initial;
         }
 
         .party-sprite.moltres-galar {
             background-position: -2281px 0;
             width: 42px;
             height: 42px;
-            padding: calc((56px - 42px) / 2) calc((68px - 42px) / 2) 0;
+            margin: calc((56px - 42px) / 2) calc((68px - 42px) / 2) 0;
+            box-sizing: initial;
             
         }
 
@@ -7899,33 +7904,38 @@
             background-position: -2281px -42px;
             width: 30px;
             height: 40px;
-            padding: calc((56px - 45px) / 2) calc((68px - 45px) / 2) 0;
+            margin: calc((56px - 45px) / 2) calc((68px - 45px) / 2) 0;
+            box-sizing: initial;
         }
 
         .party-sprite.regidrago {
             background-position: -2281px -82px;
             width: 40px;
             height: 37px;
-            padding: calc((56px - 37px) / 2) calc((68px - 40px) / 2) 0;
+            margin: calc((56px - 37px) / 2) calc((68px - 40px) / 2) 0;
+            box-sizing: initial;
         }
 
         .party-sprite.calyrex {
             background-position: -2281px -119px;
             width: 35px;
             height: 40px;
-            padding: calc((56px - 40px) / 2) calc((68px - 35px) / 2) 0;
+            margin: calc((56px - 40px) / 2) calc((68px - 35px) / 2) 0;
+            box-sizing: initial;
         }
 
         .party-sprite.glastrier {
             background-position: -2281px -159px;
             width: 34px;
             height: 37px;
-            padding: calc((56px - 37px) / 2) calc((68px - 34px) / 2) 0;
+            margin: calc((56px - 37px) / 2) calc((68px - 34px) / 2) 0;
+            box-sizing: initial;
         }
 
         .party-sprite.spectrier {
             background-position: -2281px -196px;
             width: 36px;
             height: 34px;
-            padding: calc((56px - 34px) / 2) calc((68px - 36px) / 2) 0;
+            margin: calc((56px - 34px) / 2) calc((68px - 36px) / 2) 0;
+            box-sizing: initial;
         }

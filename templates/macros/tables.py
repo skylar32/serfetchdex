@@ -92,14 +92,16 @@
                 <td class="abilities-cell">
                     <ul>
                         {% for slot in mon[0].abilities %}{% if slot != "hidden_ability" %}{% for ability in mon[0].abilities[slot] %}
-                        <li><a href="/abilitles/{{ability.identifier}}">{{ ability.name }}</a></li>
+                        <li><a href="/abilities/{{ability.identifier}}">{{ ability.name }}</a></li>
                         {% endfor %}{% endif %}{% endfor %}
                     </ul>
                 </td>
                 <td class="hidden-ability-cell">{% if mon[0].abilities["hidden_ability"] %}
-                    <a href="/abilities/{{mon[0].abilities['hidden_ability'][0].identifier}}"><em>{{ mon[0].abilities["hidden_ability"][0].name }}</em></a>
+                    <ul>
+                        <li><a href="/abilities/{{mon[0].abilities['hidden_ability'][0].identifier}}"><em>{{ mon[0].abilities["hidden_ability"][0].name }}</em></a></li>
+                    </ul>
                 {% endif %}</td>
-                {% for stat in mon[0].stats %}<td class="pokemon-stat-cell">{{ mon[0].stats[stat].base_stat }}</td>{% endfor %}
+                {% for stat in mon[0].stats %}<td class="pokemon-stat-cell {{ stat|lower }}">{{ mon[0].stats[stat].base_stat }}</td>{% endfor %}
             </tr>
         {% endif %}{% endfor %}
     </table>
@@ -138,14 +140,16 @@
                 <td class="abilities-cell">
                     <ul>
                         {% for slot in mon.abilities %}{% if slot != "hidden_ability" %}{% for ability in mon.abilities[slot] %}
-                        <li><a href="/abilitles/{{ability.identifier}}">{{ ability.name }}</a></li>
+                        <li><a href="/abilities/{{ability.identifier}}">{{ ability.name }}</a></li>
                         {% endfor %}{% endif %}{% endfor %}
                     </ul>
                 </td>
                 <td class="hidden-ability-cell">{% if mon.abilities["hidden_ability"] %}
-                    <a href="/abilities/{{mon.abilities['hidden_ability'][0].identifier}}"><em>{{ mon.abilities["hidden_ability"][0].name }}</em></a>
+                   <ul>
+                        <li><a href="/abilities/{{mon.abilities['hidden_ability'][0].identifier}}"><em>{{ mon.abilities["hidden_ability"][0].name }}</em></a></li>
+                    </ul>
                 {% endif %}</td>
-                {% for stat in mon.stats %}<td class="pokemon-stat-cell">{{ mon.stats[stat].base_stat }}</td>{% endfor %}
+                {% for stat in mon.stats %}<td class="pokemon-stat-cell {{ stat|lower }}">{{ mon.stats[stat].base_stat }}</td>{% endfor %}
             </tr>
         {% endif %}{% endfor %}
     </table>
