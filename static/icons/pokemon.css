@@ -7371,7 +7371,7 @@
             height: 56px;
         }
 
-        .party-sprite.alcremie-salted-cream-strawberry {
+        .party-sprite.alcremie-salted-cream-strawberry, .party-sprite.alcremie-salted-cream {
             background-position: -2176px -504px;
             width: 68px;
             height: 56px;
@@ -7419,7 +7419,7 @@
             height: 56px;
         }
 
-        .party-sprite.alcremie-ruby-swirl-strawberry {
+        .party-sprite.alcremie-ruby-swirl-strawberry, .party-sprite.alcremie-ruby-swirl {
             background-position: -2176px -952px;
             width: 68px;
             height: 56px;
@@ -7467,7 +7467,7 @@
             height: 56px;
         }
 
-        .party-sprite.alcremie-ruby-cream-strawberry {
+        .party-sprite.alcremie-ruby-cream-strawberry, .party-sprite.alcremie-ruby-cream {
             background-position: -2176px -1400px;
             width: 68px;
             height: 56px;
@@ -7515,7 +7515,7 @@
             height: 56px;
         }
 
-        .party-sprite.alcremie-rainbow-swirl-strawberry {
+        .party-sprite.alcremie-rainbow-swirl-strawberry, .party-sprite.alcremie-rainbow-swirl {
             background-position: -2176px -1848px;
             width: 68px;
             height: 56px;
@@ -7563,7 +7563,7 @@
             height: 56px;
         }
 
-        .party-sprite.alcremie-mint-cream-strawberry {
+        .party-sprite.alcremie-mint-cream-strawberry, .party-sprite.alcremie-mint-cream {
             background-position: -204px -2128px;
             width: 68px;
             height: 56px;
@@ -7611,7 +7611,7 @@
             height: 56px;
         }
 
-        .party-sprite.alcremie-matcha-cream-strawberry {
+        .party-sprite.alcremie-matcha-cream-strawberry, .party-sprite.alcremie-matcha-cream {
             background-position: -748px -2128px;
             width: 68px;
             height: 56px;
@@ -7659,7 +7659,7 @@
             height: 56px;
         }
 
-        .party-sprite.alcremie-lemon-cream-strawberry {
+        .party-sprite.alcremie-lemon-cream-strawberry, .party-sprite.alcremie-lemon-cream {
             background-position: -1292px -2128px;
             width: 68px;
             height: 56px;
@@ -7713,7 +7713,7 @@
             height: 56px;
         }
 
-        .party-sprite.alcremie-caramel-swirl-strawberry {
+        .party-sprite.alcremie-caramel-swirl-strawberry, .party-sprite.alcremie-caramel-swirl {
             background-position: -1904px -2128px;
             width: 68px;
             height: 56px;

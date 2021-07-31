@@ -183,3 +183,20 @@
     {% endfor %}
 </section>
 {% endmacro %}
+
+{% macro evolution_table(evos) %}
+<div class="evolutions-wrapper">
+    {% for mon_dict in evos %}
+        <figure
+            {% if mon_dict["is_tall"] %}class="stretch-cell"{% endif %}
+            style="grid-column: {{ mon_dict['coords'][0] }}; grid-row: {{ mon_dict['coords'][1] }}">
+            <a href="/pokemon/{{ mon_dict['mon'].identifier }}"><span class="party-sprite {{ mon_dict['mon'].identifier }}"></span></a>
+            <figcaption>
+                <h4><a href="/pokemon/{{ mon_dict['mon'].identifier }}">{{ mon_dict["mon"].name }}</a></h4>
+                {% if mon_dict["mon"].form and mon_dict["mon"].form.name %}<small><a href="/pokemon/{{ mon_dict['mon'].identifier }}">{{ mon_dict["mon"].form.name }} Form</a></small>{% endif %}
+                <p>{{ mon_dict["prose"] }}</p>
+            </figcaption>
+        </figure>
+    {% endfor %}
+</div>
+{% endmacro %}

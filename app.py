@@ -52,6 +52,101 @@ def get_type_efficiencies(types, sides=["Damage dealt", "Damage taken"]):
   
     return reversed_matchups
 
+def get_evo_method_prose(evolution):
+    def get_article(string):
+        if string:
+            return "an" if string[0].lower() in ['a', 'e', 'i', 'o', 'u'] else "a"
+        else:
+            return ''
+
+    method_prose_map = {
+        "level": f"Raise to level {evolution.quantity}" if evolution.quantity else "Level up",
+        "happiness": f"Raise happiness to {evolution.quantity}",
+        "use-item":  "Use " + get_article(evolution.item_identifier) + f" {evolution.item_identifier}",
+        "trade": "Trade",
+        "hitmonlee": "Raise to level 20 with Attack higher than Defense",
+        "hitmonchan": "Raise to level 20 with Defense higher than Attack",
+        "hitmontop": "Raise to level 20 with equal Attack and Defense",
+        "sirfetchd": "Land three critical hits in one battle",
+        "shedinja": "Raise to level 20 with an extra party space and a Poké Ball in the Bag",
+        "runerigus": "Go to the stone bridge in Dusty Bowl after at least 49HP have been lost without fainting",
+        "melmetal": "Use 400 Meltan Candy in Pokémon Go",
+        "toxtricity-amped": "Raise to level 30 with Hardy, Brave, Adamant, Naughty, Docile, Impish, Lax, Hasty, Jolly, Naive, Rash, Sassy, or Quirky nature",
+        "toxtricity-low-key": "Raise to level 30 with Lonely, Bold, Relaxed, Timid, Serious, Modest, Quiet, Bashful, Calm, Gentle, or Careful nature",
+        "spin": "Spin",
+        "urshifu-single-strike": "Train in the Tower of Darkness",
+        "urshifu-rapid-strike": "Train in the Tower of Waters"
+    }
+    method = method_prose_map[evolution.method]
+    conditions = []
+    if evolution.method == "spin":
+        length = "less than 5" if evolution.quantity == 4 else str(evolution.quantity)
+        time = "between 7:00pm and 7:59pm" if evolution.time == "7" else "during the " + evolution.time
+        method += f" {evolution.direction} for {length} seconds {time}"
+    if evolution.method not in ["level", "happiness", "trade"]:
+        return method
+    if evolution.region:
+        conditions.append(f"in {evolution.region}")
+    if evolution.location:
+        conditions.append(f"at {evolution.location}")
+    if evolution.ability:
+        conditions.append(f"with the ability [[abilities:{evolution.ability.name}]]")
+    if evolution.item_identifier:
+        conditions.append("while holding " + get_article(evolution.item_identifier) + f" {evolution.item_identifier}")
+    if evolution.move:
+        conditions.append(f"while knowing {evolution.move.name}")
+    if evolution.knows_move_type:
+        conditions.append(f"while knowing a [[types:{evolution.knows_move_type.title()}]]-type move")
+    if evolution.party_type_identifier:
+        conditions.append(" while " + get_article(evolution.party_type_identifier) + f" [[types:{evolution.party_type_id.title()}]]-type is in the party")
+    if evolution.needed_pokemon:
+        if evolution.method == "level":
+            conditions.append("while " + get_article(evolution.needed_pokemon.name) + f" [[pokemon:{evolution.needed_pokemon.name}]] is in the party")
+        elif evolution.method == "trade":
+            conditions.append("for " + get_article(evolution.needed_pokemon.name) + f" [[pokemon:{evolution.needed_pokemon.name}]]")
+    if evolution.direction == "upside-down":
+        conditions.append("while the system is held upside-down")
+    if evolution.weather:
+        conditions.append(f"while the weather is {evolution.weather}")
+    if evolution.time:
+        conditions.append("during " + ("the " if evolution.time != "dusk" else '') + evolution.time)
+    if len(conditions) > 2:
+        cond_string = ", ".join(conditions[:-1]) + f", and {conditions[1]}"
+    else:
+        cond_string = " ".join(conditions)
+    if evolution.gender:
+        cond_string += f"({evolution.gender}s only)"
+    return parse_links(method + ' ' + cond_string)
+
+def get_evolution_table(evolution_chain):
+    def get_mon_dict(evo, x, y):
+        return {
+            "mon": evo if y == 'base' else evo.evolution,
+            "prose": '' if y == 'base' else get_evo_method_prose(evo),
+            "coords": (x, y),
+            "is_tall": isinstance(y, str)
+        }
+    evolution_table = []
+    y = 1
+    stage_2_height = 0
+
+    base_form = evolution_chain.base_form
+    evolution_table.append(get_mon_dict(base_form, 1, 'base'))
+    stage_1_mons = base_form.evolutions
+    for evo_1 in stage_1_mons:
+        stage_2_mons = evo_1.evolution.evolutions
+        height = len(stage_2_mons)
+        stage_2_height += height
+        evolution_table.append(get_mon_dict(evo_1, 2, f"span {height}"))
+        z = y
+        for evo_2 in stage_2_mons:
+            evolution_table.append(get_mon_dict(evo_2, 3, z))
+            z += 1
+        y += 1
+
+    evolution_table[0]["coords"] = (1, f"span {max(len(stage_1_mons), stage_2_height)}")
+    return evolution_table
+
 @app.before_request
 def clear_trailing():
     from flask import redirect, request
@@ -114,7 +209,11 @@ def get_pokemon(identifier):
     matchups = get_type_efficiencies(pokemon.types, sides=["Damage taken"])
     other_forms = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon.number==pokemon.number).all()
     other_forms = [form for form in other_forms if form != pokemon]
-    return render_template("pokemon.html.j2", pokemon=pokemon, efficiencies=matchups, other_forms=other_forms)
+    if pokemon.evolution_chain:
+        evos = get_evolution_table(pokemon.evolution_chain)
+    else:
+        evos = None
+    return render_template("pokemon.html.j2", pokemon=pokemon, efficiencies=matchups, other_forms=other_forms, evos=evos)
 
 @app.route('/moves/<identifier>')
 def get_move(identifier):

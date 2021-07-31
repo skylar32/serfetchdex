@@ -1,6 +1,6 @@
 {% extends "base.html.j2" %}
 {% block title %}{{move.name}} - serfetchdex{% endblock %}
-{% import "macros/tables.py" as table_utils %}
+{% import "macros/tables.j2" as table_utils %}
 {% block head %}
 <script type="text/javascript" src="/static/js/sort-movetable.js"></script>
 <link rel="stylesheet" href="/static/icons/icons.css">
