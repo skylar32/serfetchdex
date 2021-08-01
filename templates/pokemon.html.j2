@@ -53,12 +53,30 @@
                     <th><h3>Stats</h3></th>
                 </thead>
                 <tbody>
-                {% for stat in pokemon.stats %}
                     <tr>    
-                        <td><strong>{{ stat }}:</strong> {{ pokemon.stats[stat].base_stat }}</td>
-                        <td><span style="width: calc(100% * {{ pokemon.stats[stat].base_stat }} / 255)"></span></td>
+                        <td><strong>HP:</strong> {{ pokemon.stats['HP'].base_stat }}</td>
+                        <td><span style="width: min(100%, calc(100% * {{ pokemon.stats['HP'].base_stat }} / 150))"></span></td>
                     </tr>
-                {% endfor %}
+                    <tr>    
+                        <td><strong>Atk:</strong> {{ pokemon.stats['Atk'].base_stat }}</td>
+                        <td><span style="width: min(100%, calc(100% * {{ pokemon.stats['Atk'].base_stat }} / 150))"></span></td>
+                    </tr>
+                    <tr>    
+                        <td><strong>Def:</strong> {{ pokemon.stats['Def'].base_stat }}</td>
+                        <td><span style="width: min(100%, calc(100% * {{ pokemon.stats['Def'].base_stat }} / 150))"></span></td>
+                    </tr>
+                    <tr>    
+                        <td><strong>SpA:</strong> {{ pokemon.stats['SpA'].base_stat }}</td>
+                        <td><span style="width: min(100%, calc(100% * {{ pokemon.stats['SpA'].base_stat }} / 150))"></span></td>
+                    </tr>
+                    <tr>    
+                        <td><strong>SpD:</strong> {{ pokemon.stats['SpD'].base_stat }}</td>
+                        <td><span style="width: min(100%, calc(100% * {{ pokemon.stats['SpD'].base_stat }} / 150))"></span></td>
+                    </tr>
+                    <tr>    
+                        <td><strong>Spe:</strong> {{ pokemon.stats['Spe'].base_stat }}</td>
+                        <td><span style="width: min(100%, calc(100% * {{ pokemon.stats['Spe'].base_stat }} / 150))"></span></td>
+                    </tr>
                     <tr>
                         <td><strong>Total:</strong></td>
                         <td>{{ pokemon.stats.values()|sum(attribute="base_stat") }}</td>
@@ -68,6 +86,7 @@
     </section>
     {% if evos %}<section class="evolution">
         <h2>Evolution</h2>
+        <hr />
         {{ table_utils.evolution_table(evos) }}
     </section>{% endif %}
     <section class="pokemon-details">
@@ -127,7 +146,6 @@
         <hr />
         <p>{{ pokemon.flavor[1] }}</p>
     </section>
-    {% if pokemon.levelup_moves %}
     <section class="pokemon-moves">
         <h2>Learnset</h2>
         <hr />
@@ -135,8 +153,8 @@
         {% if pokemon.machine_moves %}<h3>Machine</h3> {{ table_utils.move_table(pokemon.machine_moves) }}{% endif %}
         {% if pokemon.tutor_moves %}<h3>Tutor</h3> {{ table_utils.move_table(pokemon.tutor_moves) }}{% endif %}
         {% if pokemon.egg_moves %}<h3>Egg Moves</h3> {{ table_utils.move_table(pokemon.egg_moves) }}{% endif %}
+        {% if pokemon.max_moves %}<h3>Available Max moves</h3> {{ table_utils.max_move_table(pokemon.max_moves) }}{% endif %}
     </section>
-    {% endif %}
     {% if other_forms %}
     <h2>Other Forms</h2>
     <section class="other-forms">

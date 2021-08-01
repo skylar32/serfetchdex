@@ -19,8 +19,29 @@
                 <td><span class="damage-icon {{move.damage_class}}" alt="{{move.damage_class|title}} move" title="{{move.damage_class|title}} move"></span></td>
                 <td>{%if move.power%}{{move.power}}{%else%}—{%endif%}</td>
                 <td>{%if move.accuracy%}{{move.accuracy}}%{%else%}—{%endif%}</td>
-                <td>{{move.pp}}</td>
+                <td>{% if move.pp %}{{move.pp}}{% else %}—{% endif %}</td>
                 <td>{{move.priority}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endmacro %}
+
+{% macro max_move_table(moves) %}
+<table class="movelist tablelist maxlist">
+        <thead>
+            <tr>
+                <th onclick="onColumnHeaderClicked(event)">Type</th>
+                <th onclick="onColumnHeaderClicked(event)">Move</th>
+                <th onclick="onColumnHeaderClicked(event)">Class</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for move in moves %}
+            <tr>
+                <td><a href="/types/{{move.type}}"><span class="type-dynamic {{move.type}}" alt="{{move.type|title}}-type move" title="{{move.type|title}}-type move"></span></a></td>
+                <td><a href="/moves/{{move.identifier}}">{{move.name}}</a></td>
+                <td><span class="damage-icon {{move.damage_class}}" alt="{{move.damage_class|title}} move" title="{{move.damage_class|title}} move"></span></td>
             </tr>
         {% endfor %}
         </tbody>
@@ -50,7 +71,7 @@
                 <td><span class="damage-icon {{move.damage_class}}" alt="{{move.damage_class|title}} move" title="{{move.damage_class|title}} move"></span></td>
                 <td>{%if move.power%}{{move.power}}{%else%}—{%endif%}</td>
                 <td>{%if move.accuracy%}{{move.accuracy}}%{%else%}—{%endif%}</td>
-                <td>{{move.pp}}</td>
+                <td>{% if move.pp %}{{move.pp}}{% else %}—{% endif %}</td>
                 <td>{{move.priority}}</td>
             </tr>
         {% endfor %}{% endfor %}
@@ -101,7 +122,12 @@
                         <li><a href="/abilities/{{mon[0].abilities['hidden_ability'][0].identifier}}"><em>{{ mon[0].abilities["hidden_ability"][0].name }}</em></a></li>
                     </ul>
                 {% endif %}</td>
-                {% for stat in mon[0].stats %}<td class="pokemon-stat-cell {{ stat|lower }}">{{ mon[0].stats[stat].base_stat }}</td>{% endfor %}
+                <td class="pokemon-stat-cell hp">{{ mon[0].stats['HP'].base_stat }}</td>
+                <td class="pokemon-stat-cell atk">{{ mon[0].stats['Atk'].base_stat }}</td>
+                <td class="pokemon-stat-cell def">{{ mon[0].stats['Def'].base_stat }}</td>
+                <td class="pokemon-stat-cell spa">{{ mon[0].stats['SpA'].base_stat }}</td>
+                <td class="pokemon-stat-cell spd">{{ mon[0].stats['SpD'].base_stat }}</td>
+                <td class="pokemon-stat-cell spe">{{ mon[0].stats['Spe'].base_stat }}</td>
             </tr>
         {% endif %}{% endfor %}
     </table>
@@ -149,7 +175,12 @@
                         <li><a href="/abilities/{{mon.abilities['hidden_ability'][0].identifier}}"><em>{{ mon.abilities["hidden_ability"][0].name }}</em></a></li>
                     </ul>
                 {% endif %}</td>
-                {% for stat in mon.stats %}<td class="pokemon-stat-cell {{ stat|lower }}">{{ mon.stats[stat].base_stat }}</td>{% endfor %}
+                <td class="pokemon-stat-cell hp">{{ mon.stats['HP'].base_stat }}</td>
+                <td class="pokemon-stat-cell atk">{{ mon.stats['Atk'].base_stat }}</td>
+                <td class="pokemon-stat-cell def">{{ mon.stats['Def'].base_stat }}</td>
+                <td class="pokemon-stat-cell spa">{{ mon.stats['SpA'].base_stat }}</td>
+                <td class="pokemon-stat-cell spd">{{ mon.stats['SpD'].base_stat }}</td>
+                <td class="pokemon-stat-cell spe">{{ mon.stats['Spe'].base_stat }}</td>
             </tr>
         {% endif %}{% endfor %}
     </table>
@@ -185,10 +216,11 @@
 {% endmacro %}
 
 {% macro evolution_table(evos) %}
-<div class="evolutions-wrapper">
-    {% for mon_dict in evos %}
+<div class="evolutions-wrapper" data-stages="{{ evos[0] }}">
+    {% for mon_dict in evos[1] %}
         <figure
-            {% if mon_dict["is_tall"] %}class="stretch-cell"{% endif %}
+            class="stage-{{ mon_dict['coords'][0] }}
+            {% if mon_dict['is_tall'] %}stretch-cell{% endif %}"
             style="grid-column: {{ mon_dict['coords'][0] }}; grid-row: {{ mon_dict['coords'][1] }}">
             <a href="/pokemon/{{ mon_dict['mon'].identifier }}"><span class="party-sprite {{ mon_dict['mon'].identifier }}"></span></a>
             <figcaption>

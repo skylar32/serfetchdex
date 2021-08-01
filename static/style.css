@@ -329,7 +329,6 @@ table.pokemon-misc {
 }
 
 table.pokemon-misc h3 {
-    text-align: left;
     margin: 0 auto;
 }
 
@@ -632,9 +631,22 @@ table.movelist td {
     width: max-content;
 }
 
-table.movelist:not(.leveluplist) td:first-of-type, table.movelist:not(.leveluplist) th:first-of-type,
+table.movelist:not(.leveluplist, .maxlist) td:first-of-type, table.movelist:not(.leveluplist, .maxlist) th:first-of-type,
 table.movelist.leveluplist td:nth-of-type(2), table.movelist.leveluplist th:nth-of-type(2) {
     width: 8em;
+}
+
+table.maxlist td:nth-of-type(2),
+table.maxlist th:nth-of-type(2) {
+    width: 75%;
+}
+
+@media only screen and (max-width: 400px) {
+    table.maxlist td:nth-of-type(2),
+    table.maxlist th:nth-of-type(2) {
+        width: 75%;
+        padding-left: 1.5rem;
+    }
 }
 
 /* evolution divs new */
@@ -650,11 +662,31 @@ table.movelist.leveluplist td:nth-of-type(2), table.movelist.leveluplist th:nth-
     align-items: center;
 }
 
-.evolutions-wrapper figure:not(:first-of-type)::before {
+.evolutions-wrapper figure.stage-2::before,
+.evolutions-wrapper figure.stage-3::before {
     content: "→";
-    position: relative;
-    left: -45%;
-    top: 30%;
+    position: absolute;
+    margin-top: 3.5rem;
+}
+
+.evolutions-wrapper[data-stages="2"] > figure.stage-2::before {
+    margin-right: 30%;
+}
+
+.evolutions-wrapper[data-stages="3"] > figure.stage-2::before,
+.evolutions-wrapper[data-stages="3"] > figure.stage-3::before {
+    margin-right: 20%;
+}
+
+@media only screen and (max-width: 800px) {
+    .evolutions-wrapper[data-stages="2"] > figure.stage-2::before {
+        margin-right: 45%;
+    }
+
+    .evolutions-wrapper[data-stages="3"] > figure.stage-2::before,
+    .evolutions-wrapper[data-stages="3"] > figure.stage-3::before {
+        margin-right: 30%;
+    }
 }
 
 .evolutions-wrapper figure.stretch-cell {
@@ -663,6 +695,10 @@ table.movelist.leveluplist td:nth-of-type(2), table.movelist.leveluplist th:nth-
 
 .evolutions-wrapper figcaption {
     text-align: center;
+}
+
+.evolutions-wrapper figcaption h4 {
+    margin-top: 0;
 }
 
 .evolutions-wrapper figcaption p {
@@ -737,16 +773,16 @@ footer {
         font-size: .85rem;
     }
 
-    table.movelist td:last-of-type, table.movelist th:last-of-type {
+    table.movelist:not(.maxlist) td:last-of-type, table.movelist:not(.maxlist)  th:last-of-type {
         display: none;
     }
 
-    table.movelist:not(.leveluplist) th:nth-of-type(4) > span:first-of-type,
+    table.movelist:not(.leveluplist, .maxlist) th:nth-of-type(4) > span:first-of-type,
     table.movelist.leveluplist th:nth-of-type(5) > span:first-of-type {
         display: none;
     }
 
-    table.movelist:not(.leveluplist) th:nth-of-type(4) > span:last-of-type,
+    table.movelist:not(.leveluplist, .maxlist) th:nth-of-type(4) > span:last-of-type,
     table.movelist.leveluplist th:nth-of-type(5) > span:last-of-type {
         display: initial;
     }

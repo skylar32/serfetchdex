@@ -61,7 +61,7 @@ def get_evo_method_prose(evolution):
 
     method_prose_map = {
         "level": f"Raise to level {evolution.quantity}" if evolution.quantity else "Level up",
-        "happiness": f"Raise happiness to {evolution.quantity}",
+        "happiness": f"Level up with {evolution.quantity} happiness",
         "use-item":  "Use " + get_article(evolution.item_identifier) + f" {evolution.item_identifier}",
         "trade": "Trade",
         "hitmonlee": "Raise to level 20 with Attack higher than Defense",
@@ -74,8 +74,8 @@ def get_evo_method_prose(evolution):
         "toxtricity-amped": "Raise to level 30 with Hardy, Brave, Adamant, Naughty, Docile, Impish, Lax, Hasty, Jolly, Naive, Rash, Sassy, or Quirky nature",
         "toxtricity-low-key": "Raise to level 30 with Lonely, Bold, Relaxed, Timid, Serious, Modest, Quiet, Bashful, Calm, Gentle, or Careful nature",
         "spin": "Spin",
-        "urshifu-single-strike": "Train in the Tower of Darkness",
-        "urshifu-rapid-strike": "Train in the Tower of Waters"
+        "urshifu-single": "Train in the Tower of Darkness",
+        "urshifu-rapid": "Train in the Tower of Waters"
     }
     method = method_prose_map[evolution.method]
     conditions = []
@@ -83,7 +83,7 @@ def get_evo_method_prose(evolution):
         length = "less than 5" if evolution.quantity == 4 else str(evolution.quantity)
         time = "between 7:00pm and 7:59pm" if evolution.time == "7" else "during the " + evolution.time
         method += f" {evolution.direction} for {length} seconds {time}"
-    if evolution.method not in ["level", "happiness", "trade"]:
+    if evolution.method not in ["level", "happiness", "trade", "use-item"]:
         return method
     if evolution.region:
         conditions.append(f"in {evolution.region}")
@@ -91,14 +91,14 @@ def get_evo_method_prose(evolution):
         conditions.append(f"at {evolution.location}")
     if evolution.ability:
         conditions.append(f"with the ability [[abilities:{evolution.ability.name}]]")
-    if evolution.item_identifier:
+    if evolution.item_identifier and evolution.method != "use-item":
         conditions.append("while holding " + get_article(evolution.item_identifier) + f" {evolution.item_identifier}")
     if evolution.move:
-        conditions.append(f"while knowing {evolution.move.name}")
+        conditions.append(f"while knowing [[moves:{evolution.move.name}]]")
     if evolution.knows_move_type:
         conditions.append(f"while knowing a [[types:{evolution.knows_move_type.title()}]]-type move")
     if evolution.party_type_identifier:
-        conditions.append(" while " + get_article(evolution.party_type_identifier) + f" [[types:{evolution.party_type_id.title()}]]-type is in the party")
+        conditions.append(" while " + get_article(evolution.party_type_identifier) + f" [[types:{evolution.party_type_identifier.title()}]]-type is in the party")
     if evolution.needed_pokemon:
         if evolution.method == "level":
             conditions.append("while " + get_article(evolution.needed_pokemon.name) + f" [[pokemon:{evolution.needed_pokemon.name}]] is in the party")
@@ -109,7 +109,7 @@ def get_evo_method_prose(evolution):
     if evolution.weather:
         conditions.append(f"while the weather is {evolution.weather}")
     if evolution.time:
-        conditions.append("during " + ("the " if evolution.time != "dusk" else '') + evolution.time)
+        conditions.append("at " + evolution.time if evolution.time != "day" else "during the day")
     if len(conditions) > 2:
         cond_string = ", ".join(conditions[:-1]) + f", and {conditions[1]}"
     else:
@@ -121,31 +121,38 @@ def get_evo_method_prose(evolution):
 def get_evolution_table(evolution_chain):
     def get_mon_dict(evo, x, y):
         return {
-            "mon": evo if y == 'base' else evo.evolution,
-            "prose": '' if y == 'base' else get_evo_method_prose(evo),
+            "mon": evo if x == 1 and y == 1 else evo.evolution,
+            "prose": '' if x == 1 and y == 1 else get_evo_method_prose(evo),
             "coords": (x, y),
             "is_tall": isinstance(y, str)
         }
     evolution_table = []
     y = 1
+    stages =1
     stage_2_height = 0
 
     base_form = evolution_chain.base_form
-    evolution_table.append(get_mon_dict(base_form, 1, 'base'))
+    evolution_table.append(get_mon_dict(base_form, 1, 1))
     stage_1_mons = base_form.evolutions
     for evo_1 in stage_1_mons:
+        stages = max(stages, 2)
         stage_2_mons = evo_1.evolution.evolutions
         height = len(stage_2_mons)
         stage_2_height += height
-        evolution_table.append(get_mon_dict(evo_1, 2, f"span {height}"))
+        evolution_table.append(get_mon_dict(evo_1, 2, f"span {height}" if height > 1 else y))
         z = y
         for evo_2 in stage_2_mons:
+            stages = max(stages, 3)
             evolution_table.append(get_mon_dict(evo_2, 3, z))
             z += 1
         y += 1
 
-    evolution_table[0]["coords"] = (1, f"span {max(len(stage_1_mons), stage_2_height)}")
-    return evolution_table
+    if len(stage_1_mons) > 1 or stage_2_height > 1:
+        evolution_table[0]["coords"] = (1, f"span {max(len(stage_1_mons), stage_2_height)}")
+        evolution_table[0]["is_tall"] = True
+    else:
+        evolution_table[0]["is_tall"] = False
+    return (stages, evolution_table)
 
 @app.before_request
 def clear_trailing():
@@ -211,8 +218,11 @@ def get_pokemon(identifier):
     other_forms = [form for form in other_forms if form != pokemon]
     if pokemon.evolution_chain:
         evos = get_evolution_table(pokemon.evolution_chain)
+    elif pokemon.form and pokemon.form.evolution_chain:
+        evos = get_evolution_table(pokemon.form.evolution_chain)
     else:
         evos = None
+    print(pokemon.max_moves)
     return render_template("pokemon.html.j2", pokemon=pokemon, efficiencies=matchups, other_forms=other_forms, evos=evos)
 
 @app.route('/moves/<identifier>')
@@ -224,11 +234,16 @@ def get_move(identifier):
     levelup = [(move.pokemon, move.level) for move in db.session.query(
         mohacdex.db.LevelUpMove).filter(mohacdex.db.LevelUpMove.move==move).order_by(mohacdex.db.LevelUpMove.level).all()
         ]
-    levelup = [next(level) for move, level in itertools.groupby(levelup, lambda y: y[0])]
-    machine = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon.machine_moves.any(mohacdex.db.Move.identifier==identifier)).all()
-    tutor = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon.tutor_moves.any(mohacdex.db.Move.identifier==identifier)).all()
-    egg = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon.egg_moves.any(mohacdex.db.Move.identifier==identifier)).all()
-    return render_template("move.html.j2", move=move, all_flags=flags, move_flags=move_flags, efficiencies=matchups, levelup=levelup, machine=machine, tutor=tutor, egg=egg)
+    if move.damage_class == "max":
+        levelup = machine = tutor = egg = None
+        _max = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon.max_moves.any(mohacdex.db.Move.identifier==identifier)).all()
+    else:
+        levelup = [next(level) for move, level in itertools.groupby(levelup, lambda y: y[0])]
+        machine = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon.machine_moves.any(mohacdex.db.Move.identifier==identifier)).all()
+        tutor = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon.tutor_moves.any(mohacdex.db.Move.identifier==identifier)).all()
+        egg = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon.egg_moves.any(mohacdex.db.Move.identifier==identifier)).all()
+        _max = None
+    return render_template("move.html.j2", move=move, all_flags=flags, move_flags=move_flags, efficiencies=matchups, levelup=levelup, machine=machine, tutor=tutor, egg=egg, _max=_max)
 
 @app.route('/abilities/<identifier>')
 def get_ability(identifier):

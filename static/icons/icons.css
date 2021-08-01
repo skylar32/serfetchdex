@@ -1,5 +1,5 @@
 .type-bar, .type-bar-small, .type-badge, .damage-class, .damage-icon, .type-dynamic {
-    background-image: url("/static/icons/icons.png");
+    background-image: url("/static/icons/icons-new.png");
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
@@ -267,6 +267,12 @@
     background-position: -140px -917px;
 }
 
+.damage-class.max {
+    background-position: 0px -1193px;
+    width: 64px;
+    height: 63px;
+}
+
 .damage-icon.status {
     background-position: 0px -888px;
 }
@@ -277,6 +283,10 @@
 
 .damage-icon.physical {
     background-position: -84px -888px;
+}
+
+.damage-icon.max {
+    background-position: -123px -888px;
 }
 
 @media only screen and (max-width: 1365px) {

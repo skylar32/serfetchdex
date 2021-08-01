@@ -20,7 +20,7 @@
             <p>{{move.flavor_text|parse_links}}</p>
         </span>
         <span class="move-details">
-            <table class="move-stats">
+            {% if move.damage_class != "max" %}<table class="move-stats">
                 <tbody>
                     <tr>
                         <th>Power</th>
@@ -30,7 +30,7 @@
                     <tr>
                         <td>{%if move.power%}{{move.power}}{%else%}—{%endif%}</td>
                         <td>{%if move.accuracy%}{{move.accuracy}}%{%else%}—{%endif%}</td>
-                        <td>{{move.pp}} (max {{(move.pp * (8/5))|int}})</td>
+                        <td>{% if move.pp %}{{move.pp}} (max {{(move.pp * (8/5))|int}}){% else %}—{% endif %}</td>
                     </tr>
                         <th>Target</th>
                         <th>Priority</th>
@@ -41,20 +41,21 @@
                         <td>{{move.priority}}</td>
                     </tr>
                 </tbody>
-            </table>
+            </table>{% endif %}
             {{ table_utils.type_chart(efficiencies) }}
         </span>
-    <h2>Flags</h2>
+    {% if move.damage_class != "max" %}<h2>Flags</h2>
     <hr />
     <ul class="flags">
         {%for flag in all_flags %}<li{%if flag.name not in move_flags%} class="crossed-out"{%endif%}>
             {{flag.name}}
             {%if flag.name in move_flags and flag.description%}<ul><li>{{flag.description|parse_links}}</li></ul>{%endif%}
         </li>{%endfor%}
-    </ul>
+    </ul>{% endif %}
 
     <h2>Pokémon</h2>
     <hr />
+    {% if move.damage_class == "max" %} {{ table_utils.pokemon_table(_max) }}{% endif %}
     {% if levelup %}<h3>By level-up</h3> {{ table_utils.pokemon_level_table(levelup) }}{% endif %}
     {% if machine %}<h3>By machine</h3> {{ table_utils.pokemon_table(machine) }}{% endif %}
     {% if tutor %}<h3>By tutor</h3> {{ table_utils.pokemon_table(tutor) }}{% endif %}

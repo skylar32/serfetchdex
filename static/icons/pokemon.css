@@ -213,7 +213,7 @@
             height: 56px;
         }
 
-        .party-sprite.wormadam {
+        .party-sprite.wormadam-plant {
             background-position: -340px -168px;
             width: 68px;
             height: 56px;
@@ -1695,7 +1695,7 @@
             height: 56px;
         }
 
-        .party-sprite.sinistea {
+        .party-sprite.sinistea, .party-sprite.sinistea-antique {
             background-position: -1020px -504px;
             width: 68px;
             height: 56px;
@@ -1893,7 +1893,7 @@
             height: 56px;
         }
 
-        .party-sprite.shellos {
+        .party-sprite.shellos-west {
             background-position: -1088px -448px;
             width: 68px;
             height: 56px;
@@ -2613,7 +2613,7 @@
             height: 56px;
         }
 
-        .party-sprite.polteageist {
+        .party-sprite.polteageist, .party-sprite.polteageist-antique {
             background-position: -952px -1232px;
             width: 68px;
             height: 56px;
@@ -5103,7 +5103,7 @@
             height: 56px;
         }
 
-        .party-sprite.gastrodon {
+        .party-sprite.gastrodon-west {
             background-position: -680px -1736px;
             width: 68px;
             height: 56px;
@@ -6687,7 +6687,7 @@
             height: 56px;
         }
 
-        .party-sprite.burmy {
+        .party-sprite.burmy-plant {
             background-position: -2040px -1736px;
             width: 68px;
             height: 56px;
@@ -7803,7 +7803,7 @@
             height: 56px;
         }
 
-        .party-sprite.aegislash {
+        .party-sprite.aegislash-shield {
             background-position: -680px -2184px;
             width: 68px;
             height: 56px;
@@ -7870,7 +7870,7 @@
             background-position: -2244px -50px;
             width: 37px;
             height: 50px;
-            margin: calc((56px - 37px) / 2) calc((68px - 45p50px) / 2) 0;
+            margin: calc((56px - 37px) / 2) calc((68px - 50px) / 2) 0;
             box-sizing: initial;
         }
 
