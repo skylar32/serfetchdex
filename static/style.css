@@ -670,22 +670,22 @@ table.maxlist th:nth-of-type(2) {
 }
 
 .evolutions-wrapper[data-stages="2"] > figure.stage-2::before {
-    margin-right: 30%;
+    padding-right: 30%;
 }
 
 .evolutions-wrapper[data-stages="3"] > figure.stage-2::before,
 .evolutions-wrapper[data-stages="3"] > figure.stage-3::before {
-    margin-right: 20%;
+    padding-right: 20%;
 }
 
 @media only screen and (max-width: 800px) {
     .evolutions-wrapper[data-stages="2"] > figure.stage-2::before {
-        margin-right: 45%;
+        padding-right: 45%;
     }
 
     .evolutions-wrapper[data-stages="3"] > figure.stage-2::before,
     .evolutions-wrapper[data-stages="3"] > figure.stage-3::before {
-        margin-right: 30%;
+        padding-right: 30%;
     }
 }
 
