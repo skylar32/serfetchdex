@@ -1,8 +1,9 @@
 import mohacdex.db
 from mohacdex.db.base import Base
 
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, request, jsonify, url_for
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.sql import func
 from flask_caching import Cache
 
 import re
@@ -261,6 +262,37 @@ def get_type(type_name):
     moves  = db.session.query(mohacdex.db.Move).filter(mohacdex.db.Move.type==type_name).all()
     matchups = get_type_efficiencies([type_name], sides=["Damage dealt", "Damage taken"])
     return render_template("type.html.j2", type_name=type_name.title(), moves=moves, efficiencies=matchups)
+
+def get_suggestions(search):
+    results = []
+    for table in [mohacdex.db.Pokemon, mohacdex.db.Move, mohacdex.db.Ability]:
+        items = (
+            db.session.query(table)
+            .filter(table.name.like(f"%{search}%"))
+            .limit(3)
+        )
+        for item in items:
+            name = item.name
+            if table == mohacdex.db.Pokemon and item.form and item.form.name:
+                name += f" ({item.form.name} form)"
+            results.append({"label": name, "value": item.identifier, "type": item.__tablename__})
+    return results
+
+@app.route('/suggest')
+def suggest():
+    query = request.args.get("q")
+    return jsonify(get_suggestions(query))
+
+@app.route('/search')
+def search():
+    query = request.args.get("q").lower()
+    for table in [mohacdex.db.Pokemon, mohacdex.db.Move, mohacdex.db.Ability]:
+        print(db.session.query(mohacdex.db.Move).filter(mohacdex.db.Move.name.ilike("tackle")).all())
+        result = db.session.query(table).filter(table.name.ilike(query)).first()
+        if result:
+            return redirect(f"{table.__tablename__}/{result.identifier}")
+    suggestions = get_suggestions(query)
+    return render_template("search-results.html.j2", query=query, suggestions=suggestions)
 
 if __name__ == "__main__":
     cache.init_app(app, config=cache_config)

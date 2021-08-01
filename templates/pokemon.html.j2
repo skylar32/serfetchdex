@@ -33,9 +33,9 @@
                     {% for ability in pokemon.abilities[slot] %}
                         <dl>
                             <dt><a href="/abilities/{{ ability.identifier }}"
-                            {%if slot == "hidden_ability" %} title="Hidden ability" class="hidden-ability"
-                            {%elif slot == "unique_ability" %} title="Unique ability" class="hidden-ability"{%endif%}>
-                            {{ ability.name }}{% if slot == "unique_ability" %}<sup>*</sup>{% endif %}</a></dt>
+                            {%if slot in ["hidden_ability", "unique_ability"] %} class="hidden-ability"{%endif%}>
+                            {{ ability.name }}</a> {% if slot == "unique_ability" %}<small>(unique)</small>
+                                              {% elif slot == "hidden_ability" %}<small>(hidden)</small>{% endif %}</dt>
                                 <dd>{{ ability.flavor_text|parse_links }}</dd>
                         </dl>
                     {% endfor %}
@@ -50,7 +50,7 @@
             </dl>
             <table class="pokemon-stats">
                 <thead>
-                    <th><h3>Stats</h3></th>
+                    <th colspan=2><h3>Stats</h3></th>
                 </thead>
                 <tbody>
                     <tr>    

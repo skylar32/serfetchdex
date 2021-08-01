@@ -5,6 +5,10 @@
         <link rel="stylesheet" href="/static/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
         <script type="text/javascript" src="/static/js/hover-fetchd.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="/static/js/search.js"></script>
         {% block head %}{% endblock %}
     </head>
     <body>
@@ -14,10 +18,17 @@
                 <a href="/"><h1>serfetchdex</h1></a>
             </header>
             <ul>
-                <li><a href="/moves">moves</a></li>
-                <li><a href="/abilities">abilities</a></li>
-                <li><a href="/pokemon">pokémon</a></li>
+                <li>explore
+                    <ul>
+                        <li><a href="/moves">moves</a></li>
+                        <li><a href="/abilities">abilities</a></li>
+                        <li><a href="/pokemon">pokémon</a></li>
+                    </ul>
+                </li>
             </ul>
+            <form action="/search" method="get">
+                <input type="text" id="search-bar" name="q" placeholder="Search..."><button type="submit">search</button>
+            </form>
         </nav>
         <main>
             <content>

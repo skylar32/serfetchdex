@@ -1,5 +1,5 @@
 .type-bar, .type-bar-small, .type-badge, .damage-class, .damage-icon, .type-dynamic {
-    background-image: url("/static/icons/icons-new.png");
+    background-image: url("/static/icons/icons.png");
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;

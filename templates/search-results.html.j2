@@ -1,0 +1,12 @@
+{% extends "base.html.j2" %}
+{% block title %}Search results - serfetchdex{% endblock %}
+{% block content %}
+    <h1>Search results: {{ query }}</h1>
+    {% if suggestions %}
+    <p>There's no exact match for your query.  Perhaps you want one of these?</p>
+    <ul>{% for item in suggestions %}
+        <li><a href="/{{ item.type }}/{{ item.value }}">{{ item.label }}</a></li>
+    {% endfor %}</ul>
+    {% else %}<p>D'oh!  There were no results for that query, sorry.  Maybe try again.</p>
+    {% endif %}
+{% endblock %}

@@ -34,7 +34,6 @@ hr {
 header {
     display: flex;
     align-items: center;
-    margin-right: 2rem;
 }
 
 header h1 {
@@ -44,11 +43,6 @@ header h1 {
 
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0;
-}
-
-header > a:hover, nav > ul a:hover {
-    color: white !important;
-    transition: ease-in .02s;
 }
 
 header a:link, header a:visited {
@@ -64,8 +58,7 @@ main {
     background: #f9f8ed;
     box-shadow: 0 0 10px 10px #29533552;
     flex: 1 1 auto;
-    margin: 3.3rem auto 0;
-    padding: 4rem 5rem 2rem;
+    padding: 2rem 5rem 2rem;
     width: 70%;
     display: flex;
     flex-flow: column;
@@ -83,11 +76,12 @@ h2 {
 /* Navigation */
 
 nav {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
+    height: min-content;
     width: 100%;
-    padding-left: 12.5vw;
+    padding-left: 1rem;
     background: #6a9c78;
     box-shadow: 0 0 5px 5px #295335b5;
     display: flex;
@@ -97,21 +91,58 @@ nav {
 
 nav > ul {
     list-style: none;
-    width: 90%;
     padding-left: 0;
-    margin: 0 auto;
     display: flex;
     align-items: center;
+    margin: 0 1rem;
 }
 
 nav > ul > li {
-    margin: .25rem;
+    color: #ded;
+    font-weight: bold;
+    display: flex;
+    padding: 1.75rem;
 }
 
-nav > ul a, nav > ul a:link, nav > ul a:visited {
-    padding: 1.5rem;
+nav > ul > li > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: #f9f8ed;
+    padding-left: 0;
+    list-style-type: none;
+    min-width: 10rem;
+    box-shadow: 0 2px 5px 2px #29533552;
+}
+
+nav > ul > li:hover > ul,
+nav > ul > li > ul:hover {
+    display: block;
+}
+
+nav > ul > li > ul > li a:hover {
+    background: #c4e3cb;
+}
+
+nav > ul > li > ul a,
+nav > ul > li > ul a:link,
+nav > ul > li > ul a:visited {
     text-decoration: none;
-    color: #ded;
+    color: #000;
+    font-weight: normal;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 15px;
+}
+
+nav form {
+    padding-right: 1rem;
+    margin-left: auto;
+}
+
+#search-bar {
+    background: #f9f8ed;
+    border: none;
 }
 
 /* Move page */
@@ -237,8 +268,10 @@ ul.flags > li > ul {
 
 a.hidden-ability {
     font-style: italic;
-    border-bottom: 1px #cccbc3 dotted;
-    cursor: help;
+}
+
+table h3 {
+    text-align: center;
 }
 
 table.pokemon-stats > thead > tr {
@@ -272,6 +305,7 @@ table.pokemon-stats tr > td > span {
 .pokemon-details {
     display: flex;
     justify-content: space-evenly;
+    align-items: baseline;
 }
 
 .pokemon-essential-details {
@@ -821,7 +855,7 @@ footer {
 
 @media only screen and (min-width: 601px) and (max-width: 1023px) {
     main {
-        padding: 2rem;
+        padding: 1rem 2rem;
     }
 
     ul.flags {
@@ -842,7 +876,7 @@ footer {
 
     main {
         width: 100%;
-        padding: 3rem 1rem 1rem;
+        padding: 1rem;
     }
 
     content {
@@ -854,11 +888,37 @@ footer {
 
     nav {
         padding-left: 0;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 7px;
     }
 
     nav img {
         left: -15px;
+    }
+
+    nav > ul > li {
+        padding: 0;
+    }
+
+    nav > ul > li > ul {
+        width: 100%;
+        left: 0;
+    }
+
+    nav form {
+        padding: 0 1rem;
+        margin-left: 0;
+        flex-grow: 1;
+    }
+
+    nav #search-bar {
+        width: 100%;
+        font-size: 1.75rem;
+    }
+
+    nav form button {
+        display: none;
     }
 
     /* Move page */
