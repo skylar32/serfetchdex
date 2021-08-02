@@ -3,11 +3,13 @@ from mohacdex.db.base import Base
 
 from flask import Flask, render_template, redirect, request, jsonify, url_for
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.sql import func
+from sqlalchemy.sql.expression import func
 from flask_caching import Cache
 
 import re
 import itertools
+
+from sqlalchemy.sql.functions import random
 
 cache_config = {
     "DEBUG": True,
@@ -194,7 +196,25 @@ def kg_to_lbs(kg):
 
 @app.route('/')
 def index():
-    return render_template("index.html.j2")
+    random_pokemon = (
+        db.session.query(mohacdex.db.Pokemon)
+        .order_by(func.random())
+        .limit(1)
+        .first()
+    )
+    random_move = (
+        db.session.query(mohacdex.db.Move)
+        .order_by(func.random())
+        .limit(1)
+        .first()
+    )
+    random_ability = (
+        db.session.query(mohacdex.db.Ability)
+        .order_by(func.random())
+        .limit(1)
+        .first()
+    )
+    return render_template("index.html.j2", pokemon=random_pokemon, move=random_move, ability=random_ability)
 
 @app.route('/pokemon')
 def get_pokemon_index():
@@ -223,7 +243,6 @@ def get_pokemon(identifier):
         evos = get_evolution_table(pokemon.form.evolution_chain)
     else:
         evos = None
-    print(pokemon.max_moves)
     return render_template("pokemon.html.j2", pokemon=pokemon, efficiencies=matchups, other_forms=other_forms, evos=evos)
 
 @app.route('/moves/<identifier>')
@@ -253,8 +272,6 @@ def get_ability(identifier):
     hidden = [a.pokemon for a in db.session.query(mohacdex.db.PokemonAbility).filter(mohacdex.db.PokemonAbility.ability==ability, mohacdex.db.PokemonAbility.slot=="hidden_ability").all()]
     unique = [a.pokemon for a in db.session.query(mohacdex.db.PokemonAbility).filter(mohacdex.db.PokemonAbility.ability==ability, mohacdex.db.PokemonAbility.slot=="unique_ability").all()]
     pokemon = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon._ability_table.any(mohacdex.db.PokemonAbility.ability_identifier==identifier)).all()
-    for item in [ordinary, hidden, unique]:
-        print([mon.identifier for mon in item])
     return render_template("ability.html.j2", ability=ability, ordinary=ordinary, hidden=hidden, unique=unique)
 
 @app.route('/types/<type_name>')
@@ -287,7 +304,6 @@ def suggest():
 def search():
     query = request.args.get("q").lower()
     for table in [mohacdex.db.Pokemon, mohacdex.db.Move, mohacdex.db.Ability]:
-        print(db.session.query(mohacdex.db.Move).filter(mohacdex.db.Move.name.ilike("tackle")).all())
         result = db.session.query(table).filter(table.name.ilike(query)).first()
         if result:
             return redirect(f"{table.__tablename__}/{result.identifier}")

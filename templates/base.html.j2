@@ -9,6 +9,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="/static/js/search.js"></script>
+        <link rel="stylesheet" href="/static/icons/icons.css">
+        <link rel="stylesheet" href="/static/icons/pokemon.css">
         {% block head %}{% endblock %}
     </head>
     <body>
@@ -27,7 +29,7 @@
                 </li>
             </ul>
             <form action="/search" method="get">
-                <input type="text" id="search-bar" name="q" placeholder="Search..."><button type="submit">search</button>
+                <input type="text" id="search-bar" name="q" placeholder="Search...">
             </form>
         </nav>
         <main>
