@@ -146,10 +146,12 @@ nav form {
 
 #search-bar {
     background: #f9f8ed url("/static/icons/search-solid.png") no-repeat 3px/1em;
+    color: #5f6c63;
     border: none;
-    font-size: 1.3em;
+    font-size: 1rem;
     font-weight: light;
     transition: width 0.3s ease;
+    padding: 5px;
     padding-left: calc(1.3em + 3px);
     border-radius: 8em;
 }
@@ -161,7 +163,7 @@ nav form {
 
 @media screen and (min-width: 801px) {
     #search-bar {
-        width: 6em;
+        width: 7.5rem;
         transition: width 0.3s ease;
     }
 
@@ -480,6 +482,7 @@ table.tablelist > thead > tr {
 }
 
 @media only screen and (min-width: 800px) {
+
     table.movelist th::after {
         content: " ▿";
     }
@@ -914,6 +917,10 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
+    .ui-widget {
+        font-size: 1.3rem !important;
+    }
+
     /* Page layout */
     body {
         max-width: 100vw;
@@ -1050,4 +1057,24 @@ footer {
     table.movelist td:first-of-type, table.movelist th:first-of-type {
         max-width: 6em;
     }
+}
+
+/* autocomplete list styling */
+.ui-widget.ui-widget-content {
+    border: none !important;
+    box-shadow: 0 5px 5px 5px #29533552 !important;
+}
+
+.ui-widget-content {
+    color: #5f6c63 !important;
+    background: #f9f8ed !important;
+}
+
+.ui-state-active {
+    background: #c4e3cb !important;
+    border: none !important;
+}
+
+ui-menu .ui-state-focus, .ui-menu .ui-state-active {
+    margin: 0 !important;
 }

@@ -8,7 +8,7 @@ $(function() {
             );
         },
         select: function(event, ui) {
-            window.location.href = ui.item.type + '/' + ui.item.value;
+            window.location.href = '/' + ui.item.type + '/' + ui.item.value;
         }
     });
 });
