@@ -145,20 +145,26 @@ nav form {
 }
 
 #search-bar {
-    background: #f9f8ed url("/static/icons/search-solid.png") no-repeat 3px/1em;
+    background: #f9f8ed url("/static/icons/search-solid.png") no-repeat 10px/1em;
     color: #5f6c63;
     border: none;
     font-size: 1rem;
     font-weight: light;
     transition: width 0.3s ease;
     padding: 5px;
-    padding-left: calc(1.3em + 3px);
+    padding-left: calc(1.3em + 15px);
     border-radius: 8em;
 }
 
+@media screen and (max-width: 800px) {
+    #search-bar {
+        background: #f9f8ed url("/static/icons/search-solid.png") no-repeat 15px/1em;
+        padding-left: calc(1.3em + 17px);
+    }
+}
+
 #search-bar:focus {
-    outline: #8fe58f 1px solid;
-    box-shadow: 0 0 7px #c4e3cb;
+    outline: none;
 }
 
 @media screen and (min-width: 801px) {
