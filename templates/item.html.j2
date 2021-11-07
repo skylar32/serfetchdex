@@ -1,0 +1,61 @@
+{% extends "base.html.j2" %}
+{% block title %}{{item.name}} - serfetchdex{% endblock %}
+{% block head %}<link rel="stylesheet" href="/static/icons/items.css">{% endblock %}
+{% block content %}
+    <span class="headline"><h1>{{item.name}}</h1></span>
+    <span class="item-info">
+        <span class="sprite-wrapper">
+            {% if item.name[:2] in ['TR', 'TM', 'HM'] and item.identifier not in ['tm-case', 'tmv-pass'] %}
+                <span class="item {{item.identifier[:2]}}-{{item.move_associations[0].type}}" alt="{{ item.name }}" title="{{ item.name }}" ></span>
+            {% else %}
+                <span class="item {{item.identifier}}" alt="{{ item.name }}" title="{{ item.name }}" ></span>
+            {% endif %}
+        </span>
+        <table class="item-misc">
+            <tbody>
+                <tr>
+                    <th>Value</th>
+                    {% if item.type_associations %}<th>Associated Type</th>{% endif %}
+                </tr>
+                <tr>
+                    <td>{% if item.value > 0 %}<span class="money">{{ item.value }}</span>{% else %}N/A{% endif %}</td>
+                    {% if item.type_associations %}<td><a href="/types/{{item.type_associations[0]}}"><span class="type-bar-small {{item.type_associations[0]}}"></span></a></td>{% endif %}
+                </tr>
+                <tr>
+                    <th>Pocket</th>
+                    {% if item.move_associations %}<th>Associated Move</th>{% endif %}
+                </tr>
+                <tr>
+                    <td><span class="{{ pocket }} pocket" alt="{{ item.pocket }}" title="{{ item.pocket }} pocket"></span>{{ item.pocket }}</td>
+                    {% if item.move_associations %}<td><a href="/moves/{{item.move_associations[0].identifier}}">{{item.move_associations[0].name}}</a></td>{% endif %}
+                </tr>
+            </tbody>
+        </table>
+        <span class="item-description">
+            <h2>Description</h2>
+            <hr />
+            {% if item.name[:2] in ['TR', 'TM'] and item.identifier not in ['tm-case', 'tmv-pass'] %}
+                <p>{{item.move_associations[0].flavor_text|parse_links}}</p>
+            {% else %}
+                <p>{{item.flavor_text|parse_links}}</p>
+            {% endif %}
+        </span>
+    </span>
+    <span>
+        {% if item.pokemon_associations %}
+        <span>
+            <h2>Associated Pokémon</h2>
+            <hr />
+            <section class="associated-pokemon">
+                {% for pokemon in item.pokemon_associations %}<span class="pokemon-portrait">
+                    <a href="/pokemon/{{ pokemon.identifier }}">
+                        <img src="{{ url_for('static', filename='pokemon/' + pokemon.identifier + '.png') }}" />
+                        <h4>{{ pokemon.name }}</h4>
+                        {% if pokemon.form and pokemon.form.name %}<small>{{ pokemon.form.name }} Form</small>{% endif %}
+                    </a>
+                </span>{% endfor %}
+            </section>
+        </span>
+        {% endif %}
+    </span>
+{% endblock %}

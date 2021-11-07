@@ -1,0 +1,4836 @@
+.item.timid-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -5px;
+}
+
+.item.serious-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -5px;
+}
+
+.item.sassy-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -47px;
+}
+
+.item.naive-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -47px;
+}
+
+.item.relaxed-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -5px;
+}
+
+.item.rash-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -47px;
+}
+
+.item.quiet-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -89px;
+}
+
+.item.modest-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -89px;
+}
+
+.item.mild-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -89px;
+}
+
+.item.lax-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -5px;
+}
+
+.item.jolly-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -47px;
+}
+
+.item.impish-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -89px;
+}
+
+.item.lonely-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -131px;
+}
+
+.item.naughty-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -131px;
+}
+
+.item.hasty-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -131px;
+}
+
+.item.gentle-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -131px;
+}
+
+.item.careful-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -5px;
+}
+
+.item.calm-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -47px;
+}
+
+.item.brave-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -89px;
+}
+
+.item.bold-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -131px;
+}
+
+.item.adamant-mint {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -173px;
+}
+
+.item.x-speed-6 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -173px;
+}
+
+.item.x-speed-3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -173px;
+}
+
+.item.x-speed-2 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -173px;
+}
+
+.item.x-speed-1 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -173px;
+}
+
+.item.x-sp-def-6 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -5px;
+}
+
+.item.x-sp-def-3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -47px;
+}
+
+.item.x-sp-def-2 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -89px;
+}
+
+.item.x-sp-def-1 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -131px;
+}
+
+.item.x-sp-atk-6 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -173px;
+}
+
+.item.x-sp-atk-3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -215px;
+}
+
+.item.x-sp-atk-2 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -215px;
+}
+
+.item.x-sp-atk-1 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -215px;
+}
+
+.item.x-defense-6 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -215px;
+}
+
+.item.x-defense-3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -215px;
+}
+
+.item.x-defense-2 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -215px;
+}
+
+.item.x-defense-1 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -5px;
+}
+
+.item.x-attack-6 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -47px;
+}
+
+.item.x-attack-3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -89px;
+}
+
+.item.x-attack-2 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -131px;
+}
+
+.item.x-attack-1 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -173px;
+}
+
+.item.x-accuracy-6 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -215px;
+}
+
+.item.x-accuracy-3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -257px;
+}
+
+.item.x-accuracy-2 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -257px;
+}
+
+.item.x-accuracy-1 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -257px;
+}
+
+.item.reset-urge {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -257px;
+}
+
+.item.item-urge {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -257px;
+}
+
+.item.item-drop {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -257px;
+}
+
+.item.dire-hit-3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -257px;
+}
+
+.item.dire-hit-2 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -5px;
+}
+
+.item.dire-hit-1 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -47px;
+}
+
+.item.ability-urge {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -89px;
+}
+
+.item.yellow-apricorn {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -131px;
+}
+
+.item.white-apricorn {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -173px;
+}
+
+.item.red-apricorn {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -215px;
+}
+
+.item.pink-apricorn {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -257px;
+}
+
+.item.green-apricorn {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -299px;
+}
+
+.item.blue-apricorn {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -299px;
+}
+
+.item.black-apricorn {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -299px;
+}
+
+.item.ultra-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -299px;
+}
+
+.item.timer-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -299px;
+}
+
+.item.sport-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -299px;
+}
+
+.item.safari-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -299px;
+}
+
+.item.repeat-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -299px;
+}
+
+.item.quick-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -5px;
+}
+
+.item.premier-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -47px;
+}
+
+.item.poke-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -89px;
+}
+
+.item.park-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -131px;
+}
+
+.item.net-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -173px;
+}
+
+.item.nest-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -215px;
+}
+
+.item.moon-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -257px;
+}
+
+.item.master-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -299px;
+}
+
+.item.luxury-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -341px;
+}
+
+.item.lure-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -341px;
+}
+
+.item.love-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -341px;
+}
+
+.item.level-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -341px;
+}
+
+.item.heavy-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -341px;
+}
+
+.item.heal-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -341px;
+}
+
+.item.great-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -341px;
+}
+
+.item.friend-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -341px;
+}
+
+.item.fast-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -341px;
+}
+
+.item.dusk-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -5px;
+}
+
+.item.dream-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -47px;
+}
+
+.item.dive-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -89px;
+}
+
+.item.cherish-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -131px;
+}
+
+.item.beast-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -173px;
+}
+
+.item.x-speed {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -215px;
+}
+
+.item.x-sp-def {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -257px;
+}
+
+.item.x-sp-atk {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -299px;
+}
+
+.item.x-defense {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -341px;
+}
+
+.item.x-attack {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -383px;
+}
+
+.item.x-accuracy {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -383px;
+}
+
+.item.max-mushrooms {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -383px;
+}
+
+.item.guard-spec {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -383px;
+}
+
+.item.dire-hit {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -383px;
+}
+
+.item.yache-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -383px;
+}
+
+.item.wiki-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -383px;
+}
+
+.item.wepear-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -383px;
+}
+
+.item.watmel-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -383px;
+}
+
+.item.wacan-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -383px;
+}
+
+.item.tanga-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -5px;
+}
+
+.item.tamato-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -47px;
+}
+
+.item.starf-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -89px;
+}
+
+.item.spelon-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -131px;
+}
+
+.item.sitrus-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -173px;
+}
+
+.item.silver-razz-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -215px;
+}
+
+.item.silver-pinap-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -257px;
+}
+
+.item.silver-nanab-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -299px;
+}
+
+.item.shuca-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -341px;
+}
+
+.item.salac-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -383px;
+}
+
+.item.rowap-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -425px;
+}
+
+.item.roseli-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -425px;
+}
+
+.item.rindo-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -425px;
+}
+
+.item.razz-gen7-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -425px;
+}
+
+.item.razz-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -425px;
+}
+
+.item.rawst-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -425px;
+}
+
+.item.rabuta-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -425px;
+}
+
+.item.qualot-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -425px;
+}
+
+.item.pomeg-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -425px;
+}
+
+.item.pinap-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -425px;
+}
+
+.item.petaya-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -425px;
+}
+
+.item.persim-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -5px;
+}
+
+.item.pecha-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -47px;
+}
+
+.item.payapa-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -89px;
+}
+
+.item.passho-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -131px;
+}
+
+.item.pamtre-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -173px;
+}
+
+.item.oran-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -215px;
+}
+
+.item.occa-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -257px;
+}
+
+.item.nomel-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -299px;
+}
+
+.item.nanab-gen7-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -341px;
+}
+
+.item.nanab-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -383px;
+}
+
+.item.micle-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -425px;
+}
+
+.item.maranga-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -467px;
+}
+
+.item.magost-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -467px;
+}
+
+.item.mago-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -467px;
+}
+
+.item.lum-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -467px;
+}
+
+.item.liechi-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -467px;
+}
+
+.item.leppa-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -467px;
+}
+
+.item.lansat-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -467px;
+}
+
+.item.kelpsy-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -467px;
+}
+
+.item.kee-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -467px;
+}
+
+.item.kebia-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -467px;
+}
+
+.item.kasib-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -467px;
+}
+
+.item.jaboca-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -467px;
+}
+
+.item.iapapa-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -5px;
+}
+
+.item.hondew-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -47px;
+}
+
+.item.haban-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -89px;
+}
+
+.item.grepa-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -131px;
+}
+
+.item.golden-razz-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -173px;
+}
+
+.item.golden-pinap-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -215px;
+}
+
+.item.golden-nanab-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -257px;
+}
+
+.item.ganlon-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -299px;
+}
+
+.item.figy-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -341px;
+}
+
+.item.enigma-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -383px;
+}
+
+.item.durin-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -425px;
+}
+
+.item.custap-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -467px;
+}
+
+.item.cornn-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -509px;
+}
+
+.item.colbur-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -509px;
+}
+
+.item.coba-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -509px;
+}
+
+.item.chople-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -509px;
+}
+
+.item.chilan-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -509px;
+}
+
+.item.chesto-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -509px;
+}
+
+.item.cheri-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -509px;
+}
+
+.item.charti-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -509px;
+}
+
+.item.bluk-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -509px;
+}
+
+.item.belue-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -509px;
+}
+
+.item.babiri-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -509px;
+}
+
+.item.aspear-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -509px;
+}
+
+.item.apicot-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -509px;
+}
+
+.item.aguav-berry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -5px;
+}
+
+.item.tin-of-beans {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -47px;
+}
+
+.item.spice-mix {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -89px;
+}
+
+.item.smoke-poke-tail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -131px;
+}
+
+.item.sausages {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -173px;
+}
+
+.item.salad-mix {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -215px;
+}
+
+.item.pungent-root {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -257px;
+}
+
+.item.precooked-burger {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -299px;
+}
+
+.item.pasta {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -341px;
+}
+
+.item.pack-of-potatoes {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -383px;
+}
+
+.item.packaged-curry {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -425px;
+}
+
+.item.moomoo-cheese {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -467px;
+}
+
+.item.mixed-mushrooms {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -509px;
+}
+
+.item.large-leek {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -551px;
+}
+
+.item.instant-noodles {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -551px;
+}
+
+.item.gigantamix {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -551px;
+}
+
+.item.fruit-bunch {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -551px;
+}
+
+.item.fried-food {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -551px;
+}
+
+.item.fresh-cream {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -551px;
+}
+
+.item.fancy-apple {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -551px;
+}
+
+.item.coconut-milk {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -551px;
+}
+
+.item.brittle-bones {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -551px;
+}
+
+.item.bread {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -551px;
+}
+
+.item.boiled-egg {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -551px;
+}
+
+.item.bobs-food-tin {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -551px;
+}
+
+.item.bachs-food-tin {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -551px;
+}
+
+.item.power-weight {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -551px;
+}
+
+.item.power-lens {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -5px;
+}
+
+.item.power-bracer {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -47px;
+}
+
+.item.power-belt {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -89px;
+}
+
+.item.power-band {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -131px;
+}
+
+.item.power-anklet {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -173px;
+}
+
+.item.macho-brace {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -215px;
+}
+
+.item.whipped-dream {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -257px;
+}
+
+.item.water-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -299px;
+}
+
+.item.up-grade {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -341px;
+}
+
+.item.thunder-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -383px;
+}
+
+.item.tart-apple {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -425px;
+}
+
+.item.sweet-apple {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -467px;
+}
+
+.item.sun-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -509px;
+}
+
+.item.strawberry-sweet {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -551px;
+}
+
+.item.star-sweet {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -593px;
+}
+
+.item.shiny-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -593px;
+}
+
+.item.sachet {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -593px;
+}
+
+.item.ribbon-sweet {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -593px;
+}
+
+.item.reaper-cloth {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -593px;
+}
+
+.item.razor-fang {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -593px;
+}
+
+.item.razor-claw {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -593px;
+}
+
+.item.protector {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -593px;
+}
+
+.item.prism-scale {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -593px;
+}
+
+.item.oval-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -593px;
+}
+
+.item.metal-coat {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -593px;
+}
+
+.item.magmarizer {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -593px;
+}
+
+.item.love-sweet {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -593px;
+}
+
+.item.kings-rock {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -593px;
+}
+
+.item.ice-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -593px;
+}
+
+.item.galarica-wreath {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -5px;
+}
+
+.item.galarica-cuff {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -47px;
+}
+
+.item.flower-sweet {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -89px;
+}
+
+.item.fire-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -131px;
+}
+
+.item.electirizer {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -173px;
+}
+
+.item.dusk-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -215px;
+}
+
+.item.dubious-disc {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -257px;
+}
+
+.item.dragon-scale {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -299px;
+}
+
+.item.deep-sea-tooth {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -341px;
+}
+
+.item.deep-sea-scale {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -383px;
+}
+
+.item.dawn-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -425px;
+}
+
+.item.cracked-pot {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -467px;
+}
+
+.item.clover-sweet {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -509px;
+}
+
+.item.chipped-pot {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -551px;
+}
+
+.item.berry-sweet {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -593px;
+}
+
+.item.exp-candy-xs {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -635px;
+}
+
+.item.exp-candy-xl {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -635px;
+}
+
+.item.exp-candy-s {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -635px;
+}
+
+.item.exp-candy-m {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -635px;
+}
+
+.item.exp-candy-l {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -635px;
+}
+
+.item.yellow-flute {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -635px;
+}
+
+.item.white-flute {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -635px;
+}
+
+.item.red-flute {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -635px;
+}
+
+.item.blue-flute {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -635px;
+}
+
+.item.black-flute {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -635px;
+}
+
+.item.skull-fossil {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -635px;
+}
+
+.item.sail-fossil {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -635px;
+}
+
+.item.root-fossil {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -635px;
+}
+
+.item.plume-fossil {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -635px;
+}
+
+.item.old-amber-fossil {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -635px;
+}
+
+.item.jaw-fossil {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -635px;
+}
+
+.item.helix-fossil {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -5px;
+}
+
+.item.fish-fossil, .item.fossilized-fish {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -47px;
+}
+
+.item.drake-fossil, .item.fossilized-drake {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -89px;
+}
+
+.item.dome-fossil {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -131px;
+}
+
+.item.dino-fossil, .item.fossilized-dino {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -173px;
+}
+
+.item.cover-fossil {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -215px;
+}
+
+.item.claw-fossil {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -257px;
+}
+
+.item.bird-fossil, .item.fossilized-bird {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -299px;
+}
+
+.item.armor-fossil {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -341px;
+}
+
+.item.water-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -383px;
+}
+
+.item.steel-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -425px;
+}
+
+.item.rock-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -467px;
+}
+
+.item.psychic-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -509px;
+}
+
+.item.poison-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -551px;
+}
+
+.item.normal-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -593px;
+}
+
+.item.ice-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -635px;
+}
+
+.item.ground-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -677px;
+}
+
+.item.grass-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -677px;
+}
+
+.item.ghost-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -677px;
+}
+
+.item.flying-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -677px;
+}
+
+.item.fire-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -677px;
+}
+
+.item.fighting-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -677px;
+}
+
+.item.fairy-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -677px;
+}
+
+.item.electric-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -677px;
+}
+
+.item.dragon-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -677px;
+}
+
+.item.dark-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -677px;
+}
+
+.item.bug-gem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -677px;
+}
+
+.item.hm-water {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -677px;
+}
+
+.item.hm-normal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -677px;
+}
+
+.item.hm-flying {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -677px;
+}
+
+.item.hm-fighting {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -677px;
+}
+
+.item.zoom-lens {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -677px;
+}
+
+.item.wise-glasses {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -677px;
+}
+
+.item.wide-lens {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -5px;
+}
+
+.item.white-herb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -47px;
+}
+
+.item.weakness-policy {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -89px;
+}
+
+.item.utility-umbrella {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -131px;
+}
+
+.item.twisted-spoon {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -173px;
+}
+
+.item.toxic-orb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -215px;
+}
+
+.item.throat-spray {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -257px;
+}
+
+.item.thick-club {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -299px;
+}
+
+.item.terrain-extender {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -341px;
+}
+
+.item.sticky-barb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -383px;
+}
+
+.item.leek {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -425px;
+}
+
+.item.spell-tag {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -467px;
+}
+
+.item.soul-dew {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -509px;
+}
+
+.item.soft-sand {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -551px;
+}
+
+.item.snowball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -593px;
+}
+
+.item.smooth-rock {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -635px;
+}
+
+.item.smoke-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -677px;
+}
+
+.item.silver-powder {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -719px;
+}
+
+.item.silk-scarf {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -719px;
+}
+
+.item.shock-drive {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -719px;
+}
+
+.item.shell-bell {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -719px;
+}
+
+.item.shed-shell {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -719px;
+}
+
+.item.sharp-beak {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -719px;
+}
+
+.item.scope-lens {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -719px;
+}
+
+.item.safety-goggles {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -719px;
+}
+
+.item.rusted-sword {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -719px;
+}
+
+.item.rusted-shield {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -719px;
+}
+
+.item.room-service {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -719px;
+}
+
+.item.rocky-helmet {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -719px;
+}
+
+.item.ring-target {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -719px;
+}
+
+.item.red-orb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -719px;
+}
+
+.item.red-card {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -719px;
+}
+
+.item.quick-powder {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -719px;
+}
+
+.item.quick-claw {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -719px;
+}
+
+.item.psychic-seed {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -719px;
+}
+
+.item.protective-pads {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -5px;
+}
+
+.item.power-herb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -47px;
+}
+
+.item.poison-barb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -89px;
+}
+
+.item.never-melt-ice {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -131px;
+}
+
+.item.mystic-water {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -173px;
+}
+
+.item.muscle-band {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -215px;
+}
+
+.item.misty-seed {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -257px;
+}
+
+.item.miracle-seed {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -299px;
+}
+
+.item.metronome {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -341px;
+}
+
+.item.metal-powder {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -383px;
+}
+
+.item.moon-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -425px;
+}
+
+.item.mental-herb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -467px;
+}
+
+.item.magnet {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -509px;
+}
+
+.item.lustrous-orb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -551px;
+}
+
+.item.luminous-moss {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -593px;
+}
+
+.item.lucky-punch {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -635px;
+}
+
+.item.lucky-egg {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -677px;
+}
+
+.item.light-clay {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -719px;
+}
+
+.item.light-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -761px;
+}
+
+.item.life-orb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -761px;
+}
+
+.item.leftovers {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -761px;
+}
+
+.item.lagging-tail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -761px;
+}
+
+.item.leaf-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -761px;
+}
+
+.item.iron-ball {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -761px;
+}
+
+.item.icy-rock {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -761px;
+}
+
+.item.heavy-duty-boots {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -761px;
+}
+
+.item.heat-rock {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -761px;
+}
+
+.item.hard-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -761px;
+}
+
+.item.griseous-orb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -761px;
+}
+
+.item.grip-claw {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -761px;
+}
+
+.item.grassy-seed {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -761px;
+}
+
+.item.focus-sash {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -761px;
+}
+
+.item.focus-band {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -761px;
+}
+
+.item.float-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -761px;
+}
+
+.item.flame-orb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -761px;
+}
+
+.item.expert-belt {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -761px;
+}
+
+.item.eviolite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -761px;
+}
+
+.item.everstone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -5px;
+}
+
+.item.electric-seed {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -47px;
+}
+
+.item.eject-pack {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -89px;
+}
+
+.item.eject-button {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -131px;
+}
+
+.item.dragon-fang {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -173px;
+}
+
+.item.douse-drive {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -215px;
+}
+
+.item.destiny-knot {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -257px;
+}
+
+.item.damp-rock {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -299px;
+}
+
+.item.cleanse-tag {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -341px;
+}
+
+.item.choice-specs {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -383px;
+}
+
+.item.choice-scarf {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -425px;
+}
+
+.item.choice-band {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -467px;
+}
+
+.item.chill-drive {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -509px;
+}
+
+.item.charcoal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -551px;
+}
+
+.item.cell-battery {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -593px;
+}
+
+.item.burn-drive {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -635px;
+}
+
+.item.bright-powder {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -677px;
+}
+
+.item.blunder-policy {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -719px;
+}
+
+.item.blue-orb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -761px;
+}
+
+.item.black-sludge {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -803px;
+}
+
+.item.black-glasses {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -803px;
+}
+
+.item.black-belt {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -803px;
+}
+
+.item.binding-band {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -803px;
+}
+
+.item.big-root {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -803px;
+}
+
+.item.assault-vest {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -803px;
+}
+
+.item.amulet-coin {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -803px;
+}
+
+.item.air-balloon {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -803px;
+}
+
+.item.adrenaline-orb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -803px;
+}
+
+.item.adamant-orb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -803px;
+}
+
+.item.absorb-bulb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -803px;
+}
+
+.item.wave-incense {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -803px;
+}
+
+.item.sea-incense {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -803px;
+}
+
+.item.rose-incense {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -803px;
+}
+
+.item.rock-incense {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -803px;
+}
+
+.item.pure-incense {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -803px;
+}
+
+.item.odd-incense {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -803px;
+}
+
+.item.luck-incense {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -803px;
+}
+
+.item.lax-incense {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -803px;
+}
+
+.item.full-incense {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -803px;
+}
+
+.item.zygarde-cube {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -5px;
+}
+
+.item.z-ring {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -47px;
+}
+
+.item.z-power-ring {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -89px;
+}
+
+.item.xtransceiver--yellow {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -131px;
+}
+
+.item.xtransceiver--red {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -173px;
+}
+
+.item.xtransceiver {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -215px;
+}
+
+.item.xtransceiver--blue {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -257px;
+}
+
+.item.works-key {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -299px;
+}
+
+.item.wooden-crown {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -341px;
+}
+
+.item.wishing-star {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -383px;
+}
+
+.item.wishing-chip {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -425px;
+}
+
+.item.white-mane-hair {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -467px;
+}
+
+.item.wailmer-pail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -509px;
+}
+
+.item.vs-seeker {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -551px;
+}
+
+.item.vs-recorder {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -593px;
+}
+
+.item.unown-report {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -635px;
+}
+
+.item.tri-pass {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -677px;
+}
+
+.item.travel-trunk--silver {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -719px;
+}
+
+.item.travel-trunk--gold {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -761px;
+}
+
+.item.travel-trunk {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -803px;
+}
+
+.item.town-map-gen4 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -845px;
+}
+
+.item.town-map-gen3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -845px;
+}
+
+.item.town-map {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -845px;
+}
+
+.item.tmv-pass {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -845px;
+}
+
+.item.tm-case {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -845px;
+}
+
+.item.tidal-bell {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -845px;
+}
+
+.item.tea-gen3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -845px;
+}
+
+.item.teachy-tv {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -845px;
+}
+
+.item.tea {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -845px;
+}
+
+.item.surge-badge {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -845px;
+}
+
+.item.super-rod {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -845px;
+}
+
+.item.sun-flute {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -845px;
+}
+
+.item.suite-key {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -845px;
+}
+
+.item.style-card {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -845px;
+}
+
+.item.storage-key--sea-mauville {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -845px;
+}
+
+.item.storage-key {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -845px;
+}
+
+.item.storage-key--galactic-warehouse {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -845px;
+}
+
+.item.ss-ticket, .item.ss-ticket--hoenn {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -845px;
+}
+
+.item.squirt-bottle {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -845px;
+}
+
+.item.sprinklotad {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -845px;
+}
+
+.item.sprayduck {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -845px;
+}
+
+.item.sparkling-stone-sm {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -5px;
+}
+
+.item.sparkling-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -47px;
+}
+
+.item.soot-sack {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -89px;
+}
+
+.item.sonias-book {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -131px;
+}
+
+.item.silver-wing {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -173px;
+}
+
+.item.silph-scope-gen3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -215px;
+}
+
+.item.silph-scope {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -257px;
+}
+
+.item.shiny-charm {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -299px;
+}
+
+.item.shaderoot-carrot {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -341px;
+}
+
+.item.secret-potion {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -383px;
+}
+
+.item.secret-key-sinnoh {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -425px;
+}
+
+.item.secret-key {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -467px;
+}
+
+.item.seal-case {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -509px;
+}
+
+.item.seal-bag {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -551px;
+}
+
+.item.scanner {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -593px;
+}
+
+.item.sapphire {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -635px;
+}
+
+.item.rule-book {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -677px;
+}
+
+.item.ruby {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -719px;
+}
+
+.item.rotom-catalog {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -761px;
+}
+
+.item.rotom-bike-4 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -803px;
+}
+
+.item.rotom-bike-3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -845px;
+}
+
+.item.rotom-bike-2 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -887px;
+}
+
+.item.rotom-bike-1, .item.rotom-bike {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -887px;
+}
+
+.item.roller-skates {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -887px;
+}
+
+.item.rm-6-key {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -887px;
+}
+
+.item.key-to-room-6 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -887px;
+}
+
+.item.key-to-room-4 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -887px;
+}
+
+.item.rm-4-key {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -887px;
+}
+
+.item.key-to-room-2 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -887px;
+}
+
+.item.rm-2-key {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -887px;
+}
+
+.item.key-to-room-1 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -887px;
+}
+
+.item.rm-1-key {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -887px;
+}
+
+.item.ride-pager {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -887px;
+}
+
+.item.reveal-glass {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -887px;
+}
+
+.item.reins-of-unity {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -887px;
+}
+
+.item.red-scale {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -887px;
+}
+
+.item.red-orb-gen4 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -887px;
+}
+
+.item.red-orb-gen3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -887px;
+}
+
+.item.red-chain {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -887px;
+}
+
+.item.rainbow-wing {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -887px;
+}
+
+.item.rainbow-pass {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -887px;
+}
+
+.item.rainbow-flower {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -887px;
+}
+
+.item.radiant-petal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -887px;
+}
+
+.item.prop-case {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -5px;
+}
+
+.item.profs-letter {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -47px;
+}
+
+.item.professors-mask {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -89px;
+}
+
+.item.prison-bottle {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -131px;
+}
+
+.item.power-plant-pass {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -173px;
+}
+
+.item.powder-jar {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -215px;
+}
+
+.item.poke-radar {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -257px;
+}
+
+.item.pokemon-box-link {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -299px;
+}
+
+.item.poke-flute-gen3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -341px;
+}
+
+.item.poke-flute {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -383px;
+}
+
+.item.pokeblock-kit {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -425px;
+}
+
+.item.pokeblock-case {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -467px;
+}
+
+.item.point-card {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -509px;
+}
+
+.item.poffin-case {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -551px;
+}
+
+.item.plasma-card {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -593px;
+}
+
+.item.photo-album {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -635px;
+}
+
+.item.permit {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -677px;
+}
+
+.item.pass {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -719px;
+}
+
+.item.parcel {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -761px;
+}
+
+.item.pal-pad {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -803px;
+}
+
+.item.pair-of-tickets {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -845px;
+}
+
+.item.oval-charm {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -887px;
+}
+
+.item.old-sea-map {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -929px;
+}
+
+.item.old-rod {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -929px;
+}
+
+.item.old-letter {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -929px;
+}
+
+.item.old-charm {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -929px;
+}
+
+.item.old-amber {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -929px;
+}
+
+.item.oaks-parcel {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -929px;
+}
+
+.item.oaks-letter {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -929px;
+}
+
+.item.n-solarizer {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -929px;
+}
+
+.item.n-lunarizer {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -929px;
+}
+
+.item.mysticticket {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -929px;
+}
+
+.item.mystery-egg {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -929px;
+}
+
+.item.moon-flute {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -929px;
+}
+
+.item.meteorite-shard {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -929px;
+}
+
+.item.meteorite--4 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -929px;
+}
+
+.item.meteorite--3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -929px;
+}
+
+.item.meteorite--2 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -929px;
+}
+
+.item.meteorite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -929px;
+}
+
+.item.member-card {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -929px;
+}
+
+.item.mega-ring {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -929px;
+}
+
+.item.mega-cuff {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -929px;
+}
+
+.item.mega-charm {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -929px;
+}
+
+.item.mega-bracelet {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -929px;
+}
+
+.item.medal-box {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -929px;
+}
+
+.item.mark-charm {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -5px;
+}
+
+.item.makeup-bag {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -47px;
+}
+
+.item.magma-suit {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -89px;
+}
+
+.item.magma-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -131px;
+}
+
+.item.magma-emblem {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -173px;
+}
+
+.item.machine-part {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -215px;
+}
+
+.item.mach-bike-gen3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -257px;
+}
+
+.item.mach-bike {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -299px;
+}
+
+.item.lunar-wing {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -341px;
+}
+
+.item.lost-item-mimejr {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -383px;
+}
+
+.item.lost-item {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -425px;
+}
+
+.item.loot-sack {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -467px;
+}
+
+.item.looker-ticket {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -509px;
+}
+
+.item.lock-capsule-gen4 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -551px;
+}
+
+.item.lock-capsule {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -593px;
+}
+
+.item.light-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -635px;
+}
+
+.item.lift-key-gen3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -677px;
+}
+
+.item.lift-key {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -719px;
+}
+
+.item.liberty-pass {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -761px;
+}
+
+.item.letter {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -803px;
+}
+
+.item.lens-case {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -845px;
+}
+
+.item.legendary-clue, .item.legendary-clue-1,
+.item.legendary-clue-2, .item.legendary-clue-3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -887px;
+}
+
+.item.key-stone-gen6 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -929px;
+}
+
+.item.key-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -971px;
+}
+
+.item.journal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -971px;
+}
+
+.item.jade-orb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -971px;
+}
+
+.item.intriguing-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -971px;
+}
+
+.item.iceroot-carrot {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -971px;
+}
+
+.item.honor-of-kalos {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -971px;
+}
+
+.item.holo-caster--red {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -971px;
+}
+
+.item.holo-caster--green {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -971px;
+}
+
+.item.holo-caster {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -971px;
+}
+
+.item.hi-tech-earbuds {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -971px;
+}
+
+.item.grubby-hanky {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -971px;
+}
+
+.item.gram-2 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -971px;
+}
+
+.item.gram-3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -971px;
+}
+
+.item.gram-1 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -971px;
+}
+
+.item.gracidea {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -971px;
+}
+
+.item.good-rod {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -971px;
+}
+
+.item.gold-teeth-gen3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -971px;
+}
+
+.item.gold-teeth {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -971px;
+}
+
+.item.go-goggles-gen3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -971px;
+}
+
+.item.go-goggles {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -971px;
+}
+
+.item.god-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -971px;
+}
+
+.item.gb-sounds {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -971px;
+}
+
+.item.galactic-key {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -971px;
+}
+
+.item.forage-bag {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -971px;
+}
+
+.item.fishing-rod-gen7 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -5px;
+}
+
+.item.fishing-rod {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -47px;
+}
+
+.item.festival-ticket {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -89px;
+}
+
+.item.fashion-case {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -131px;
+}
+
+.item.fame-checker {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -173px;
+}
+
+.item.exp-share {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -215px;
+}
+
+.item.explorer-kit {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -257px;
+}
+
+.item.exp-charm {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -299px;
+}
+
+.item.eon-ticket {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -341px;
+}
+
+.item.eon-flute {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -383px;
+}
+
+.item.enigmatic-card {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -425px;
+}
+
+.item.enigma-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -467px;
+}
+
+.item.endorsement {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -509px;
+}
+
+.item.elevator-key {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -551px;
+}
+
+.item.dynamax-band {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -593px;
+}
+
+.item.dropped-item--yellow {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -635px;
+}
+
+.item.dropped-item--red {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -677px;
+}
+
+.item.dropped-item {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -719px;
+}
+
+.item.dragon-skull {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -761px;
+}
+
+.item.dowsing-machine-xy {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -803px;
+}
+
+.item.dowsing-machine-gen5 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -845px;
+}
+
+.item.dowsing-machine-gen4 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -887px;
+}
+
+.item.dowsing-machine-gen3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -929px;
+}
+
+.item.dowsing-machine {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -971px;
+}
+
+.item.dna-splicers {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -1013px;
+}
+
+.item.devon-scuba-gear {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -1013px;
+}
+
+.item.devon-scope-gen3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -1013px;
+}
+
+.item.devon-scope {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -1013px;
+}
+
+.item.devon-goods {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -1013px;
+}
+
+.item.devon-parts {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -1013px;
+}
+
+.item.data-card-01, .item.data-card-02, .item.data-card-03, .item.data-card-04, 
+.item.data-card-05, .item.data-card-06, .item.data-card-07, .item.data-card-08, 
+.item.data-card-09, .item.data-card-10, .item.data-card-11, .item.data-card-12, 
+.item.data-card-13, .item.data-card-14, .item.data-card-15, .item.data-card-16, 
+.item.data-card-17, .item.data-card-18, .item.data-card-19, .item.data-card-20, 
+.item.data-card-21, .item.data-card-22, .item.data-card-23, .item.data-card-24, 
+.item.data-card-25, .item.data-card-26, .item.data-card-27 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -1013px;
+}
+
+.item.dark-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -1013px;
+}
+
+.item.crown-pass {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -1013px;
+}
+
+.item.coupon-3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -1013px;
+}
+
+.item.coupon-2 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -1013px;
+}
+
+.item.coupon-1 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -1013px;
+}
+
+.item.contest-pass {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -1013px;
+}
+
+.item.contest-costume--jacket {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -1013px;
+}
+
+.item.contest-costume--dress {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -1013px;
+}
+
+.item.common-stone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -1013px;
+}
+
+.item.colress-machine {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -1013px;
+}
+
+.item.coin-case {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -1013px;
+}
+
+.item.clear-bell {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -1013px;
+}
+
+.item.catching-charm {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -1013px;
+}
+
+.item.carrot-seeds {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -1013px;
+}
+
+.item.card-key-gen3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -1013px;
+}
+
+.item.card-key {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -1013px;
+}
+
+.item.camping-gear {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -1013px;
+}
+
+.item.blue-orb-gen4 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -1013px;
+}
+
+.item.blue-orb-gen3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -5px;
+}
+
+.item.blue-card {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -47px;
+}
+
+.item.black-mane-hair {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -89px;
+}
+
+.item.bike--yellow {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -131px;
+}
+
+.item.bike-voucher {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -173px;
+}
+
+.item.bike--green {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -215px;
+}
+
+.item.bicycle {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -257px;
+}
+
+.item.berry-pouch {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -299px;
+}
+
+.item.berry-pots {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -341px;
+}
+
+.item.basement-key {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -383px;
+}
+
+.item.basement-key--new-mauville {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -425px;
+}
+
+.item.basement-key--goldenrod {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -467px;
+}
+
+.item.band-autograph {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -509px;
+}
+
+.item.azure-flute {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -551px;
+}
+
+.item.autograph {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -593px;
+}
+
+.item.auroraticket {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -635px;
+}
+
+.item.armor-pass {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -677px;
+}
+
+.item.aqua-suit {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -719px;
+}
+
+.item.apricorn-box {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -761px;
+}
+
+.item.adventure-rules {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -803px;
+}
+
+.item.adventure-guide {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -845px;
+}
+
+.item.acro-bike-gen3 {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -887px;
+}
+
+.item.acro-bike {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -929px;
+}
+
+.item.wood-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -971px;
+}
+
+.item.wave-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -1013px;
+}
+
+.item.tunnel-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -1055px;
+}
+
+.item.tropic-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -1055px;
+}
+
+.item.thanks-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -1055px;
+}
+
+.item.steel-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -1055px;
+}
+
+.item.space-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -1055px;
+}
+
+.item.snow-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -1055px;
+}
+
+.item.shadow-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -1055px;
+}
+
+.item.rsvp-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -1055px;
+}
+
+.item.retro-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -1055px;
+}
+
+.item.reply-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -1055px;
+}
+
+.item.orange-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -1055px;
+}
+
+.item.mosaic-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -1055px;
+}
+
+.item.mech-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -1055px;
+}
+
+.item.like-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -1055px;
+}
+
+.item.inquiry-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -1055px;
+}
+
+.item.heart-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -1055px;
+}
+
+.item.harbor-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -1055px;
+}
+
+.item.greet-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -1055px;
+}
+
+.item.grass-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -1055px;
+}
+
+.item.glitter-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -1055px;
+}
+
+.item.flame-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -1055px;
+}
+
+.item.favored-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -1055px;
+}
+
+.item.fab-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -1055px;
+}
+
+.item.dream-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -1055px;
+}
+
+.item.bubble-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -1055px;
+}
+
+.item.bridge-mail-v {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -1055px;
+}
+
+.item.bridge-mail-t {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -5px;
+}
+
+.item.bridge-mail-s {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -47px;
+}
+
+.item.bridge-mail-m {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -89px;
+}
+
+.item.bridge-mail-d {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -131px;
+}
+
+.item.brick-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -173px;
+}
+
+.item.bloom-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -215px;
+}
+
+.item.bead-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -257px;
+}
+
+.item.air-mail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -299px;
+}
+
+.item.zinc {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -341px;
+}
+
+.item.swift-wing {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -383px;
+}
+
+.item.sweet-heart {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -425px;
+}
+
+.item.super-potion {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -467px;
+}
+
+.item.soda-pop {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -509px;
+}
+
+.item.shalour-sable {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -551px;
+}
+
+.item.sacred-ash {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -593px;
+}
+
+.item.revive {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -635px;
+}
+
+.item.revival-herb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -677px;
+}
+
+.item.resist-wing {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -719px;
+}
+
+.item.rare-candy {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -761px;
+}
+
+.item.rage-candy-bar {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -803px;
+}
+
+.item.protein {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -845px;
+}
+
+.item.pp-up {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -887px;
+}
+
+.item.pp-max {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -929px;
+}
+
+.item.potion {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -971px;
+}
+
+.item.pewter-crunchies {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -1013px;
+}
+
+.item.paralyze-heal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -1055px;
+}
+
+.item.old-gateau {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -1097px;
+}
+
+.item.muscle-wing {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -1097px;
+}
+
+.item.moomoo-milk {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -1097px;
+}
+
+.item.max-revive {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -1097px;
+}
+
+.item.max-potion {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -1097px;
+}
+
+.item.max-honey {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -1097px;
+}
+
+.item.max-ether {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -1097px;
+}
+
+.item.max-elixir {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -1097px;
+}
+
+.item.lumiose-galette {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -1097px;
+}
+
+.item.lemonade {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -1097px;
+}
+
+.item.lava-cookie {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -1097px;
+}
+
+.item.iron {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -1097px;
+}
+
+.item.ice-heal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -1097px;
+}
+
+.item.hyper-potion {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -1097px;
+}
+
+.item.hp-up {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -1097px;
+}
+
+.item.health-wing {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -1097px;
+}
+
+.item.heal-powder {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -1097px;
+}
+
+.item.genius-wing {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -1097px;
+}
+
+.item.full-restore {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -1097px;
+}
+
+.item.full-heal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -1097px;
+}
+
+.item.fresh-water {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -1097px;
+}
+
+.item.ether {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -1097px;
+}
+
+.item.energy-root {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -1097px;
+}
+
+.item.energy-powder {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -1097px;
+}
+
+.item.elixir {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -1097px;
+}
+
+.item.clever-wing {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -1097px;
+}
+
+.item.casteliacone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -1097px;
+}
+
+.item.carbos {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -5px;
+}
+
+.item.calcium {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -47px;
+}
+
+.item.burn-heal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -89px;
+}
+
+.item.big-malasada {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -131px;
+}
+
+.item.berry-juice {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -173px;
+}
+
+.item.awakening {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -215px;
+}
+
+.item.antidote {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -257px;
+}
+
+.item.ability-capsule {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -299px;
+}
+
+.item.venusaurite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -341px;
+}
+
+.item.tyranitarite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -383px;
+}
+
+.item.swampertite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -425px;
+}
+
+.item.steelixite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -467px;
+}
+
+.item.slowbronite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -509px;
+}
+
+.item.sharpedonite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -551px;
+}
+
+.item.scizorite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -593px;
+}
+
+.item.sceptilite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -635px;
+}
+
+.item.salamencite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -677px;
+}
+
+.item.sablenite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -719px;
+}
+
+.item.pinsirite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -761px;
+}
+
+.item.pidgeotite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -803px;
+}
+
+.item.mewtwonite-y {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -845px;
+}
+
+.item.mewtwonite-x {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -887px;
+}
+
+.item.metagrossite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -929px;
+}
+
+.item.medichamite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -971px;
+}
+
+.item.mawilite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -1013px;
+}
+
+.item.manectite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -1055px;
+}
+
+.item.lucarionite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -1097px;
+}
+
+.item.lopunnite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -1139px;
+}
+
+.item.latiosite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -1139px;
+}
+
+.item.latiasite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -1139px;
+}
+
+.item.kangaskhanite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -1139px;
+}
+
+.item.houndoominite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -1139px;
+}
+
+.item.heracronite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -1139px;
+}
+
+.item.gyaradosite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -1139px;
+}
+
+.item.glalitite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -1139px;
+}
+
+.item.gengarite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -1139px;
+}
+
+.item.gardevoirite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -1139px;
+}
+
+.item.garchompite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -1139px;
+}
+
+.item.galladite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -1139px;
+}
+
+.item.diancite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -1139px;
+}
+
+.item.charizardite-y {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -1139px;
+}
+
+.item.charizardite-x {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -1139px;
+}
+
+.item.cameruptite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -1139px;
+}
+
+.item.blazikenite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -1139px;
+}
+
+.item.blastoisinite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -1139px;
+}
+
+.item.beedrillite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -1139px;
+}
+
+.item.banettite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -1139px;
+}
+
+.item.audinite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -1139px;
+}
+
+.item.ampharosite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -1139px;
+}
+
+.item.altarianite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -1139px;
+}
+
+.item.alakazite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -1139px;
+}
+
+.item.aggronite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -1139px;
+}
+
+.item.aerodactylite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -1139px;
+}
+
+.item.absolite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -1139px;
+}
+
+.item.abomasite {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -1139px;
+}
+
+.item.water-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -5px;
+}
+
+.item.steel-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -47px;
+}
+
+.item.rock-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -89px;
+}
+
+.item.psychic-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -131px;
+}
+
+.item.poison-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -173px;
+}
+
+.item.ice-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -215px;
+}
+
+.item.ground-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -257px;
+}
+
+.item.grass-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -299px;
+}
+
+.item.ghost-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -341px;
+}
+
+.item.flying-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -383px;
+}
+
+.item.fire-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -425px;
+}
+
+.item.fighting-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -467px;
+}
+
+.item.fairy-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -509px;
+}
+
+.item.electric-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -551px;
+}
+
+.item.dragon-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -593px;
+}
+
+.item.dark-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -635px;
+}
+
+.item.bug-memory {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -677px;
+}
+
+.item.surprise-mulch {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -719px;
+}
+
+.item.stable-mulch {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -761px;
+}
+
+.item.rich-mulch {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -803px;
+}
+
+.item.growth-mulch {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -845px;
+}
+
+.item.gooey-mulch {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -887px;
+}
+
+.item.damp-mulch {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -929px;
+}
+
+.item.boost-mulch {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -971px;
+}
+
+.item.amaze-mulch {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -1013px;
+}
+
+.item.yellow-nectar {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -1055px;
+}
+
+.item.wishing-piece {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -1097px;
+}
+
+.item.super-repel {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -1139px;
+}
+
+.item.super-lure {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -1181px;
+}
+
+.item.strange-souvenir {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -1181px;
+}
+
+.item.soothe-bell {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -1181px;
+}
+
+.item.repel {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -1181px;
+}
+
+.item.red-nectar {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -1181px;
+}
+
+.item.purple-nectar {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -1181px;
+}
+
+.item.poke-toy {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -1181px;
+}
+
+.item.poke-doll {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -1181px;
+}
+
+.item.pink-nectar {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -1181px;
+}
+
+.item.pass-orb {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -1181px;
+}
+
+.item.odd-keystone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -1181px;
+}
+
+.item.max-repel {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -1181px;
+}
+
+.item.max-lure {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -1181px;
+}
+
+.item.lure {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -1181px;
+}
+
+.item.honey {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -1181px;
+}
+
+.item.heart-scale {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -1181px;
+}
+
+.item.gold-bottle-cap {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -1181px;
+}
+
+.item.galarica-twig {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -1181px;
+}
+
+.item.fluffy-tail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -1181px;
+}
+
+.item.escape-rope {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -1181px;
+}
+
+.item.dynite-ore {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -1181px;
+}
+
+.item.dynamax-crystal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -1181px;
+}
+
+.item.dynamax-candy {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -1181px;
+}
+
+.item.discount-coupon {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -1181px;
+}
+
+.item.bottle-cap {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -1181px;
+}
+
+.item.armorite-ore {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -1181px;
+}
+
+.item.ability-patch {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -1181px;
+}
+
+.item.yellow-petal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -1181px;
+}
+
+.item.red-petal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -1181px;
+}
+
+.item.purple-petal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -5px;
+}
+
+.item.pink-petal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -47px;
+}
+
+.item.orange-petal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -89px;
+}
+
+.item.green-petal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -131px;
+}
+
+.item.blue-petal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -173px;
+}
+
+.item.zap-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -215px;
+}
+
+.item.toxic-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -257px;
+}
+
+.item.stone-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -299px;
+}
+
+.item.spooky-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -341px;
+}
+
+.item.splash-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -383px;
+}
+
+.item.sky-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -425px;
+}
+
+.item.pixie-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -467px;
+}
+
+.item.mind-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -509px;
+}
+
+.item.meadow-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -551px;
+}
+
+.item.iron-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -593px;
+}
+
+.item.insect-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -635px;
+}
+
+.item.icicle-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -677px;
+}
+
+.item.flame-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -719px;
+}
+
+.item.fist-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -761px;
+}
+
+.item.earth-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -803px;
+}
+
+.item.dread-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -845px;
+}
+
+.item.draco-plate {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -887px;
+}
+
+.item.yellow-scarf {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -929px;
+}
+
+.item.red-scarf {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -971px;
+}
+
+.item.pink-scarf {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -1013px;
+}
+
+.item.green-scarf {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -1055px;
+}
+
+.item.blue-scarf {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -1097px;
+}
+
+.item.yellow-shard {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -1139px;
+}
+
+.item.red-shard {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -1181px;
+}
+
+.item.green-shard {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -1223px;
+}
+
+.item.blue-shard {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -1223px;
+}
+
+.item.tm-water {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -1223px;
+}
+
+.item.tm-steel {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -1223px;
+}
+
+.item.tm-rock {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -1223px;
+}
+
+.item.tm-psychic {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -1223px;
+}
+
+.item.tm-poison {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -1223px;
+}
+
+.item.tm-normal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -1223px;
+}
+
+.item.tm-ice {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -1223px;
+}
+
+.item.tm-ground {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -1223px;
+}
+
+.item.tm-grass {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -1223px;
+}
+
+.item.tm-ghost {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -1223px;
+}
+
+.item.tm-flying {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -1223px;
+}
+
+.item.tm-fire {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -1223px;
+}
+
+.item.tm-fighting {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -1223px;
+}
+
+.item.tm-fairy {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -1223px;
+}
+
+.item.tm-electric {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -1223px;
+}
+
+.item.tm-dragon {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -1223px;
+}
+
+.item.tm-dark {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -1223px;
+}
+
+.item.tm-bug {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -1223px;
+}
+
+.item.tr-water {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -1223px;
+}
+
+.item.tr-steel {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -1223px;
+}
+
+.item.tr-rock {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -1223px;
+}
+
+.item.tr-psychic {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -1223px;
+}
+
+.item.tr-poison {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -1223px;
+}
+
+.item.tr-normal {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -1223px;
+}
+
+.item.tr-ice {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -1223px;
+}
+
+.item.tr-ground {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -1223px;
+}
+
+.item.tr-grass {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -1223px;
+}
+
+.item.tr-ghost {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -1223px;
+}
+
+.item.tr-flying {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -5px;
+}
+
+.item.tr-fire {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -47px;
+}
+
+.item.tr-fighting {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -89px;
+}
+
+.item.tr-fairy {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -131px;
+}
+
+.item.tr-electric {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -173px;
+}
+
+.item.tr-dragon {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -215px;
+}
+
+.item.tr-dark {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -257px;
+}
+
+.item.tr-bug {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -299px;
+}
+
+.item.tiny-mushroom {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -341px;
+}
+
+.item.star-piece {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -383px;
+}
+
+.item.stardust {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -425px;
+}
+
+.item.slowpoke-tail {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -467px;
+}
+
+.item.shoal-shell {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -509px;
+}
+
+.item.shoal-salt {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -551px;
+}
+
+.item.relic-vase {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -593px;
+}
+
+.item.relic-statue {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -635px;
+}
+
+.item.relic-silver {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -677px;
+}
+
+.item.relic-gold {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -719px;
+}
+
+.item.relic-crown {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -761px;
+}
+
+.item.relic-copper {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -803px;
+}
+
+.item.relic-band {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -845px;
+}
+
+.item.rare-bone {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -887px;
+}
+
+.item.pretty-wing {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -929px;
+}
+
+.item.pearl-string {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -971px;
+}
+
+.item.pearl {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -1013px;
+}
+
+.item.nugget {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -1055px;
+}
+
+.item.comet-shard {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -1097px;
+}
+
+.item.big-pearl {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -1139px;
+}
+
+.item.big-nugget {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -1181px;
+}
+
+.item.big-mushroom {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -1223px;
+}
+
+.item.balm-mushroom {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -5px -1265px;
+}
+
+.item.waterium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -47px -1265px;
+}
+
+.item.ultranecrozium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -89px -1265px;
+}
+
+.item.tapunium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -131px -1265px;
+}
+
+.item.steelium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -173px -1265px;
+}
+
+.item.solganium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -215px -1265px;
+}
+
+.item.snorlium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -257px -1265px;
+}
+
+.item.rockium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -299px -1265px;
+}
+
+.item.psychium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -341px -1265px;
+}
+
+.item.primarium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -383px -1265px;
+}
+
+.item.poisonium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -425px -1265px;
+}
+
+.item.pikashunium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -467px -1265px;
+}
+
+.item.pikanium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -509px -1265px;
+}
+
+.item.normalium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -551px -1265px;
+}
+
+.item.mimikium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -593px -1265px;
+}
+
+.item.mewnium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -635px -1265px;
+}
+
+.item.marshadium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -677px -1265px;
+}
+
+.item.lycanium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -719px -1265px;
+}
+
+.item.lunalium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -761px -1265px;
+}
+
+.item.kommonium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -803px -1265px;
+}
+
+.item.incinium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -845px -1265px;
+}
+
+.item.icium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -887px -1265px;
+}
+
+.item.groundium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -929px -1265px;
+}
+
+.item.grassium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -971px -1265px;
+}
+
+.item.ghostium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1013px -1265px;
+}
+
+.item.flyinium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1055px -1265px;
+}
+
+.item.firium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1097px -1265px;
+}
+
+.item.fightinium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1139px -1265px;
+}
+
+.item.fairium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1181px -1265px;
+}
+
+.item.electrium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1223px -1265px;
+}
+
+.item.eevium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1265px -1265px;
+}
+
+.item.dragonium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1307px -5px;
+}
+
+.item.decidium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1307px -47px;
+}
+
+.item.darkinium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1307px -89px;
+}
+
+.item.buginium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1307px -131px;
+}
+
+.item.aloraichium-z {
+    width: 32px; height: 32px; display: inline-block;
+    background: url('/static/icons/items.png') -1307px -173px;
+}

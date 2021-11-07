@@ -1,0 +1,30 @@
+{% extends "base.html.j2" %}
+{% block title %}Abilities - serfetchdex{% endblock %}
+{% block head %}<link rel="stylesheet" href="/static/icons/items.css">{% endblock %}
+{% block content %}
+    <h1>Items</h1>
+    <table class="tablelist">
+        <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for item in items %}
+            <tr>
+                <td>
+                    {% if item.name[:2] in ['TR', 'TM', 'HM'] and item.identifier not in ['tm-case', 'tmv-pass'] %}
+                        <span class="item {{item.identifier[:2]}}-{{item.move_associations[0].type}}" alt="{{ item.name }}" title="{{ item.name }}" ></span>
+                    {% else %}
+                        <span class="item {{item.identifier}}" alt="{{ item.name }}" title="{{ item.name }}" ></span>
+                    {% endif %}
+                </td>
+                <td><a href="/items/{{item.identifier}}">{{item.name}}</a></td>
+                <td>{% if item.name[:2] in ['TR', 'TM', 'HM'] and item.identifier not in ['tm-case', 'tmv-pass'] %}<p>{{item.move_associations[0].flavor_text|parse_links}}</p>{% else %}<p>{{item.flavor_text|parse_links}}</p>{% endif %}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

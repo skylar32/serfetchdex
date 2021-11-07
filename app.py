@@ -62,10 +62,11 @@ def get_evo_method_prose(evolution):
         else:
             return ''
 
+    print(evolution)
     method_prose_map = {
         "level": f"Raise to level {evolution.quantity}" if evolution.quantity else "Level up",
         "happiness": f"Level up with {evolution.quantity} happiness",
-        "use-item":  "Use " + get_article(evolution.item_identifier) + f" {evolution.item_identifier}",
+        "use-item":  "Use " + get_article(evolution.item.name) + f" [[items:{evolution.item.name}]]" if evolution.item else '',
         "trade": "Trade",
         "hitmonlee": "Raise to level 20 with Attack higher than Defense",
         "hitmonchan": "Raise to level 20 with Defense higher than Attack",
@@ -95,7 +96,7 @@ def get_evo_method_prose(evolution):
     if evolution.ability:
         conditions.append(f"with the ability [[abilities:{evolution.ability.name}]]")
     if evolution.item_identifier and evolution.method != "use-item":
-        conditions.append("while holding " + get_article(evolution.item_identifier) + f" {evolution.item_identifier}")
+        conditions.append("while holding " + get_article(evolution.item.identifier) + f" [[items:{evolution.item.name}]]")
     if evolution.move:
         conditions.append(f"while knowing [[moves:{evolution.move.name}]]")
     if evolution.knows_move_type:
@@ -174,7 +175,7 @@ def parse_links(string):
     for item in tags:
         components = item.split(":")
         appear_as = components[1].split("|")
-        identifier = appear_as[0].lower().replace(' ', '-')
+        identifier = appear_as[0].lower().replace(' ', '-').replace('é', 'e')
         link = template.format(components[0], identifier, appear_as[1] if len(appear_as) == 2 else components[1])
         links["[[" + item + "]]"] = link
     for find, replace in links.items():
@@ -214,7 +215,13 @@ def index():
         .limit(1)
         .first()
     )
-    return render_template("index.html.j2", pokemon=random_pokemon, move=random_move, ability=random_ability)
+    random_item = (
+        db.session.query(mohacdex.db.Item)
+        .order_by(func.random())
+        .limit(1)
+        .first()
+    )
+    return render_template("index.html.j2", pokemon=random_pokemon, move=random_move, ability=random_ability, item=random_item)
 
 @app.route('/pokemon')
 def get_pokemon_index():
@@ -230,6 +237,15 @@ def get_move_index():
 def get_ability_index():
     abilities = db.session.query(mohacdex.db.Ability).all()
     return render_template("abilities-index.html.j2", abilities=abilities)
+
+@app.route('/items')
+def get_item_index():
+    items = db.session.query(mohacdex.db.Item).all()
+    for item in items:
+        if item.name[:2] in ['TR', 'TM', 'HM'] and item.identifier not in ['tm-case', 'tmv-pass']:
+            if not item.move_associations:
+                print(f"{item.name}")
+    return render_template("items-index.html.j2", items=items)
 
 @app.route('/pokemon/<identifier>')
 def get_pokemon(identifier):
@@ -274,6 +290,12 @@ def get_ability(identifier):
     pokemon = db.session.query(mohacdex.db.Pokemon).filter(mohacdex.db.Pokemon._ability_table.any(mohacdex.db.PokemonAbility.ability_identifier==identifier)).all()
     return render_template("ability.html.j2", ability=ability, ordinary=ordinary, hidden=hidden, unique=unique)
 
+@app.route('/items/<identifier>')
+def get_item(identifier):
+    item = db.session.query(mohacdex.db.Item).filter(mohacdex.db.Item.identifier==identifier).one()
+    pocket = item.pocket.replace(' ', '-').replace('é', 'e').lower() + "-pocket"
+    return render_template("item.html.j2", item=item, pocket=pocket)
+
 @app.route('/types/<type_name>')
 def get_type(type_name):
     moves  = db.session.query(mohacdex.db.Move).filter(mohacdex.db.Move.type==type_name).all()
@@ -282,7 +304,7 @@ def get_type(type_name):
 
 def get_suggestions(search):
     results = []
-    for table in [mohacdex.db.Pokemon, mohacdex.db.Move, mohacdex.db.Ability]:
+    for table in [mohacdex.db.Pokemon, mohacdex.db.Move, mohacdex.db.Ability, mohacdex.db.Item]:
         items = (
             db.session.query(table)
             .filter(table.name.like(f"%{search}%"))

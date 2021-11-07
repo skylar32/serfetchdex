@@ -1,10 +1,59 @@
+span.money::before {
+    content: " ";
+    width: 7px;
+    background-image: url("/static/icons/pdollar.webp");
+    display: inline-block;
+    height: 13px;
+    image-rendering: crisp-edges;
+    margin-right: 3px;
+}
+
+span.pocket::before {
+    content: " ";
+    width: 32px;
+    display: inline-block;
+    height: 32px;
+    margin-right: 3px;
+    margin-bottom: -10px;
+}
+
+span.items-pocket::before {
+    background-image: url("/static/icons/items-pocket.webp");
+}
+
+span.medicine-pocket::before {
+    background-image: url("/static/icons/medicine-pocket.webp");
+}
+
+span.poke-balls-pocket::before {
+    background-image: url("/static/icons/poke-balls-pocket.webp");
+}
+
+span.battle-items-pocket::before {
+    background-image: url("/static/icons/battle-items-pocket.webp");
+}
+
+span.tms-pocket::before {
+    background-image: url("/static/icons/tms-pocket.webp");
+}
+
+span.treasures-pocket::before {
+    background-image: url("/static/icons/treasures-pocket.webp");
+}
+
+span.ingredients-pocket::before {
+    background-image: url("/static/icons/ingredients-pocket.webp");
+}
+
+span.key-items-pocket::before {
+    background-image: url("/static/icons/key-items-pocket.webp");
+}
+
 .type-bar, .type-bar-small, .type-badge, .damage-class, .damage-icon, .type-dynamic {
     background-image: url("/static/icons/icons.png");
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
 }
 
 .type-bar {
@@ -30,7 +79,6 @@
 
 .movelist .damage-icon {
     display: block;
-    margin: 0 auto;
 }
 
 .type-bar-small, .type-dynamic {

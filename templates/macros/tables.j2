@@ -32,16 +32,16 @@
         <thead>
             <tr>
                 <th onclick="onColumnHeaderClicked(event)">Type</th>
-                <th onclick="onColumnHeaderClicked(event)">Move</th>
                 <th onclick="onColumnHeaderClicked(event)">Class</th>
+                <th onclick="onColumnHeaderClicked(event)">Move</th>
             </tr>
         </thead>
         <tbody>
         {% for move in moves %}
             <tr>
                 <td><a href="/types/{{move.type}}"><span class="type-dynamic {{move.type}}" alt="{{move.type|title}}-type move" title="{{move.type|title}}-type move"></span></a></td>
-                <td><a href="/moves/{{move.identifier}}">{{move.name}}</a></td>
                 <td><span class="damage-icon {{move.damage_class}}" alt="{{move.damage_class|title}} move" title="{{move.damage_class|title}} move"></span></td>
+                <td><a href="/moves/{{move.identifier}}">{{move.name}}</a></td>
             </tr>
         {% endfor %}
         </tbody>

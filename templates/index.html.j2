@@ -1,5 +1,6 @@
 {% extends "base.html.j2" %}
 {% block title %}serfetchdex{% endblock %}
+{% block head %}<link rel="stylesheet" href="/static/icons/items.css">{% endblock %}
 {% block content %}
     <h1>serfetchdex</h1>
     <p>hi, welcome to my pok&eacute;dex website.</p>
@@ -32,6 +33,12 @@
         <section class="ability">
             <a href="/abilities/{{ ability.identifier }}"><h4>{{ ability.name }}</h4></a>
             <p>{{ ability.flavor_text|parse_links }}</p>
+        </section>
+        <section class="item">
+            <a href="/items/{{ item.identifier }}">
+                <h4>{{ item.name }}</h4>
+                <span class="item {{ item.identifier }}"></span>
+            </a>
         </section>
     </div>
 {% endblock %}
