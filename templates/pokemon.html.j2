@@ -1,0 +1,169 @@
+{% extends "base.html.j2" %}
+{% import "macros/tables.j2" as table_utils %}
+{% block title %}{{pokemon.name}}{%if pokemon.form and pokemon.form.name %} ({{ pokemon.form.name }} Form){% endif %} - serfetchdex{% endblock %}
+{% block head %}
+<script type="text/javascript" src="/static/js/sort-movetable.js"></script>
+{% endblock %}
+{% block content %}
+    <span class="pokemon-tagline">
+            <h1>#{{pokemon.number}}: {{pokemon.name}}</h1>
+            {% if pokemon.form and pokemon.form.name %}
+            <h2>{{ pokemon.form.name }} Form</h2>
+            {% endif %}
+    </span>
+    <section class="pokemon-essentials">
+        <span class="pokemon-portrait">
+            <img src="/static/pokemon/{{ pokemon.identifier }}.png" />
+            <span class="pokemon-types">
+                <a href="/types/{{pokemon.type1}}"><span class="type-bar {{pokemon.type1}}" alt="{{pokemon.type1|title}} type" title="{{pokemon.type1|title}} type"></span></a>
+                {% if pokemon.type2 %}
+                <a href="/types/{{pokemon.type2}}"><span class="type-bar {{pokemon.type2}}" alt="{{pokemon.type2|title}} type" title="{{pokemon.type2|title}} type"></span></a>
+                {% endif %}
+            </span>
+        </span>
+        <span class="pokemon-essential-details">
+            <dl>
+                <dt>Species</dt>
+                    <dd>{{ pokemon.species }} Pokémon</dd>
+                <dt>Abilities</dt>
+                    <dd>
+                    {% for slot in pokemon.abilities %}
+                    {% for ability in pokemon.abilities[slot] %}
+                        <dl>
+                            <dt><a href="/abilities/{{ ability.identifier }}"
+                            {%if slot in ["hidden_ability", "unique_ability"] %} class="hidden-ability"{%endif%}>
+                            {{ ability.name }}</a> {% if slot == "unique_ability" %}<small>(unique)</small>
+                                              {% elif slot == "hidden_ability" %}<small>(hidden)</small>{% endif %}</dt>
+                                <dd>{{ ability.flavor_text|parse_links }}</dd>
+                        </dl>
+                    {% endfor %}
+                    {% endfor %}
+                    </dd>
+                <dt>Egg Groups</dt>
+                    <dd>
+                        <ul>
+                            {% for group in pokemon.egg_groups %}<li>{{ group }}</li>{% endfor %}
+                        </ul>
+                    </dd>
+            </dl>
+            <table class="pokemon-stats">
+                <thead>
+                    <th colspan=2><h3>Stats</h3></th>
+                </thead>
+                <tbody>
+                    <tr>    
+                        <td><strong>HP:</strong> {{ pokemon.stats['HP'].base_stat }}</td>
+                        <td><span style="width: min(100%, calc(100% * {{ pokemon.stats['HP'].base_stat }} / 150))"></span></td>
+                    </tr>
+                    <tr>    
+                        <td><strong>Atk:</strong> {{ pokemon.stats['Atk'].base_stat }}</td>
+                        <td><span style="width: min(100%, calc(100% * {{ pokemon.stats['Atk'].base_stat }} / 150))"></span></td>
+                    </tr>
+                    <tr>    
+                        <td><strong>Def:</strong> {{ pokemon.stats['Def'].base_stat }}</td>
+                        <td><span style="width: min(100%, calc(100% * {{ pokemon.stats['Def'].base_stat }} / 150))"></span></td>
+                    </tr>
+                    <tr>    
+                        <td><strong>SpA:</strong> {{ pokemon.stats['SpA'].base_stat }}</td>
+                        <td><span style="width: min(100%, calc(100% * {{ pokemon.stats['SpA'].base_stat }} / 150))"></span></td>
+                    </tr>
+                    <tr>    
+                        <td><strong>SpD:</strong> {{ pokemon.stats['SpD'].base_stat }}</td>
+                        <td><span style="width: min(100%, calc(100% * {{ pokemon.stats['SpD'].base_stat }} / 150))"></span></td>
+                    </tr>
+                    <tr>    
+                        <td><strong>Spe:</strong> {{ pokemon.stats['Spe'].base_stat }}</td>
+                        <td><span style="width: min(100%, calc(100% * {{ pokemon.stats['Spe'].base_stat }} / 150))"></span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total:</strong></td>
+                        <td>{{ pokemon.stats.values()|sum(attribute="base_stat") }}</td>
+                </tbody>
+            </table>
+        </span>
+    </section>
+    {% if evos %}<section class="evolution">
+        <h2>Evolution</h2>
+        <hr />
+        {{ table_utils.evolution_table(evos) }}
+    </section>{% endif %}
+    <section class="pokemon-details">
+        {{ table_utils.type_chart(efficiencies) }}
+        <table class="pokemon-misc">
+            <th colspan="3"><h3>Miscellaneous data</h3></th>
+            <tbody>
+                <tr>
+                    <th>Gender</th>
+                    <th>Height</th>
+                    <th>Weight</th>
+                </tr>
+                <tr>
+                    <td style="width: 40%">
+                        <span class="gender-bar">
+                            {% if pokemon.gender > 0 %}
+                                <span class="male" style="width: {{ (8 - pokemon.gender) * 12.5 }}%"></span>
+                                <span class="female" style="width: {{ pokemon.gender * 12.5 }}%"></span>
+                            {% endif %}
+                        </span>
+                        <p style="margin: 0">{% if pokemon.gender < 0 %}Genderless
+                           {% else %}{{ (8 - pokemon.gender) * 12.5 }}% male, {{ pokemon.gender * 12.5 }}% female{% endif %}
+                        </p>
+                    </td>
+                    <td>{{ pokemon.height_m }} m{% if pokemon.identifier.endswith("-gigantamax") %}+{% endif %}
+                        <br />
+                        {{ pokemon.height_m|m_to_feet }}{% if pokemon.identifier.endswith("-gigantamax") %}+{% endif %}
+                    </td>
+                    <td>
+                        {% if pokemon.weight_kg %}
+                        {{ pokemon.weight_kg }} kg<br />{{ pokemon.weight_kg|kg_to_lbs }} lbs
+                        {% else %} ??? kg <br /> ??? lbs
+                        {% endif %}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Growth rate</th>
+                    <th>EV yield</th>
+                    <th>Capture rate</th>
+                </tr>
+                <tr>
+                    <td>{{ pokemon.growth_rate|capitalize }}</td>
+                    <td>
+                            {% for item in pokemon.effort_yield %}
+                            {{ pokemon.effort_yield[item].value }} {{ item }}{{ "<br />" if not loop.last else "" }}
+                            {% endfor %}
+                        </ul>
+                    </td>
+                    <td>{{ pokemon.capture_rate }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="pokemon-flavor">
+        <h2>Dex Entries</h2>
+        <p>{{ pokemon.flavor[0] }}</p>
+        <hr />
+        <p>{{ pokemon.flavor[1] }}</p>
+    </section>
+    <section class="pokemon-moves">
+        <h2>Learnset</h2>
+        <hr />
+        {% if pokemon.levelup_moves %}<h3>Level-up</h3> {{ table_utils.levelup_table(pokemon.levelup_moves) }}{% endif %}
+        {% if pokemon.machine_moves %}<h3>Machine</h3> {{ table_utils.move_table(pokemon.machine_moves) }}{% endif %}
+        {% if pokemon.tutor_moves %}<h3>Tutor</h3> {{ table_utils.move_table(pokemon.tutor_moves) }}{% endif %}
+        {% if pokemon.egg_moves %}<h3>Egg Moves</h3> {{ table_utils.move_table(pokemon.egg_moves) }}{% endif %}
+        {% if pokemon.max_moves %}<h3>Available Max moves</h3> {{ table_utils.max_move_table(pokemon.max_moves) }}{% endif %}
+    </section>
+    {% if other_forms %}
+    <h2>Other Forms</h2>
+    <section class="other-forms">
+    {% for form in other_forms %}
+        <span class="pokemon-portrait">
+            <a href="/pokemon/{{ form.identifier }}">
+                <img src="/static/pokemon/{{ form.identifier }}.png" />
+                <h4>{% if form.form %}{{ form.form.name }}{% else %}Base{% endif %} Form</h4>
+            </a>
+        </span>
+    {% endfor %}
+    </section>
+    {% endif %}
+{% endblock %}

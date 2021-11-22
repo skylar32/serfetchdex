@@ -5,26 +5,45 @@
         <link rel="stylesheet" href="/static/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
         <script type="text/javascript" src="/static/js/hover-fetchd.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="/static/js/search.js"></script>
+        <link rel="stylesheet" href="/static/icons/icons.css">
+        <link rel="stylesheet" href="/static/icons/pokemon.css">
         {% block head %}{% endblock %}
     </head>
     <body>
-        <nav>
+        <nav onmouseover="hover()" onmouseout="unhover()">
             <header>
-                <a href="/"><img src="/static/icons/farfetchd-static.png" onmouseover="hover(this)" onmouseout="unhover(this)" /></a>
+                <a href="/"><img src="/static/icons/farfetchd-static.png" /></a>
                 <a href="/"><h1>serfetchdex</h1></a>
             </header>
             <ul>
-                <li><a href="/moves">moves</a></li>
-                <li><a href="/abilities">abilities</a></li>
-                <li><a href="#">pokémon</a></li>
+                <li>explore
+                    <ul>
+                        <li><a href="/moves">moves</a></li>
+                        <li><a href="/abilities">abilities</a></li>
+                        <li><a href="/pokemon">pokémon</a></li>
+                        <li><a href="/items">items</a></li>
+                    </ul>
+                </li>
+                <li>network
+                    <ul>
+                        <li><a href="https://serfetch.kyeugh.online">serfetch</a></li>
+                    </ul>
+                </li>
             </ul>
+            <form action="/search" method="get">
+                <input type="text" id="search-bar" name="q" placeholder="Search...">
+            </form>
         </nav>
         <main>
             <content>
                 {% block content %}{% endblock %}
             </content>
             <footer>
-                <p>serfetch/serfetchdex &copy; kyeugh 2020</p>
+                <p>serfetch/serfetchdex &copy; kyeugh 2021</p>
                 <p>
                     data courtesy of <a href="https://github.com/CatTrinket" target="_blank">Trinket</a>,
                     <a href="https://veekun.com">veekun</a>, &amp; <a href="https://bulbapedia.bulbagarden.net" target="_blank">Bulbapedia</a>.

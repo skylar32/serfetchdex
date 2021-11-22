@@ -1,6 +1,16 @@
 {% extends "base.html.j2" %}
+{% import "macros/tables.j2" as table_utils %}
 {% block title %}{{ability.name}} - serfetchdex{% endblock %}
+{% block head %}
+<script type="text/javascript" src="/static/js/sort-movetable.js"></script>
+{% endblock %}
 {% block content %}
     <h1>{{ability.name}}</h1>
     <p>{{ability.flavor_text|parse_links}}</p>
+
+    <h2>Pokémon</h2>
+    <hr />
+    {% if ordinary %}<h3>As an ordinary Ability</h3> {{ table_utils.pokemon_table(ordinary) }}{% endif %}
+    {% if hidden %}<h3>As a Hidden Ability</h3> {{ table_utils.pokemon_table(hidden) }}{% endif %}
+    {% if unique %}<h3>As a unique Ability</h3> {{ table_utils.pokemon_table(unique) }}{% endif %}
 {% endblock %}

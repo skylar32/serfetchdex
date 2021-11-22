@@ -1,10 +1,44 @@
 {% extends "base.html.j2" %}
 {% block title %}serfetchdex{% endblock %}
+{% block head %}<link rel="stylesheet" href="/static/icons/items.css">{% endblock %}
 {% block content %}
     <h1>serfetchdex</h1>
-    <p>there's not much to look at here right now, sorry.  maybe click some links?</p>
-    <ul>
-        <li><a href="/moves">moves</a></li>
-        <li><a href="/abilities">abilities</a></li>
-    </ul>
+    <p>hi, welcome to my pok&eacute;dex website.</p>
+    <p>
+        serfetchdex is not intended to be a comprehensive data reference.  it only contains the data i personally care about,
+        and only from the most recent games. if that's roughly what you care about too, then great&mdash;perhaps you'll find the
+        <a href="https://github.com/skylar32/mohacdex">database backend</a> useful as well.
+    </p>
+    <p>
+        to browse, try clicking the links in the navbar, or take the shiny searchbar out for a spin.
+        alternatively, here's some random stuff to get you started.
+    </p>
+    <div class="featured">
+        <section class="pokemon">
+            <a href="/pokemon/{{ pokemon.identifier }}">
+                <h4>{{ pokemon.name }}
+                {% if pokemon.form and pokemon.form.name %}<br /><small>{{ pokemon.form.name}} Form</small>{% endif %}
+                </h4>
+                <span class="party-sprite {{ pokemon.identifier }}"></span>
+            </a>
+        </section>
+        <section class="move">
+            <a href="/moves/{{ move.identifier }}">
+                <h4>{{ move.name }}</h4>
+                <br />
+                <span class="type-bar-small {{ move.type }}"></span>
+                <span class="damage-icon {{ move.damage_class }}"></span>
+            </a>
+        </section>
+        <section class="ability">
+            <a href="/abilities/{{ ability.identifier }}"><h4>{{ ability.name }}</h4></a>
+            <p>{{ ability.flavor_text|parse_links }}</p>
+        </section>
+        <section class="item">
+            <a href="/items/{{ item.identifier }}">
+                <h4>{{ item.name }}</h4>
+                <span class="item {{ item.identifier }}"></span>
+            </a>
+        </section>
+    </div>
 {% endblock %}

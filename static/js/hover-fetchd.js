@@ -5,10 +5,15 @@ static.src = "/static/icons/farfetchd-static.png";
 var animated = new Image();
 animated.src = "/static/icons/farfetchd-animated.png";
 
-function hover(element) {
-  element.setAttribute('src', animated.src);
+const screenWidth = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+function hover() {
+  if (screenWidth > 760)
+    document.querySelector("header img").setAttribute('src', animated.src);
 }
 
-function unhover(element) {
-  element.setAttribute('src', static.src);
+function unhover() {
+  document.querySelector("header img").setAttribute('src', static.src);
 }
