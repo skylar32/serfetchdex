@@ -17,6 +17,7 @@ $ pip install mohacdex
 $ cd /path/to/serfetchdex
 $ mohacdex sqlite:///mohacdex.db load
 ```
+check [here](https://github.com/skylar32/mohacdex) for more details.
 
 ### running
 ```sh
